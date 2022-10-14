@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>igscDfU3SeBCbLCzr89atKJsxBwJxwnSheZgOD9UpUI=</dsig:DigestValue>
+        <dsig:DigestValue>xCRIqOUry+QgSBytBynKx3tDJfUhYKERkYTfOG2Il+g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -216,7 +216,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>qQNWj7ZNXdkvlusOTauY4F68+CPDWLHayAHnS9ucpqU=</dsig:DigestValue>
+      <dsig:DigestValue>Vz3wPrbGesOtdsPUTBbFRur4anwa+7TB27TCw+owN34=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Codes_log.ldf" size="41943040" writeableType="applicationData">
@@ -225,7 +225,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>w4iLZmZKffL561wBGTskwCF08b1APVN8BE5uvIrSurQ=</dsig:DigestValue>
+      <dsig:DigestValue>ikSbLtlvSjRZTpgk4NpWvMd4+xe/q43TKEhfnpLZ1sY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Fault Code Search.exe.config" size="1202">
