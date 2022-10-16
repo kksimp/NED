@@ -2,15 +2,25 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace Fault_Code_Search
 {
+
     public partial class Main : Form
     {
         public Main()
         {
             InitializeComponent();
+            try
+            {
+                VersionNUM.Text = "V" + System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion;
+            }
+            catch (Exception)
+            {
+                VersionNUM.Text = "V" + Assembly.GetExecutingAssembly().GetName().Version;
+            }
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -27,6 +37,7 @@ namespace Fault_Code_Search
             this.uniqueControllersTableAdapter1.Fill(this.database1DataSet2.UniqueControllers);
 
         }
+
 
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -260,11 +271,42 @@ namespace Fault_Code_Search
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateCheck_Click(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                VisitLink();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to open link that was clicked.");
+            }
+        }
+
+        private void VisitLink()
+        {
+            System.Diagnostics.Process.Start("https://github.com/kksimp/NED/releases/latest");
+        }
+
+        private void label1_Click_4(object sender, EventArgs e)
+        {
+
+        }
     }
-
-
-
-
-
-
 }

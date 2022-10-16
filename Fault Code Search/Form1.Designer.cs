@@ -73,9 +73,11 @@
             this.Manufacture = new System.Windows.Forms.ComboBox();
             this.Controllers = new System.Windows.Forms.ComboBox();
             this.Ned = new System.Windows.Forms.PictureBox();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SearchResults = new System.Windows.Forms.DataGridView();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.engineTableAdapter = new Fault_Code_Search.CodesDataSetTableAdapters.EngineTableAdapter();
+            this.Version = new System.Windows.Forms.LinkLabel();
+            this.VersionNUM = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.codeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uniqueControllersBindingSource)).BeginInit();
@@ -98,6 +100,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.codesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ned)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchResults)).BeginInit();
+            this.toolStripContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // codeBindingSource
@@ -236,20 +239,19 @@
             // 
             this.SearchProgress.AutoScroll = true;
             this.SearchProgress.ColumnCount = 1;
-            this.SearchProgress.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SearchProgress.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.SearchProgress.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.SearchProgress.Controls.Add(this.SearchControlBox, 0, 1);
             this.SearchProgress.Controls.Add(this.Ned, 0, 0);
-            this.SearchProgress.Controls.Add(this.progressBar1, 0, 2);
-            this.SearchProgress.Controls.Add(this.SearchResults, 0, 3);
+            this.SearchProgress.Controls.Add(this.SearchResults, 0, 2);
+            this.SearchProgress.Controls.Add(this.toolStripContainer1, 0, 3);
             this.SearchProgress.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SearchProgress.Location = new System.Drawing.Point(0, 0);
             this.SearchProgress.Name = "SearchProgress";
             this.SearchProgress.RowCount = 4;
-            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.9226F));
-            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0774F));
-            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 469F));
+            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.47561F));
+            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.52439F));
+            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 463F));
+            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.SearchProgress.Size = new System.Drawing.Size(1402, 803);
             this.SearchProgress.TabIndex = 17;
@@ -273,9 +275,9 @@
             this.SearchControlBox.Controls.Add(this.Type);
             this.SearchControlBox.Controls.Add(this.Manufacture);
             this.SearchControlBox.Controls.Add(this.Controllers);
-            this.SearchControlBox.Location = new System.Drawing.Point(441, 245);
+            this.SearchControlBox.Location = new System.Drawing.Point(441, 238);
             this.SearchControlBox.Name = "SearchControlBox";
-            this.SearchControlBox.Size = new System.Drawing.Size(519, 75);
+            this.SearchControlBox.Size = new System.Drawing.Size(519, 78);
             this.SearchControlBox.TabIndex = 16;
             this.SearchControlBox.TabStop = false;
             // 
@@ -435,18 +437,10 @@
             this.Ned.Image = ((System.Drawing.Image)(resources.GetObject("Ned.Image")));
             this.Ned.Location = new System.Drawing.Point(3, 3);
             this.Ned.Name = "Ned";
-            this.Ned.Size = new System.Drawing.Size(1396, 236);
+            this.Ned.Size = new System.Drawing.Size(1396, 229);
             this.Ned.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Ned.TabIndex = 17;
             this.Ned.TabStop = false;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar1.Location = new System.Drawing.Point(3, 326);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(1396, 4);
-            this.progressBar1.TabIndex = 18;
             // 
             // SearchResults
             // 
@@ -457,17 +451,57 @@
             this.SearchResults.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.SearchResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SearchResults.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SearchResults.Location = new System.Drawing.Point(3, 336);
+            this.SearchResults.Location = new System.Drawing.Point(3, 322);
             this.SearchResults.Name = "SearchResults";
             this.SearchResults.ReadOnly = true;
             this.SearchResults.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.SearchResults.Size = new System.Drawing.Size(1396, 464);
+            this.SearchResults.Size = new System.Drawing.Size(1396, 457);
             this.SearchResults.TabIndex = 19;
             this.SearchResults.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchResults_CellContentClick);
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1396, 0);
+            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.toolStripContainer1.Location = new System.Drawing.Point(3, 785);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(1396, 15);
+            this.toolStripContainer1.TabIndex = 20;
+            this.toolStripContainer1.Text = "toolStripContainer1";
             // 
             // engineTableAdapter
             // 
             this.engineTableAdapter.ClearBeforeFill = true;
+            // 
+            // Version
+            // 
+            this.Version.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Version.AutoSize = true;
+            this.Version.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.Version.LinkColor = System.Drawing.Color.Black;
+            this.Version.Location = new System.Drawing.Point(1300, 5);
+            this.Version.Name = "Version";
+            this.Version.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Version.Size = new System.Drawing.Size(94, 13);
+            this.Version.TabIndex = 19;
+            this.Version.TabStop = true;
+            this.Version.Text = "Check For Update";
+            this.Version.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Version.VisitedLinkColor = System.Drawing.Color.Black;
+            this.Version.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // VersionNUM
+            // 
+            this.VersionNUM.AutoSize = true;
+            this.VersionNUM.Location = new System.Drawing.Point(10, 5);
+            this.VersionNUM.Name = "VersionNUM";
+            this.VersionNUM.Size = new System.Drawing.Size(35, 13);
+            this.VersionNUM.TabIndex = 20;
+            this.VersionNUM.Text = "label1";
+            this.VersionNUM.Click += new System.EventHandler(this.label1_Click_4);
             // 
             // Main
             // 
@@ -479,6 +513,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1402, 803);
+            this.Controls.Add(this.VersionNUM);
+            this.Controls.Add(this.Version);
             this.Controls.Add(this.SearchProgress);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel3);
@@ -514,6 +550,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.codesDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ned)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchResults)).EndInit();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -561,12 +599,14 @@
         private System.Windows.Forms.ComboBox Manufacture;
         private System.Windows.Forms.ComboBox Controllers;
         private System.Windows.Forms.PictureBox Ned;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private CodesDataSet codesDataSet;
         private System.Windows.Forms.BindingSource engineBindingSource;
         private CodesDataSetTableAdapters.EngineTableAdapter engineTableAdapter;
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.DataGridView SearchResults;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
+        private System.Windows.Forms.LinkLabel Version;
+        private System.Windows.Forms.Label VersionNUM;
     }
 }
 

@@ -1,0 +1,2549 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DbLocalizationProvider</name>
+    </assembly>
+    <members>
+        <member name="T:DbLocalizationProvider.Cache.CacheEventArgs">
+            <summary>
+            Arguments for those who are interested in cache events
+            </summary>
+        </member>
+        <member name="F:DbLocalizationProvider.Cache.CacheEventArgs.Empty">
+            <summary>
+            Empty args. Nothing to see here.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Cache.CacheEventArgs.#ctor(DbLocalizationProvider.Cache.CacheOperation,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.Cache.CacheEventArgs" /> class.
+            </summary>
+            <param name="operation">The operation.</param>
+            <param name="cacheKey">The cache key.</param>
+            <param name="resourceKey">The resource key.</param>
+        </member>
+        <member name="P:DbLocalizationProvider.Cache.CacheEventArgs.Operation">
+            <summary>
+            Gets the operation.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Cache.CacheEventArgs.CacheKey">
+            <summary>
+            Gets the cache key.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Cache.CacheEventArgs.ResourceKey">
+            <summary>
+            Gets the resource key.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Cache.CacheEventHandler">
+            <summary>
+            Event handler signature for those whole are handling cache events.
+            </summary>
+            <param name="e">The <see cref="T:DbLocalizationProvider.Cache.CacheEventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="T:DbLocalizationProvider.Cache.CacheKeyHelper">
+            <summary>
+            Helper is here to save you when you have to deal with cache keys - either build one or deconstruct from resource
+            key.
+            </summary>
+        </member>
+        <member name="F:DbLocalizationProvider.Cache.CacheKeyHelper.CacheKeyPrefix">
+            <summary>
+            To avoid collisions somehow cache keys need to be prefixed. This is the one.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Cache.CacheKeyHelper.BuildKey(System.String)">
+            <summary>
+            Builds the key from resource key.
+            </summary>
+            <param name="key">The resource key.</param>
+            <returns>Cache key</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.Cache.CacheKeyHelper.GetResourceKeyFromCacheKey(System.String)">
+            <summary>
+            Gets the resource key from cache key.
+            </summary>
+            <param name="cacheKey">The cache key.</param>
+            <returns>Resource key</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Cache.CacheOperation">
+            <summary>
+            Indicates what operation has been performed in cache.
+            </summary>
+        </member>
+        <member name="F:DbLocalizationProvider.Cache.CacheOperation.None">
+            <summary>
+            Not specified
+            </summary>
+        </member>
+        <member name="F:DbLocalizationProvider.Cache.CacheOperation.Insert">
+            <summary>
+            Item has been added tot the cache
+            </summary>
+        </member>
+        <member name="F:DbLocalizationProvider.Cache.CacheOperation.Remove">
+            <summary>
+            Item has been removed from the cache
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Cache.ClearCache">
+            <summary>
+            When executed - configured <see cref="P:DbLocalizationProvider.ConfigurationContext.CacheManager" /> should clear out all cached items from
+            underlying storage.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Cache.ClearCache.Command">
+            <summary>
+            Actual command type of the <see cref="T:DbLocalizationProvider.Cache.ClearCache" /> definition.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Cache.ICacheManager">
+            <summary>
+            Interface for implementing your own cache manager.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Cache.ICacheManager.Insert(System.String,System.Object,System.Boolean)">
+            <summary>
+            You should add given value to the cache under given key.
+            </summary>
+            <param name="key">Key identifier of the cached item</param>
+            <param name="value">Actual value fo the cached item</param>
+            <param name="insertIntoKnownResourceKeys">This is pretty internal stuff and should be ignored by cache implementers.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Cache.ICacheManager.Get(System.String)">
+            <summary>
+            You should implement this method to get cached item back from the underlying storage
+            </summary>
+            <param name="key">Key identifier of the cached item</param>
+            <returns>Actual value fo the cached item. Take care of casting back to proper type.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.Cache.ICacheManager.Remove(System.String)">
+            <summary>
+            If you want to remove the cached item from the storage - this is the method to implement then.
+            </summary>
+            <param name="key">Key identifier of the cached item</param>
+        </member>
+        <member name="E:DbLocalizationProvider.Cache.ICacheManager.OnInsert">
+            <summary>
+            Event raise is taken care by <see cref="T:DbLocalizationProvider.Cache.BaseCacheManager" />.
+            </summary>
+        </member>
+        <member name="E:DbLocalizationProvider.Cache.ICacheManager.OnRemove">
+            <summary>
+            Event raise is taken care by <see cref="T:DbLocalizationProvider.Cache.BaseCacheManager" />.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Cache.InMemoryCache">
+            <summary>
+            Cache implementation for cases when you have enough memory.
+            </summary>
+            <seealso cref="T:DbLocalizationProvider.Cache.ICacheManager" />
+        </member>
+        <member name="M:DbLocalizationProvider.Cache.InMemoryCache.Insert(System.String,System.Object,System.Boolean)">
+            <summary>
+            You should add given resource to the cache with known cache key.
+            </summary>
+            <param name="key">Key identifier of the cached item</param>
+            <param name="value">Actual value fo the cached item</param>
+            <param name="insertIntoKnownResourceKeys">This is pretty internal stuff and should be ignored by cache implementers.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Cache.InMemoryCache.Get(System.String)">
+            <summary>
+            You should implement this method to get cached item back from the underlying storage
+            </summary>
+            <param name="key">Key identifier of the cached item</param>
+            <returns>
+            Actual value fo the cached item. Take care of casting back to proper type.
+            </returns>
+        </member>
+        <member name="M:DbLocalizationProvider.Cache.InMemoryCache.Remove(System.String)">
+            <summary>
+            If you want to remove the cached item from the storage - this is the method to implement then.
+            </summary>
+            <param name="key">Key identifier of the cached item</param>
+        </member>
+        <member name="E:DbLocalizationProvider.Cache.InMemoryCache.OnInsert">
+            <summary>
+            Event raise is taken care by <see cref="T:DbLocalizationProvider.Cache.BaseCacheManager" />.
+            </summary>
+        </member>
+        <member name="E:DbLocalizationProvider.Cache.InMemoryCache.OnRemove">
+            <summary>
+            Event raise is taken care by <see cref="T:DbLocalizationProvider.Cache.BaseCacheManager" />.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.CommandExecutor">
+            <summary>
+            The executor of commands.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.CommandExecutor.#ctor(DbLocalizationProvider.TypeFactory)">
+             <summary>
+            Creates new instance of the class.
+             </summary>
+             <param name="factory">Factory of the types.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.CommandExecutor.Execute(DbLocalizationProvider.Abstractions.ICommand)">
+            <summary>
+            Executes the specified command.
+            </summary>
+            <param name="command">The command.</param>
+            <exception cref="T:System.ArgumentNullException">command</exception>
+        </member>
+        <member name="M:DbLocalizationProvider.CommandExecutor.CanBeExecuted(DbLocalizationProvider.Abstractions.ICommand)">
+            <summary>
+            Checks whether this command could be executed
+            </summary>
+            <param name="command">The command.</param>
+            <returns><c>true</c> if command has registered handler; <c>false</c> otherwise</returns>
+            <exception cref="T:System.ArgumentNullException">command</exception>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.CreateNewResource">
+            <summary>
+            Wanna create new resource manually during runtime? This is the command the execute.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.CreateNewResource.Handler">
+            <summary>
+            Implementation of the command to create new resources
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.CreateNewResource.Handler.#ctor(DbLocalizationProvider.ICommandExecutor)">
+            <summary>
+            Creates new instance
+            </summary>
+            <param name="commandExecutor">This is required to forward call to another command handler.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.CreateNewResource.Handler.Execute(DbLocalizationProvider.Commands.CreateNewResource.Command)">
+            <summary>
+            What do you think this method does?
+            </summary>
+            <param name="command">Create resource command.</param>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.CreateNewResource.Command">
+            <summary>
+            This command is usually used when creating new resources either from AdminUI or during import process
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.CreateNewResource.Command.#ctor(DbLocalizationProvider.Abstractions.LocalizationResource)">
+            <summary>
+            Constructs new instance of command obviously.
+            </summary>
+            <param name="resource">Resource to create</param>
+        </member>
+        <member name="P:DbLocalizationProvider.Commands.CreateNewResource.Command.LocalizationResource">
+            <summary>
+            List of resources to create. Resource instance should be fully filled in order to just commit to underlying
+            storage.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.CreateNewResource.EventArgs">
+            <summary>
+            Arguments for the event handlers
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.CreateNewResource.EventArgs.#ctor(System.String)">
+            <summary>
+            Creates new instance of argument class
+            </summary>
+            <param name="key">Resource key which has been created</param>
+        </member>
+        <member name="P:DbLocalizationProvider.Commands.CreateNewResource.EventArgs.Key">
+            <summary>
+            Resource key which has been created
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.CreateNewResources">
+            <summary>
+            This command is usually used when creating new resources either from AdminUI or during import process
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.CreateNewResources.EventHandler">
+            <summary>
+            Capture moment when somebody has created new resource in UI
+            </summary>
+            <param name="e">Arguments obviously to understand what has been created.</param>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.CreateNewResources.Handler">
+            <summary>
+            Implementation of the command to create new resources
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.CreateNewResources.Handler.#ctor(DbLocalizationProvider.ConfigurationContext,DbLocalizationProvider.Abstractions.IResourceRepository)">
+            <summary>
+            Creates new instance of the class.
+            </summary>
+            <param name="configurationContext">Configuration settings.</param>
+            <param name="repository">Resource repository</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.CreateNewResources.Handler.Execute(DbLocalizationProvider.Commands.CreateNewResources.Command)">
+            <summary>
+            Handles the command. Actual instance of the command being executed is passed-in as argument
+            </summary>
+            <param name="command">Actual command instance being executed</param>
+            <exception cref="T:System.InvalidOperationException">Resource with key `{resource.ResourceKey}` already exists</exception>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.CreateNewResources.Command">
+            <summary>
+            This command is usually used when creating new resources either from AdminUI or during import process, or somebody just figured out how to push new resources to db.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.CreateNewResources.Command.#ctor(System.Collections.Generic.List{DbLocalizationProvider.Abstractions.LocalizationResource})">
+            <summary>
+            Constructs new instance of command obviously.
+            </summary>
+            <param name="resources">List of resources to create</param>
+        </member>
+        <member name="P:DbLocalizationProvider.Commands.CreateNewResources.Command.LocalizationResources">
+            <summary>
+            List of resources to create. Resource instance should be fully filled in order to just commit to underlying
+            storage.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.CreateNewResources.EventArgs">
+            <summary>
+            Arguments for the event handlers
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.CreateNewResources.EventArgs.#ctor(System.String)">
+            <summary>
+            Creates new instance of argument class
+            </summary>
+            <param name="key">Resource key which has been created</param>
+        </member>
+        <member name="P:DbLocalizationProvider.Commands.CreateNewResources.EventArgs.Key">
+            <summary>
+            Resource key which has been created
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.CreateOrUpdateTranslation">
+            <summary>
+            Create or update translation for existing resource in given language.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.CreateOrUpdateTranslation.Handler">
+            <summary>
+            Implementation for creating or updating existing translation
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.CreateOrUpdateTranslation.Handler.#ctor(DbLocalizationProvider.ConfigurationContext,DbLocalizationProvider.Abstractions.IResourceRepository)">
+            <summary>
+            Creates new instance of the class.
+            </summary>
+            <param name="configurationContext">Configuration settings.</param>
+            <param name="repository">Resource repository</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.CreateOrUpdateTranslation.Handler.Execute(DbLocalizationProvider.Commands.CreateOrUpdateTranslation.Command)">
+            <summary>
+            Handles the command. Actual instance of the command being executed is passed-in as argument
+            </summary>
+            <param name="command">Actual command instance being executed</param>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.CreateOrUpdateTranslation.Command">
+            <summary>
+            Command definition for creating or updating translation for existing resource in given language.
+            </summary>
+            <seealso cref="T:DbLocalizationProvider.Abstractions.ICommand" />
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.CreateOrUpdateTranslation.Command.#ctor(System.String,System.Globalization.CultureInfo,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.Commands.CreateOrUpdateTranslation.Command" /> class.
+            </summary>
+            <param name="key">The resource key.</param>
+            <param name="language">The language for the translation.</param>
+            <param name="translation">The actual translation for given language.</param>
+        </member>
+        <member name="P:DbLocalizationProvider.Commands.CreateOrUpdateTranslation.Command.Key">
+            <summary>
+            Gets the resource key.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Commands.CreateOrUpdateTranslation.Command.Language">
+            <summary>
+            Gets the language.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Commands.CreateOrUpdateTranslation.Command.Translation">
+            <summary>
+            Gets the translation for given <see cref="P:DbLocalizationProvider.Commands.CreateOrUpdateTranslation.Command.Language" />.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.DeleteAllResources">
+            <summary>
+            Command definition for deleting all resources
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.DeleteAllResources.Handler">
+            <summary>
+            Astalavista all resources
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.DeleteAllResources.Handler.#ctor(DbLocalizationProvider.Abstractions.IResourceRepository)">
+            <summary>
+            Creates new instance of the class.
+            </summary>
+            <param name="repository">Resource repository</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.DeleteAllResources.Handler.Execute(DbLocalizationProvider.Commands.DeleteAllResources.Command)">
+            <summary>
+            Handles the command. Actual instance of the command being executed is passed-in as argument
+            </summary>
+            <param name="command">Actual command instance being executed</param>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.DeleteAllResources.Command">
+            <summary>
+            When you need to delete all resources (it might sounds crazy, but sometimes this is necessary) - execute this
+            command.
+            </summary>
+            <seealso cref="T:DbLocalizationProvider.Abstractions.ICommand" />
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.DeleteResource">
+            <summary>
+            Deletes single resource.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.DeleteResource.Handler">
+            <summary>
+            Removes single resource
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.DeleteResource.Handler.#ctor(DbLocalizationProvider.ConfigurationContext,DbLocalizationProvider.Abstractions.IResourceRepository)">
+            <summary>
+            Creates new instance of the class.
+            </summary>
+            <param name="configurationContext">Configuration settings.</param>
+            <param name="repository">Resource repository</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.DeleteResource.Handler.Execute(DbLocalizationProvider.Commands.DeleteResource.Command)">
+            <summary>
+            Handles the command. Actual instance of the command being executed is passed-in as argument
+            </summary>
+            <param name="command">Actual command instance being executed</param>
+            <exception cref="T:System.ArgumentNullException">Key</exception>
+            <exception cref="T:System.InvalidOperationException">Cannot delete resource `{command.Key}` that is synced with code</exception>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.DeleteResource.Command">
+            <summary>
+            Execute this command if you need to just delete single resource.
+            </summary>
+            <seealso cref="T:DbLocalizationProvider.Abstractions.ICommand" />
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.DeleteResource.Command.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.Commands.DeleteResource.Command" /> class.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="P:DbLocalizationProvider.Commands.DeleteResource.Command.Key">
+            <summary>
+            Gets the key for the resource to delete.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.RemoveTranslation">
+            <summary>
+            Class when you need to just translation in some language for given resource.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.RemoveTranslation.Handler">
+            <summary>
+            Removes single translation
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.RemoveTranslation.Handler.#ctor(DbLocalizationProvider.ConfigurationContext,DbLocalizationProvider.Abstractions.IResourceRepository)">
+            <summary>
+            Creates new instance of the class.
+            </summary>
+            <param name="configurationContext">Configuration settings.</param>
+            <param name="repository">Resource repository</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.RemoveTranslation.Handler.Execute(DbLocalizationProvider.Commands.RemoveTranslation.Command)">
+            <summary>
+            Handles the command. Actual instance of the command being executed is passed-in as argument
+            </summary>
+            <param name="command">Actual command instance being executed</param>
+            <exception cref="T:System.InvalidOperationException">Cannot delete translation for not modified resource (key: `{command.Key}`</exception>
+        </member>
+        <member name="T:DbLocalizationProvider.Commands.RemoveTranslation.Command">
+            <summary>
+            Execute this command if you need to just translation in some language for given resource.
+            </summary>
+            <seealso cref="T:DbLocalizationProvider.Abstractions.ICommand" />
+        </member>
+        <member name="M:DbLocalizationProvider.Commands.RemoveTranslation.Command.#ctor(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Execute this command if you need to just translation in some language for given resource.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="language">The language.</param>
+            <exception cref="T:System.ArgumentNullException">
+            If <paramref name="key" /> or <paramref name="language" /> is null.
+            </exception>
+        </member>
+        <member name="P:DbLocalizationProvider.Commands.RemoveTranslation.Command.Key">
+            <summary>
+            Gets the resource key.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Commands.RemoveTranslation.Command.Language">
+            <summary>
+            Gets the language for translation to remove from resource.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.ConfigurationContext">
+            <summary>
+            Context to configure various localization provider features and behavior
+            </summary>
+        </member>
+        <member name="F:DbLocalizationProvider.ConfigurationContext.CultureForTranslationsFromCode">
+            <summary>
+            Value indicating default culture for resources registered from code.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.ConfigurationContext.#ctor">
+            <summary>
+            Creates new instance of configuration settings.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.EnableLocalization">
+            <summary>
+            Gets or sets the callback for enabling or disabling localization. If this returns <c>false</c> - resource key will
+            be returned. Default <c>true</c>.
+            </summary>
+            <value>
+            <c>true</c> to enable localization; otherwise - <c>false</c>.
+            </value>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.EnableLegacyMode">
+             <summary>
+             Gets or sets callback to call in order to enable ir disable legacy mode.
+             Legacy mode will ensure that if resource value starts with "/" symbol ModelMetadataProvider will try to look for
+             this XPath resource in localization provider collection once again.
+             This will make it possible to continue use *old* resource keys:
+             [DisplayName("/xpath/to/some/resource")]
+            
+             Default <c>false</c>.
+             </summary>
+             <value>
+             Return <c>true</c> to enable legacy mode translations.
+             </value>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.DiscoverAndRegisterResources">
+            <summary>
+            Gets or sets the flag to control localized models discovery and registration during app startup or whenever you initialize provider.
+            Default <c>true</c>.
+            </summary>
+            <value>
+            Discovers and registers localized models.
+            </value>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.ScanAllAssemblies">
+            <summary>
+            Forces type scanner to load all referenced assemblies. When enabled, scanner is not relying on current
+            AppDomain.GetAssemblies but checks referenced assemblies recursively.
+            Default <c>false</c>.
+            </summary>
+            <value>
+            By default this feature is disabled.
+            </value>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.ModelMetadataProviders">
+            <summary>
+            Settings for model metadata providers.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.DefaultResourceCulture">
+            <summary>
+            Gets or sets the default resource culture to register translations for newly discovered resources.
+            </summary>
+            <value>
+            The default resource culture for translations.
+            </value>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.PopulateCacheOnStartup">
+            <summary>
+            Gets or sets a value indicating whether cache should be populated during startup (default = true).
+            Default <c>true</c>.
+            </summary>
+            <value>
+            <c>true</c> if cache should be populated; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.TypeFactory">
+            <summary>
+            Returns type factory used internally for creating new services or handlers for commands.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.ResourceLookupFilter">
+            <summary>
+            Gets or sets callback whether lookup resource by requested key.
+            Use with caution. This is optimization workaround for the cases when you need to filter out and allow some of the resources to pass-through
+            for <see cref="T:DbLocalizationProvider.Queries.GetTranslation.Query" /> query.
+            </summary>
+            <remarks>Return <c>true</c> if you want to continue translation lookup for given resource key</remarks>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.CacheManager">
+            <summary>
+            Gets or sets cache manager used to store resources and translations
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.EnableInvariantCultureFallback">
+            <summary>
+            Gets or sets flag to enable or disable invariant culture fallback (to use resource values discovered and registered from code).
+            Default <c>false</c>.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.AssemblyScanningFilter">
+            <summary>
+            Gets or sets filter to apply for assembly list in application for reducing time spent during scanning.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.DiagnosticsEnabled">
+            <summary>
+            Gets or sets value enabling or disabling diagnostics for localization provider (e.g. missing keys will be written
+            to log file).
+            Default <c>false</c>.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.CustomAttributes">
+            <summary>
+            Gets or sets list of custom attributes that should be discovered and registered during startup scanning.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.ForeignResources">
+            <summary>
+            Gets or sets collection of foreign resources. Foreign resource descriptors are used to include classes without
+            <c>[LocalizedResource]</c> or <c>[LocalizedModel]</c> attributes.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.Export">
+            <summary>
+            Gets or sets settings used for export of the resources.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.Import">
+            <summary>
+            Gets or sets settings to be used during resource import.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.TypeScanners">
+            <summary>
+            Gets list of all known type scanners.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.FallbackLanguages">
+            <summary>
+            This is your last chance to lookup translations in other languages if there is none for the requested one.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.Logger">
+            <summary>
+            Gets or sets the logger to be used by the localization provider library. Depending on runtime platform specific implementations may use
+            this interface to add adapter for their logging infra.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.ResourceKeyNameFilter">
+            <summary>
+            If you are looking for a way to allow other characters in resource key name - this is the property to set.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.ManualResourceProviders">
+            <summary>
+            You can set provider that would return manual resources to sync.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ConfigurationContext.FlexibleRefactoringMode">
+            <summary>
+            Wanna chill a bit? The use this flexible and relaxed refactored resource sync mode.
+            By enabling this you are telling sync process not to panic if there is already existing refactored resources in target db.
+            This easily can happen if you switch between two branches from which one of them contains refactored code already.
+            Default <c>false</c>.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.ConfigurationContextExtensions">
+            <summary>
+            Extension methods for <see cref="T:DbLocalizationProvider.ConfigurationContext"/>
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.ConfigurationContextExtensions.ShouldLookupResource(DbLocalizationProvider.ConfigurationContext,System.String)">
+            <summary>
+            Performs resource lookup by given key.
+            Use with caution. This is optimization workaround for the cases when you need to filter out and allow some of the resources to pass-through
+            for <see cref="T:DbLocalizationProvider.Queries.GetTranslation.Query" /> query.
+            </summary>
+            <param name="context">ConfigurationContext</param>
+            <param name="resourceKey">Resource key</param>
+            <remarks>Returns <c>true</c> if you want to continue translation lookup for given resource key; otherwise <c>false</c>.</remarks>
+        </member>
+        <member name="T:DbLocalizationProvider.CustomAttributeDescriptor">
+            <summary>
+            You can add custom attributes to the collection of known types (like <c>[Required]</c>) to scan for.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.CustomAttributeDescriptor.#ctor(System.Type,System.Boolean)">
+            <summary>
+            Creates new instance of this type.
+            </summary>
+            <param name="target">Please specify type of the custom attribute you would like to look for and register.</param>
+            <param name="generateTranslation">
+            If you will set this to <c>true</c> translation will be created for discovered
+            resources; otherwise - translation will not be created (even if <see cref="M:System.Object.ToString" /> method will be
+            overwritten.
+            </param>
+        </member>
+        <member name="P:DbLocalizationProvider.CustomAttributeDescriptor.CustomAttribute">
+            <summary>
+            Target type to scan and register resources from.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.CustomAttributeDescriptor.GenerateTranslation">
+            <summary>
+            Flag indicating whether we need to generate also translations. Set this flag to <c>true</c> if you want default translation also be added to the storage for these "foreign" resources.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.CustomAttributeDescriptorCollectionExtensions">
+            <summary>
+            Extensions for collection of <see cref="T:DbLocalizationProvider.CustomAttributeDescriptor"/>.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.CustomAttributeDescriptorCollectionExtensions.Add(System.Collections.Generic.ICollection{DbLocalizationProvider.CustomAttributeDescriptor},System.Type,System.Boolean)">
+            <summary>
+            Add new foreign resource descriptor to the collection.
+            </summary>
+            <param name="target">Target collection of already discovered / registered foreign resources.</param>
+            <param name="customAttribute">Type of the attribute to add to the collection.</param>
+            <param name="generateTranslation">
+            If you will set this to <c>true</c> translation will be created for discovered
+            resources; otherwise - translation will not be created (even if <see cref="M:System.Object.ToString" /> method will be
+            overwritten.
+            </param>
+            <returns>The same collection so you can do fluent stuff.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.CustomAttributeDescriptorCollectionExtensions.Add``1(System.Collections.Generic.ICollection{DbLocalizationProvider.CustomAttributeDescriptor},System.Boolean)">
+            <summary>
+            Add new foreign resource descriptor (by given type specified in <typeparamref name="T"/>) to the collection.
+            </summary>
+            <typeparam name="T">Type of the attribute to add to the collection.</typeparam>
+            <param name="target">Target collection of already discovered / registered foreign resources.</param>
+            <param name="generateTranslation">
+            If you will set this to <c>true</c> translation will be created for discovered
+            resources; otherwise - translation will not be created (even if <see cref="M:System.Object.ToString" /> method will be
+            overwritten.
+            </param>
+            <returns>The same collection so you can do fluent stuff.</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.DuplicateResourceKeyException">
+            <summary>
+            If synchronizer will detect duplicate keys after scanner whole codebase - this exception will be thrown.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.DuplicateResourceKeyException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.DuplicateResourceKeyException" /> class.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.DuplicateResourceKeyException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.DuplicateResourceKeyException" /> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.DuplicateResourceKeyException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.DuplicateResourceKeyException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no
+            inner exception is specified.
+            </param>
+        </member>
+        <member name="M:DbLocalizationProvider.DuplicateResourceKeyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.DuplicateResourceKeyException" /> class.
+            </summary>
+            <param name="info">
+            The <see cref="T:System.Runtime.Serialization.SerializationInfo"></see> that holds the serialized object data about the
+            exception being thrown.
+            </param>
+            <param name="context">
+            The <see cref="T:System.Runtime.Serialization.StreamingContext"></see> that contains contextual information about the
+            source or destination.
+            </param>
+        </member>
+        <member name="T:DbLocalizationProvider.DuplicateResourceTranslationsException">
+            <summary>
+            If synchronizer detects duplicate translations for the same resource key and the same culture - this exception will
+            be thrown.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.DuplicateResourceTranslationsException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.DuplicateResourceTranslationsException" /> class.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.DuplicateResourceTranslationsException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.DuplicateResourceTranslationsException" /> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.DuplicateResourceTranslationsException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.DuplicateResourceTranslationsException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no
+            inner exception is specified.
+            </param>
+        </member>
+        <member name="M:DbLocalizationProvider.DuplicateResourceTranslationsException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.DuplicateResourceTranslationsException" /> class.
+            </summary>
+            <param name="info">
+            The <see cref="T:System.Runtime.Serialization.SerializationInfo"></see> that holds the serialized object data about the
+            exception being thrown.
+            </param>
+            <param name="context">
+            The <see cref="T:System.Runtime.Serialization.StreamingContext"></see> that contains contextual information about the
+            source or destination.
+            </param>
+        </member>
+        <member name="T:DbLocalizationProvider.Export.ExportProviders">
+            <summary>
+            Collector of various exporters
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Export.ExportProviders.Providers">
+            <summary>
+            Gets list of export providers.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Export.ExportResult">
+            <summary>
+            Result of the export operation.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Export.ExportResult.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.Export.ExportResult" /> class.
+            </summary>
+            <param name="serializedData">The serialized data.</param>
+            <param name="fileMimeType">Type of the file MIME.</param>
+            <param name="fileName">Name of the file.</param>
+            <exception cref="T:System.ArgumentNullException">
+            serializedData
+            or
+            fileMimeType
+            or
+            fileName
+            </exception>
+        </member>
+        <member name="P:DbLocalizationProvider.Export.ExportResult.SerializedData">
+            <summary>
+            Gets or sets exported data as serialized content.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Export.ExportResult.FileMimeType">
+            <summary>
+            Gets or sets the type of the file MIME.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Export.ExportResult.FileName">
+            <summary>
+            Gets or sets the name of the file.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Export.ExportSettings">
+            <summary>
+            Settings for the export operations
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Export.ExportSettings.Providers">
+            <summary>
+            Gets the list of export providers.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Export.IResourceExporter">
+            <summary>
+            Interface for the export implementation
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Export.IResourceExporter.FormatName">
+            <summary>
+            Gets the name of the export format (this will be visible on menu).
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Export.IResourceExporter.ProviderId">
+            <summary>
+            Gets the export provider identifier.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Export.IResourceExporter.Export(System.Collections.Generic.ICollection{DbLocalizationProvider.Abstractions.LocalizationResource},System.Collections.Generic.IDictionary{System.String,System.String[]})">
+            <summary>
+            Exports the specified resources.
+            </summary>
+            <param name="resources">The resources.</param>
+            <param name="parameters">The parameters.</param>
+            <returns>Result of the export</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Export.JsonDefaultContractResolver">
+            <summary>
+            Used to format JSON export result.
+            </summary>
+            <seealso cref="T:Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver" />
+        </member>
+        <member name="M:DbLocalizationProvider.Export.JsonDefaultContractResolver.CreateDictionaryContract(System.Type)">
+            <summary>
+            Creates a <see cref="T:Newtonsoft.Json.Serialization.JsonDictionaryContract" /> for the given type.
+            </summary>
+            <param name="objectType">Type of the object.</param>
+            <returns>
+            A <see cref="T:Newtonsoft.Json.Serialization.JsonDictionaryContract" /> for the given type.
+            </returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Export.JsonResourceExporter">
+            <summary>
+            JSON format exporter.
+            </summary>
+            <seealso cref="T:DbLocalizationProvider.Export.IResourceExporter" />
+        </member>
+        <member name="M:DbLocalizationProvider.Export.JsonResourceExporter.Export(System.Collections.Generic.ICollection{DbLocalizationProvider.Abstractions.LocalizationResource},System.Collections.Generic.IDictionary{System.String,System.String[]})">
+            <summary>
+            Exports the specified resources.
+            </summary>
+            <param name="resources">The resources.</param>
+            <param name="parameters">The parameters.</param>
+            <returns>
+            Result of the export
+            </returns>
+        </member>
+        <member name="P:DbLocalizationProvider.Export.JsonResourceExporter.FormatName">
+            <summary>
+            Gets the name of the export format (this will be visible on menu).
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Export.JsonResourceExporter.ProviderId">
+            <summary>
+            Gets the export provider identifier.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Export.JsonResourceExporter.Deserialize``1(System.String)">
+            <summary>
+            Deserializes the specified string value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="stringValue">The string value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Export.ProvidersCollectionExtensions">
+            <summary>
+            None reads this summary anyways..
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Export.ProvidersCollectionExtensions.FindById(System.Collections.Generic.ICollection{DbLocalizationProvider.Export.IResourceExporter},System.String)">
+            <summary>
+            Finds export implementation the by identifier (<see cref="P:DbLocalizationProvider.Export.IResourceExporter.ProviderId" />).
+            </summary>
+            <param name="list">The list.</param>
+            <param name="id">The identifier.</param>
+            <returns>Resource exporter if found my <paramref name="id" /></returns>
+            <exception cref="T:System.ArgumentNullException">id</exception>
+        </member>
+        <member name="T:DbLocalizationProvider.FallbackLanguages">
+            <summary>
+            List of fallback languages.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.FallbackLanguages.GetEnumerator">
+            <inheritdoc />
+        </member>
+        <member name="M:DbLocalizationProvider.FallbackLanguages.System#Collections#IEnumerable#GetEnumerator">
+            <inheritdoc />
+        </member>
+        <member name="P:DbLocalizationProvider.FallbackLanguages.Count">
+            <inheritdoc />
+        </member>
+        <member name="M:DbLocalizationProvider.FallbackLanguages.Try(System.Globalization.CultureInfo)">
+            <summary>
+            Registers fallback language.
+            </summary>
+            <param name="fallbackLanguage">The fallback language.</param>
+            <returns>The same list to support chaining</returns>
+            <exception cref="T:System.ArgumentNullException">fallbackLanguage</exception>
+        </member>
+        <member name="M:DbLocalizationProvider.FallbackLanguages.Add(System.Globalization.CultureInfo)">
+            <summary>
+            Add new language to the list of fallback languages.
+            </summary>
+            <param name="language">Language to add.</param>
+            <returns>The same list so you can do fluent stuff.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.FallbackLanguages.Try(System.Collections.Generic.IList{System.Globalization.CultureInfo})">
+            <summary>
+            Registers fallback languages.
+            </summary>
+            <param name="fallbackLanguages">The fallback languages.</param>
+            <returns>The same list of registered fallback languages to support API chaining (that fluent thingy).</returns>
+            <exception cref="T:System.ArgumentNullException">fallbackLanguages</exception>
+        </member>
+        <member name="M:DbLocalizationProvider.FallbackLanguages.Then(System.Globalization.CultureInfo)">
+            <summary>
+            Registered specified fallback language.
+            </summary>
+            <param name="fallbackLanguage">The fallback language.</param>
+            <returns>The same list of registered fallback languages to support API chaining (that fluent thingy).</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.FallbackLanguagesCollection">
+            <summary>
+            Collection of fallback language settings. Contains default settings (flat list without specific fallback for specific languages).
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.FallbackLanguagesCollection.#ctor">
+            <summary>
+            Creates new instance of this collection.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.FallbackLanguagesCollection.#ctor(System.Globalization.CultureInfo)">
+            <summary>
+            Creates new instance of this collection.
+            </summary>
+            <param name="fallbackCulture">Specifies default fallback language.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.FallbackLanguagesCollection.GetFallbackLanguages(System.Globalization.CultureInfo)">
+            <summary>
+            Get list of fallback languages configured for <paramref name="language" />.
+            </summary>
+            <param name="language">Language to get fallback languages for.</param>
+            <returns>The list of registered fallback languages for given <paramref name="language" />.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.FallbackLanguagesCollection.GetFallbackLanguages(System.String)">
+            <summary>
+            Get list of fallback languages configured for <paramref name="language" />.
+            </summary>
+            <param name="language">Language to get fallback languages for.</param>
+            <returns>The list of registered fallback languages for given <paramref name="language" />.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.FallbackLanguagesCollection.Add(System.Globalization.CultureInfo)">
+            <summary>
+            Adds new fallback language settings for specified language.
+            </summary>
+            <param name="notFoundCulture">Fallback languages will be enforced when resource for this language is not found.</param>
+            <returns>List of fallback languages on which you can call extension methods to get list configured.</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.FallbackLanguagesListExtensions">
+            <summary>
+            Extensions for language fallback list.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.FallbackLanguagesListExtensions.When(DbLocalizationProvider.FallbackLanguages,System.Globalization.CultureInfo)">
+            <summary>
+            Extension method to use to configure fallback languages. Use this method when you want to specify which languages to use when
+            <paramref name="notFoundCulture" /> language was not found.
+            </summary>
+            <param name="list">List of fallback languages.</param>
+            <param name="notFoundCulture">Configure fallback languages for this language.</param>
+            <returns>The same list of registered fallback languages to support API chaining (that fluent thingy).</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.ForeignResourceDescriptor">
+            <summary>
+            Use this class if you would like to include "foreign" types in scanning and resource discovery process.
+            Foreign resources here means types that are not decorated with either <see cref="T:DbLocalizationProvider.Abstractions.LocalizedResourceAttribute" /> or
+            <see cref="T:DbLocalizationProvider.Abstractions.LocalizedModelAttribute" /> attributes.
+            Foreign resources usually are located in assemblies to which you don't have access to the source code.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.ForeignResourceDescriptor.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.ForeignResourceDescriptor" /> class.
+            </summary>
+            <param name="target">The target.</param>
+            <exception cref="T:System.ArgumentNullException">target</exception>
+        </member>
+        <member name="M:DbLocalizationProvider.ForeignResourceDescriptor.#ctor(System.Type,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.ForeignResourceDescriptor" /> class.
+            </summary>
+            <param name="target">The target.</param>
+            <param name="includeComplexProperties">if set to <c>true</c> [include complex properties].</param>
+            <exception cref="T:System.ArgumentNullException">target</exception>
+        </member>
+        <member name="P:DbLocalizationProvider.ForeignResourceDescriptor.ResourceType">
+            <summary>
+            Target type that contains resources (properties or fields).
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ForeignResourceDescriptor.IncludeComplexProperties">
+            <summary>
+            This is handy in cases when you don't have access to source code of the resource class (which is obvious in foreign
+            resources case) and want to include complex properties as resources.
+            Then just add foreign resource descriptor with this flag set to <c>true</c>.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.ICollectionOfForeignResourceDescriptorExtensions">
+            <summary>
+            Static extension class
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.ICollectionOfForeignResourceDescriptorExtensions.Add(System.Collections.Generic.ICollection{DbLocalizationProvider.ForeignResourceDescriptor},System.Type)">
+            <summary>
+            Adds the specified type to the foreign resource collection.
+            </summary>
+            <param name="collection">The foreign resource collection.</param>
+            <param name="target">The foreign resource class.</param>
+            <returns>The same list to support API chaining</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ICollectionOfForeignResourceDescriptorExtensions.Add``1(System.Collections.Generic.ICollection{DbLocalizationProvider.ForeignResourceDescriptor})">
+            <summary>
+            Adds the specified type to the foreign resource collection.
+            </summary>
+            <typeparam name="T">Type of the foreign resource</typeparam>
+            <param name="collection">The foreign resource collection.</param>
+            <returns>The same list to support API chaining</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ICollectionOfForeignResourceDescriptorExtensions.Add``1(System.Collections.Generic.ICollection{DbLocalizationProvider.ForeignResourceDescriptor},System.Boolean)">
+            <summary>
+            Adds the specified type to the foreign resource collection.
+            </summary>
+            <typeparam name="T">Type of the foreign resource.</typeparam>
+            <param name="collection">The foreign resource collection.</param>
+            <param name="includeComplexProperties">If set to <c>true</c> then complex properties are included in scanning process.</param>
+            <returns>The same list to support API chaining.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ICollectionOfForeignResourceDescriptorExtensions.AddRange(System.Collections.Generic.ICollection{DbLocalizationProvider.ForeignResourceDescriptor},System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>
+            Adds range of specified types to the foreign resource collection.
+            </summary>
+            <param name="collection">The collection of foreign resources.</param>
+            <param name="targets">The list of foreign resource types.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.ICollectionOfForeignResourceDescriptorExtensions.Get(System.Collections.Generic.ICollection{DbLocalizationProvider.ForeignResourceDescriptor},System.Type)">
+            <summary>
+            Gets the specified foreign resource type.
+            </summary>
+            <param name="collection">The collection of foreign resource types.</param>
+            <param name="target">The target.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DbLocalizationProvider.HandlerNotFoundException">
+            <summary>
+            Thrown when there is no handler defined for command or query being executed.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.HandlerNotFoundException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.HandlerNotFoundException" /> class.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.HandlerNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.HandlerNotFoundException" /> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.HandlerNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.HandlerNotFoundException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no
+            inner exception is specified.
+            </param>
+        </member>
+        <member name="M:DbLocalizationProvider.HandlerNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.HandlerNotFoundException" /> class.
+            </summary>
+            <param name="info">
+            The <see cref="T:System.Runtime.Serialization.SerializationInfo"></see> that holds the serialized object data about the
+            exception being thrown.
+            </param>
+            <param name="context">
+            The <see cref="T:System.Runtime.Serialization.StreamingContext"></see> that contains contextual information about the
+            source or destination.
+            </param>
+        </member>
+        <member name="T:DbLocalizationProvider.ICommandExecutor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.ICommandExecutor.Execute(DbLocalizationProvider.Abstractions.ICommand)">
+            <summary>
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:DbLocalizationProvider.ICommandExecutor.CanBeExecuted(DbLocalizationProvider.Abstractions.ICommand)">
+            <summary>
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DbLocalizationProvider.ILocalizationProvider">
+            <summary>
+            Localization Provider interface. Dragon hides under the hood.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.ILocalizationProvider.GetString(System.String)">
+            <summary>
+            Gets translation for the resource with specific key.
+            </summary>
+            <param name="resourceKey">Key of the resource to look translation for.</param>
+            <returns>Translation for the resource with specific key.</returns>
+            <remarks>By default <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" /> is used as language.</remarks>
+        </member>
+        <member name="M:DbLocalizationProvider.ILocalizationProvider.GetString(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Gets translation for the resource with specific key.
+            </summary>
+            <param name="resourceKey">Key of the resource to look translation for.</param>
+            <param name="culture">
+            If you want to get translation for other language as <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />,
+            you can pass different language as parameter then..
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ILocalizationProvider.GetString(System.Linq.Expressions.Expression{System.Func{System.Object}},System.Object[])">
+            <summary>
+            Gets translation for the resource (reference to the resource is specified as lambda expression).
+            </summary>
+            <param name="resource">Lambda expression for the resource.</param>
+            <param name="formatArguments">
+            If you have placeholders in translation to replace to - use this argument to specify
+            those.
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+            <remarks>By default <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" /> is used as language.</remarks>
+        </member>
+        <member name="M:DbLocalizationProvider.ILocalizationProvider.GetString(System.Linq.Expressions.Expression{System.Func{System.Object}},System.Globalization.CultureInfo,System.Object[])">
+            <summary>
+            Gets translation for the resource (reference to the resource is specified as lambda expression).
+            </summary>
+            <param name="resource">Lambda expression for the resource.</param>
+            <param name="culture">
+            If you want to get translation for other language as <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />,
+            then specific that language here.
+            </param>
+            <param name="formatArguments">
+            If you have placeholders in translation to replace to - use this argument to specify those.
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ILocalizationProvider.GetStringByCulture(System.Linq.Expressions.Expression{System.Func{System.Object}},System.Globalization.CultureInfo,System.Object[])">
+            <summary>
+            Gets translation for the resource (reference to the resource is specified as lambda expression).
+            </summary>
+            <param name="resource">Lambda expression for the resource.</param>
+            <param name="culture">
+            If you want to get translation for other language as <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />,
+            then specify that language here.
+            </param>
+            <param name="formatArguments">
+            If you have placeholders in translation to replace to - use this argument to specify
+            those.
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ILocalizationProvider.GetStringByCulture(System.String,System.Globalization.CultureInfo,System.Object[])">
+            <summary>
+            Gets translation for the resource with specific key.
+            </summary>
+            <param name="resourceKey">Key of the resource to look translation for.</param>
+            <param name="culture">
+            If you want to get translation for other language as <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />,
+            then specify that language here.
+            </param>
+            <param name="formatArguments">
+            If you have placeholders in translation to replace to - use this argument to specify
+            those.
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ILocalizationProvider.GetStringsByCulture(System.Globalization.CultureInfo)">
+            <summary>
+            Gets keys and translations for the specified culture.
+            </summary>
+            <param name="culture">
+            If you want to get translation for other language as <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />,
+            then specify that language here.
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ILocalizationProvider.Translate``1">
+            <summary>
+            Give a type to this method and it will return instance of the type but translated.
+            </summary>
+            <typeparam name="T">Type of the target class you want to translate.</typeparam>
+            <returns>Translated class based on current language.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ILocalizationProvider.Translate``1(System.Globalization.CultureInfo)">
+            <summary>
+            Give a type to this method and it will return instance of the type but translated.
+            </summary>
+            <typeparam name="T">Type of the target class you want to translate.</typeparam>
+            <param name="language">Language to use during translation.</param>
+            <returns>Translated class</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ILocalizationProvider.Translate(System.Enum,System.Object[])">
+            <summary>
+            Translates the specified enum with some formatting arguments (if needed).
+            </summary>
+            <param name="target">The enum to translate.</param>
+            <param name="formatArguments">The format arguments.</param>
+            <returns>Translated enum values</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ILocalizationProvider.TranslateByCulture(System.Enum,System.Globalization.CultureInfo,System.Object[])">
+            <summary>
+            Translates the specified enum with some formatting arguments (if needed).
+            </summary>
+            <param name="target">The enum to translate.</param>
+            <param name="culture">The culture.</param>
+            <param name="formatArguments">The format arguments.</param>
+            <returns>Translated enum values</returns>
+            <exception cref="T:System.ArgumentNullException">
+            target
+            or
+            culture
+            </exception>
+        </member>
+        <member name="M:DbLocalizationProvider.ILocalizationProvider.GetStringWithInvariantFallback(System.Linq.Expressions.Expression{System.Func{System.Object}},System.Object[])">
+            <summary>
+            This method will try to translate resource for current language and if fail will provide you with translation in <c>CultureInfo.InvariantCulture</c> regardless of what settings are configured for fallback.
+            </summary>
+            <param name="resource">Expression of the resource to translate.</param>
+            <param name="formatArguments">If you need to format the message and substitute placeholders.</param>
+            <returns>Translation for current language or in invariant language.</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Import.ChangeType">
+            <summary>
+            Type of the change detected while importing resources
+            </summary>
+        </member>
+        <member name="F:DbLocalizationProvider.Import.ChangeType.None">
+            <summary>
+            No one knows when this could be detected
+            </summary>
+        </member>
+        <member name="F:DbLocalizationProvider.Import.ChangeType.Insert">
+            <summary>
+            Resource is going to be added
+            </summary>
+        </member>
+        <member name="F:DbLocalizationProvider.Import.ChangeType.Update">
+            <summary>
+            Updating the resource
+            </summary>
+        </member>
+        <member name="F:DbLocalizationProvider.Import.ChangeType.Delete">
+            <summary>
+            Astalavista baby!
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Import.DetectedImportChange">
+            <summary>
+            Class describing detected import change
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Import.DetectedImportChange.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.Import.DetectedImportChange" /> class.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Import.DetectedImportChange.#ctor(DbLocalizationProvider.Import.ChangeType,DbLocalizationProvider.Abstractions.LocalizationResource,DbLocalizationProvider.Abstractions.LocalizationResource)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.Import.DetectedImportChange" /> class.
+            </summary>
+            <param name="changeType">Type of the change.</param>
+            <param name="importing">The importing.</param>
+            <param name="existing">The existing.</param>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.DetectedImportChange.ChangeType">
+            <summary>
+            Gets or sets the type of the change.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.DetectedImportChange.Selected">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:DbLocalizationProvider.Import.DetectedImportChange" /> is selected.
+            </summary>
+            <value>
+            <c>true</c> if selected; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.DetectedImportChange.ImportingResource">
+            <summary>
+            Gets or sets the importing resource.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.DetectedImportChange.ExistingResource">
+            <summary>
+            Gets or sets the existing resource.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.DetectedImportChange.ChangedLanguages">
+            <summary>
+            Gets or sets list of changed languages.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Import.ICollectionOfIResourceImporterExtensions">
+            <summary>
+            Who cares?
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Import.ICollectionOfIResourceImporterExtensions.FindByExtension(System.Collections.Generic.ICollection{DbLocalizationProvider.Import.IResourceFormatParser},System.String)">
+            <summary>
+            Finds resource importer the by file extension.
+            </summary>
+            <param name="providers">The providers.</param>
+            <param name="extension">The file extension.</param>
+            <returns>Resource importer for given file extension (if one is registered)</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Import.ImportSettings">
+            <summary>
+            Settings for import
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.ImportSettings.Providers">
+            <summary>
+            Gets the list of import providers.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Import.IResourceFormatParser">
+            <summary>
+            Resource import format parser
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.IResourceFormatParser.FormatName">
+            <summary>
+            Gets the name of the format.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.IResourceFormatParser.SupportedFileExtensions">
+            <summary>
+            Gets the supported file extensions.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.IResourceFormatParser.ProviderId">
+            <summary>
+            Gets the provider identifier.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Import.IResourceFormatParser.Parse(System.String)">
+            <summary>
+            Parses the specified file content.
+            </summary>
+            <param name="fileContent">Content of the file.</param>
+            <returns>Returns list of resources from the file</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Import.JsonResourceFormatParser">
+            <summary>
+            Resource parser that talks in JSON
+            </summary>
+            <seealso cref="T:DbLocalizationProvider.Import.IResourceFormatParser" />
+        </member>
+        <member name="P:DbLocalizationProvider.Import.JsonResourceFormatParser.FormatName">
+            <summary>
+            Gets the name of the format.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.JsonResourceFormatParser.SupportedFileExtensions">
+            <summary>
+            Gets the supported file extensions.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.JsonResourceFormatParser.ProviderId">
+            <summary>
+            Gets the provider identifier.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Import.JsonResourceFormatParser.Parse(System.String)">
+            <summary>
+            Parses the specified file content.
+            </summary>
+            <param name="fileContent">Content of the file.</param>
+            <returns>
+            Returns list of resources from the file
+            </returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Import.ParseResult">
+            <summary>
+            Result of the parsing operation
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Import.ParseResult.#ctor(System.Collections.Generic.ICollection{DbLocalizationProvider.Abstractions.LocalizationResource},System.Collections.Generic.ICollection{System.Globalization.CultureInfo})">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.Import.ParseResult" /> class.
+            </summary>
+            <param name="resources">The resources.</param>
+            <param name="detectedLanguages">The detected languages.</param>
+            <exception cref="T:System.ArgumentNullException">
+            resources
+            or
+            detectedLanguages
+            </exception>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.ParseResult.Resources">
+            <summary>
+            Gets the parsed resources.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Import.ParseResult.DetectedLanguages">
+            <summary>
+            Gets list of detected languages after parsing.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Internal.ExpressionHelper">
+            <summary>
+            Helper class to get along with expressions
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Internal.ExpressionHelper.#ctor(DbLocalizationProvider.ResourceKeyBuilder)">
+            <summary>
+            Creates new instance.
+            </summary>
+            <param name="keyBuilder">Builder of the keys.</param>
+        </member>
+        <member name="T:DbLocalizationProvider.IQueryExecutor">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.IQueryExecutor.Execute``1(DbLocalizationProvider.Abstractions.IQuery{``0})">
+            <summary>
+            </summary>
+            <param name="query"></param>
+            <typeparam name="TResult"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Json.JsonConverter">
+            <summary>
+            Class used in various clientside localization resource provider operations
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Json.JsonConverter.#ctor(DbLocalizationProvider.IQueryExecutor)">
+            <summary>
+            Creates new instance of the JSON converter.
+            </summary>
+            <param name="queryExecutor">small helper guy to execute queries.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Json.JsonConverter.GetJson(System.String,DbLocalizationProvider.FallbackLanguagesCollection,System.Boolean)">
+            <summary>
+            Gets the JSON object from given resource class.
+            </summary>
+            <param name="resourceClassName">Name of the resource class.</param>
+            <param name="fallbackCollection">List of fallback languages collection.</param>
+            <param name="camelCase">if set to <c>true</c> JSON properties will be in camelCase; otherwise PascalCase is used.</param>
+            <returns>JSON object that represents resource</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.Json.JsonConverter.GetJson(System.String,System.String,DbLocalizationProvider.FallbackLanguagesCollection,System.Boolean)">
+            <summary>
+            Gets the JSON object from given resource class.
+            </summary>
+            <param name="resourceClassName">Name of the resource class.</param>
+            <param name="languageName">Name of the language.</param>
+            <param name="fallbackCollection">List of fallback languages collection.</param>
+            <param name="camelCase">if set to <c>true</c> JSON properties will be in camelCase; otherwise PascalCase is used.</param>
+            <returns>JSON object that represents resource</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Json.StaticPropertyContractResolver">
+            <summary>
+            Required to resolve static properties while deserializing from resource class
+            </summary>
+            <seealso cref="T:Newtonsoft.Json.Serialization.DefaultContractResolver" />
+        </member>
+        <member name="M:DbLocalizationProvider.Json.StaticPropertyContractResolver.GetSerializableMembers(System.Type)">
+            <summary>
+            Gets the serializable members for the type.
+            </summary>
+            <param name="objectType">The type to get serializable members for.</param>
+            <returns>
+            The serializable members for the type.
+            </returns>
+        </member>
+        <member name="T:DbLocalizationProvider.ListExtensions">
+            <summary>
+            Some of the List of T extensions
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.ListExtensions.Deconstruct``1(System.Collections.Generic.List{``0},``0@,System.Collections.Generic.List{``0}@)">
+            <summary>
+            Deconstructs list into head (1 element) and tail (sequence of the rest of the elements)
+            </summary>
+            <typeparam name="T">List type parameter</typeparam>
+            <param name="list">Target list</param>
+            <param name="head">Head of the list</param>
+            <param name="tail">Tail of the list</param>
+        </member>
+        <member name="T:DbLocalizationProvider.LocalizationProvider">
+            <summary>
+            Main class to use when resource translation is needed.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.#ctor(DbLocalizationProvider.ResourceKeyBuilder,DbLocalizationProvider.Internal.ExpressionHelper,DbLocalizationProvider.FallbackLanguagesCollection,DbLocalizationProvider.IQueryExecutor)">
+            <summary>
+            Creates new localization provider with all the required settings and services injected.
+            </summary>
+            <param name="keyBuilder">Key builder (with help of <paramref name="expressionHelper"/> this dependency will help to translate from lambda expression to resource key as string).</param>
+            <param name="expressionHelper">Can walk lambda expressions and return string representation of the expression.</param>
+            <param name="fallbackCollection">Collection of fallback language settings.</param>
+            <param name="queryExecutor">Small utility robot to help with queries.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.GetString(System.String)">
+            <summary>
+            Gets translation for the resource with specific key.
+            </summary>
+            <param name="resourceKey">Key of the resource to look translation for.</param>
+            <returns>Translation for the resource with specific key.</returns>
+            <remarks><see cref="P:System.Globalization.CultureInfo.CurrentUICulture" /> is used as language.</remarks>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.GetString(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Gets translation for the resource with specific key.
+            </summary>
+            <param name="resourceKey">Key of the resource to look translation for.</param>
+            <param name="culture">
+            If you want to get translation for other language as <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />,
+            then specify that language here.
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.GetString(System.Linq.Expressions.Expression{System.Func{System.Object}},System.Object[])">
+            <summary>
+            Gets translation for the resource (reference to the resource is specified as lambda expression).
+            </summary>
+            <param name="resource">Lambda expression for the resource.</param>
+            <param name="formatArguments">
+            If you have placeholders in translation to replace to - use this argument to specify those.
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+            <remarks><see cref="P:System.Globalization.CultureInfo.CurrentUICulture" /> is used as language.</remarks>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.GetString(System.Linq.Expressions.Expression{System.Func{System.Object}},System.Globalization.CultureInfo,System.Object[])">
+            <summary>
+            Gets translation for the resource (reference to the resource is specified as lambda expression).
+            </summary>
+            <param name="resource">Lambda expression for the resource.</param>
+            <param name="culture">
+            If you want to get translation for other language as <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />,
+            then specific that language here.
+            </param>
+            <param name="formatArguments">
+            If you have placeholders in translation to replace to - use this argument to specify those.
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.GetString(System.Linq.Expressions.Expression{System.Func{System.Object}},System.Type,System.Object[])">
+            <summary>
+            Gets translation for the resource (reference to the resource is specified as lambda expression).
+            </summary>
+            <param name="resource">Lambda expression for the resource.</param>
+            <param name="attribute">
+            Type of the custom attribute (registered in
+            <see cref="P:DbLocalizationProvider.ConfigurationContext.CustomAttributes" /> collection).
+            </param>
+            <param name="formatArguments">
+            If you have placeholders in translation to replace to - use this argument to specify
+            those.
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+            <remarks><see cref="P:System.Globalization.CultureInfo.CurrentUICulture" /> is used as language.</remarks>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.GetStringsByCulture(System.Globalization.CultureInfo)">
+            <summary>
+            Gets key and translations for the specified culture.
+            </summary>
+            <param name="culture">
+            If you want to get translation for other language as <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />,
+            then specify that language here.
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.GetStringByCulture(System.Linq.Expressions.Expression{System.Func{System.Object}},System.Globalization.CultureInfo,System.Object[])">
+            <summary>
+            Gets translation for the resource (reference to the resource is specified as lambda expression).
+            </summary>
+            <param name="resource">Lambda expression for the resource.</param>
+            <param name="culture">
+            If you want to get translation for other language as <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />, then specific
+            that language here.
+            </param>
+            <param name="formatArguments">
+            If you have placeholders in translation to replace to - use this argument to specify those.
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.GetStringByCulture(System.String,System.Globalization.CultureInfo,System.Object[])">
+            <summary>
+            Gets translation for the resource with specific key.
+            </summary>
+            <param name="resourceKey">Key of the resource to look translation for.</param>
+            <param name="culture">
+            If you want to get translation for other language as <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />,
+            then specify that language here.
+            </param>
+            <param name="formatArguments">
+            If you have placeholders in translation to replace to - use this argument to specify
+            those.
+            </param>
+            <returns>Translation for the resource with specific key.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.GetStringByCulture(System.Linq.Expressions.Expression{System.Func{System.Object}},System.Type,System.Globalization.CultureInfo,System.Object[])">
+            <summary>
+            Gets translation for the resource (reference to the resource is specified as lambda expression).
+            </summary>
+            <param name="resource">Lambda expression for the resource.</param>
+            <param name="attribute">
+            Type of the custom attribute (registered in
+            <see cref="P:DbLocalizationProvider.ConfigurationContext.CustomAttributes" /> collection).
+            </param>
+            <param name="culture">
+            If you want to get translation for other language as <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" />,
+            then specific that language here.
+            </param>
+            <param name="formatArguments">
+            If you have placeholders in translation to replace to - use this argument to specify
+            those.
+            </param>
+            <returns>Translation for the resource with specific key in language specified  in <paramref name="culture" />.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.Translate``1">
+            <summary>
+            Give a type to this method and it will return instance of the type but translated
+            </summary>
+            <typeparam name="T">Type of the target class you want to translate</typeparam>
+            <returns>Translated class based on <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" /> language</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.Translate``1(System.Globalization.CultureInfo)">
+            <summary>
+            Give a type to this method and it will return instance of the type but translated
+            </summary>
+            <typeparam name="T">Type of the target class you want to translate</typeparam>
+            <param name="language">Language to use during translation</param>
+            <returns>Translated class</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.Translate(System.Enum,System.Object[])">
+            <summary>
+            Translates the specified enum with some formatting arguments (if needed).
+            </summary>
+            <param name="target">The enum to translate.</param>
+            <param name="formatArguments">The format arguments.</param>
+            <returns>Translated enum values</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.TranslateByCulture(System.Enum,System.Globalization.CultureInfo,System.Object[])">
+            <summary>
+            Translates the specified enum with some formatting arguments (if needed).
+            </summary>
+            <param name="target">The enum to translate.</param>
+            <param name="culture">The culture.</param>
+            <param name="formatArguments">The format arguments.</param>
+            <returns>Translated enum values</returns>
+            <exception cref="T:System.ArgumentNullException">
+            target
+            or
+            culture
+            </exception>
+        </member>
+        <member name="M:DbLocalizationProvider.LocalizationProvider.GetStringWithInvariantFallback(System.Linq.Expressions.Expression{System.Func{System.Object}},System.Object[])">
+            <inheritdoc />
+        </member>
+        <member name="T:DbLocalizationProvider.Logging.ILogger">
+            <summary>
+            Interface to implement if you want to get logging from localization provider into your logging infrastructure
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Logging.ILogger.Debug(System.String)">
+            <summary>
+            Debugging is hard (been there). This method might be implemented to get more diagnostics out of library.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Logging.ILogger.Info(System.String)">
+            <summary>
+            Usually spam, but sometimes something useful also could be found in this severity.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Logging.ILogger.Error(System.String)">
+            <summary>
+            Disaster happens. Look for this severity if something blows up.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Logging.ILogger.Error(System.String,System.Exception)">
+            <summary>
+            Strongly typed disaster.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="T:DbLocalizationProvider.Logging.NullLogger">
+            <summary>
+            Log entries from this logger are found in /dev/null
+            </summary>
+            <seealso cref="T:DbLocalizationProvider.Logging.ILogger" />
+        </member>
+        <member name="M:DbLocalizationProvider.Logging.NullLogger.Debug(System.String)">
+            <summary>
+            Debugging is hard (been there). This method might be implemented to get more diagnostics out of library.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Logging.NullLogger.Info(System.String)">
+            <summary>
+            Usually spam, but sometimes something useful also could be found in this severity.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Logging.NullLogger.Error(System.String)">
+            <summary>
+            Disaster happens. Look for this severity if something blows up.
+            </summary>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Logging.NullLogger.Error(System.String,System.Exception)">
+            <summary>
+            Strongly typed disaster.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="T:DbLocalizationProvider.ModelMetadataProvidersConfiguration">
+            <summary>
+            Configuration class to play nicely with ASP.NET ModelMetadataProvider infrastructure
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ModelMetadataProvidersConfiguration.UseCachedProviders">
+            <summary>
+            Gets or sets a value to use cached version of ModelMetadataProvider.
+            </summary>
+            <value>
+            <c>true</c> if cached ModelMetadataProvider should be used; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:DbLocalizationProvider.ModelMetadataProvidersConfiguration.ReplaceProviders">
+            <summary>
+            Gets or sets a value to replace ModelMetadataProvider to use new db localization system.
+            </summary>
+            <value>
+            <c>true</c> if ModelMetadataProvider should be replaced; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:DbLocalizationProvider.ModelMetadataProvidersConfiguration.MarkRequiredFields">
+            <summary>
+            Set <c>true</c> to add translation returned from <see cref="P:DbLocalizationProvider.ModelMetadataProvidersConfiguration.RequiredFieldResource" /> for required fields.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ModelMetadataProvidersConfiguration.RequiredFieldResource">
+            <summary>
+            If <see cref="P:DbLocalizationProvider.ModelMetadataProvidersConfiguration.MarkRequiredFields" /> is set to <c>true</c>, return of this method will be used to indicate required
+            fields (added at the end of label).
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ModelMetadataProvidersConfiguration.SetupCallback">
+            <summary>
+            Gets or sets the callback for custom setup of the ModelMetadataProviders.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.AvailableLanguages">
+            <summary>
+            When you need to get al available/supported languages
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.AvailableLanguages.Handler">
+            <summary>
+            Reads all available languages form database (in which translations are added).
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.AvailableLanguages.Handler.#ctor(DbLocalizationProvider.ConfigurationContext,DbLocalizationProvider.Abstractions.IResourceRepository)">
+            <summary>
+            Creates new instance of the handler.
+            </summary>
+            <param name="configurationContext">Configuration settings.</param>
+            <param name="repository">Resource repository (usually provided by storage implementation).</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.AvailableLanguages.Handler.Execute(DbLocalizationProvider.Queries.AvailableLanguages.Query)">
+            <summary>
+            Place where query handling happens
+            </summary>
+            <param name="query">This is the query instance</param>
+            <returns>
+            You have to return something from the query execution. Of course you can return <c>null</c> as well if you
+            will.
+            </returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.AvailableLanguages.Query">
+            <summary>
+            Query definition of the all available/supported languages
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Queries.AvailableLanguages.Query.IncludeInvariant">
+            <summary>
+            To control whether you would like to include all invariant translations as well
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.DetermineDefaultCulture">
+            <summary>
+            Which is the default language? With help of this command you can get to know this magic.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.DetermineDefaultCulture.Query">
+            <summary>
+            Which is the default language? With help of this command you can get to know this magic.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.DetermineDefaultCulture.Handler">
+            <summary>
+            Default handler to answer question about which is the default language.
+            This handler is reading <see cref="P:DbLocalizationProvider.ConfigurationContext.DefaultResourceCulture" /> property.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.DetermineDefaultCulture.Handler.#ctor(DbLocalizationProvider.ConfigurationContext)">
+            <summary>
+            Creates new instance of the handler.
+            </summary>
+            <param name="context">Configuration context.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.DetermineDefaultCulture.Handler.Execute(DbLocalizationProvider.Queries.DetermineDefaultCulture.Query)">
+            <summary>
+            Executes the command.
+            </summary>
+            <param name="query">This is the query instance</param>
+            <returns>
+            You have to return something from the query execution. Of course you can return <c>null</c> as well if you
+            will.
+            </returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.GetAllResources">
+            <summary>
+            When you need everything in one go
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.GetAllResources.Handler">
+            <summary>
+            Reads all resources from underlying storage
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.GetAllResources.Handler.#ctor(DbLocalizationProvider.Abstractions.IResourceRepository)">
+            <summary>
+            Creates new instance of the class.
+            </summary>
+            <param name="repository">Resource repository</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.GetAllResources.Handler.Execute(DbLocalizationProvider.Queries.GetAllResources.Query)">
+            <summary>
+            Place where query handling happens
+            </summary>
+            <param name="query">This is the query instance</param>
+            <returns>
+            You have to return something from the query execution. Of course you can return <c>null</c> as well if you
+            will.
+            </returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.GetAllResources.Query">
+            <summary>
+            Query definition for getting all resources in one go
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.GetAllResources.Query.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.Queries.GetAllResources.Query" /> class.
+            </summary>
+            <param name="forceReadFromDb">if set to <c>true</c> read from database is forced (skipping cache).</param>
+        </member>
+        <member name="P:DbLocalizationProvider.Queries.GetAllResources.Query.ForceReadFromDb">
+            <summary>
+            Gets a value indicating whether read from database should be forced.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.GetResource">
+            <summary>
+            Gets specific resource by given key.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.GetResource.Handler">
+            <summary>
+            Retrieves single resource
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.GetResource.Handler.#ctor(DbLocalizationProvider.Abstractions.IResourceRepository)">
+            <summary>
+            Creates new instance of the class.
+            </summary>
+            <param name="repository">Resource repository</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.GetResource.Handler.Execute(DbLocalizationProvider.Queries.GetResource.Query)">
+            <summary>
+            Place where query handling happens
+            </summary>
+            <param name="query">This is the query instance</param>
+            <returns>
+            You have to return something from the query execution. Of course you can return <c>null</c> as well if you
+            will.
+            </returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.GetResource.Query">
+            <summary>
+            Query definition for getting resource by given key.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.GetResource.Query.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.Queries.GetResource.Query" /> class.
+            </summary>
+            <param name="resourceKey">The resource key.</param>
+            <exception cref="T:System.ArgumentNullException">resourceKey</exception>
+        </member>
+        <member name="P:DbLocalizationProvider.Queries.GetResource.Query.ResourceKey">
+            <summary>
+            Gets the resource key.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.GetTranslation">
+            <summary>
+            Gets translation for given resource
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.GetTranslation.Handler">
+            <summary>
+            Gets translation handler
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.GetTranslation.Handler.#ctor(DbLocalizationProvider.ConfigurationContext,DbLocalizationProvider.IQueryExecutor,DbLocalizationProvider.Logging.ILogger)">
+            <summary>
+            Creates new instance of the class.
+            </summary>
+            <param name="configurationContext">Configuration settings.</param>
+            <param name="queryExecutor">The executor of the queries.</param>
+            <param name="logger">When you need to write down your thoughts.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.GetTranslation.Handler.Execute(DbLocalizationProvider.Queries.GetTranslation.Query)">
+            <summary>
+            Place where query handling happens
+            </summary>
+            <param name="query">This is the query instance</param>
+            <returns>
+            You have to return something from the query execution. Of course you can return <c>null</c> as well if you
+            will.
+            </returns>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.GetTranslation.Handler.GetResourceFromDb(System.String)">
+            <summary>
+            Gets the resource from database.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Queries.GetTranslation.Query">
+            <summary>
+            Query definition to get translation for given resource
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Queries.GetTranslation.Query.#ctor(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.Queries.GetTranslation.Query" /> class.
+            </summary>
+            <param name="key">The resource key.</param>
+            <param name="language">The language to get translation in.</param>
+        </member>
+        <member name="P:DbLocalizationProvider.Queries.GetTranslation.Query.Key">
+            <summary>
+            Gets the key.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Queries.GetTranslation.Query.Language">
+            <summary>
+            Gets the language.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Queries.GetTranslation.Query.FallbackToInvariant">
+            <summary>
+            You can explicitly set fallback for this query if needed (configured global value will not be affected).
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.QueryExecutor">
+            <summary>
+            Helper utility to get along with queries.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.QueryExecutor.#ctor(DbLocalizationProvider.TypeFactory)">
+            <summary>
+            Creates new instance.
+            </summary>
+            <param name="factory">Factory of the types.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.QueryExecutor.Execute``1(DbLocalizationProvider.Abstractions.IQuery{``0})">
+            <summary>
+            Execute given query.
+            </summary>
+            <typeparam name="TResult">Return type from the <paramref name="query"/>.</typeparam>
+            <param name="query">Query descriptor.</param>
+            <returns>Result from the query execution.</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.RecursiveResourceReferenceException">
+            <summary>
+            Thrown when there is recursive resource reference resulting in stack overflow.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.RecursiveResourceReferenceException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.RecursiveResourceReferenceException" /> class.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.RecursiveResourceReferenceException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.RecursiveResourceReferenceException" /> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.RecursiveResourceReferenceException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.RecursiveResourceReferenceException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference (Nothing in Visual Basic) if no
+            inner exception is specified.
+            </param>
+        </member>
+        <member name="M:DbLocalizationProvider.RecursiveResourceReferenceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.RecursiveResourceReferenceException" /> class.
+            </summary>
+            <param name="info">
+            The <see cref="T:System.Runtime.Serialization.SerializationInfo"></see> that holds the serialized object data about the
+            exception being thrown.
+            </param>
+            <param name="context">
+            The <see cref="T:System.Runtime.Serialization.StreamingContext"></see> that contains contextual information about the
+            source or destination.
+            </param>
+        </member>
+        <member name="T:DbLocalizationProvider.ResourceItem">
+            <summary>
+            Represents item fo the localizable resource
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.ResourceItem.#ctor(System.String,System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.ResourceItem" /> class.
+            </summary>
+            <param name="key">The key.</param>
+            <param name="value">The value.</param>
+            <param name="sourceCulture">The source culture.</param>
+        </member>
+        <member name="P:DbLocalizationProvider.ResourceItem.Key">
+            <summary>
+            Gets the key.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ResourceItem.Value">
+            <summary>
+            Gets the value.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.ResourceItem.SourceCulture">
+            <summary>
+            Gets the source culture.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.ResourceKeyBuilder">
+            <summary>
+            This class can help you in some weird cases when you need to compose resource key manually.
+            You should avoid to do so, but just in case.. then use this class.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.ResourceKeyBuilder.#ctor(DbLocalizationProvider.Sync.ScanState)">
+            <summary>
+            Initiates new instance of <see cref="T:DbLocalizationProvider.ResourceKeyBuilder"/>.
+            </summary>
+            <param name="state">State of the scanning process.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.ResourceKeyBuilder.BuildResourceKey(System.String,System.String,System.String)">
+            <summary>
+            Builds resource key based on prefix and name of the resource
+            </summary>
+            <param name="prefix">Prefix for the resource key (usually namespace of the container)</param>
+            <param name="name">Actual resource name (usually property name)</param>
+            <param name="separator">Separator in between (usually `.`)</param>
+            <returns>Full length resource key</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ResourceKeyBuilder.BuildResourceKey(System.Type,System.Collections.Generic.Stack{System.String})">
+            <summary>
+            Recursively builds resource key out of collected stack of strings
+            </summary>
+            <param name="containerType">Type of the container class for the resource</param>
+            <param name="keyStack">Collected stack of strings - usually while walking the expression tree</param>
+            <returns>Full length resource key</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ResourceKeyBuilder.BuildResourceKey(System.String,System.Attribute)">
+            <summary>
+            Builds resource key based on prefix and name of the resource
+            </summary>
+            <param name="keyPrefix">Prefix for the resource key (usually namespace of the container)</param>
+            <param name="attribute">Attribute used for the resource - like `[Display]`, `[Description]`, etc.</param>
+            <returns>Full length resource key</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ResourceKeyBuilder.BuildResourceKey(System.String,System.Type)">
+            <summary>
+            Builds resource key based on prefix and name of the resource
+            </summary>
+            <param name="keyPrefix">Prefix for the resource key (usually namespace of the container)</param>
+            <param name="attributeType">Type of the attribute used for the resource - like `[Display]`, `[Description]`, etc.</param>
+            <returns>Full length resource key</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ResourceKeyBuilder.BuildResourceKey(System.Type,System.String,System.Type)">
+            <summary>
+            Builds resource key based on prefix and name of the resource
+            </summary>
+            <param name="containerType">Type of the container class for the resource</param>
+            <param name="memberName">Actual resource name (usually property name)</param>
+            <param name="attributeType">Type of the attribute used for the resource - like `[Display]`, `[Description]`, etc.</param>
+            <returns>Full length resource key</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ResourceKeyBuilder.BuildResourceKey(System.Type,System.String,System.Attribute)">
+            <summary>
+            Builds resource key based on prefix and name of the resource
+            </summary>
+            <param name="containerType">Type of the container class for the resource</param>
+            <param name="memberName">Actual resource name (usually property name)</param>
+            <param name="attribute">Attribute used for the resource - like `[Display]`, `[Description]`, etc.</param>
+            <returns>Full length resource key</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ResourceKeyBuilder.BuildResourceKey(System.Type,System.String,System.String)">
+            <summary>
+            Builds resource key
+            </summary>
+            <param name="containerType">Type of the container class for the resource</param>
+            <param name="memberName">Actual resource name (usually property name)</param>
+            <param name="separator">Separator in between (usually `.`)</param>
+            <returns>Full length resource key</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.ResourceKeyBuilder.BuildResourceKey(System.Type)">
+            <summary>
+            Builds resource key for type of container
+            </summary>
+            <param name="containerType">Type of the container (usually class decorated with `[LocalizedModel]` or `[LocalizedResource]`</param>
+            <returns>Full length resource key</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.SetHandlerExpression`1">
+            <summary>
+            Helper for more fluent APIs
+            </summary>
+            <typeparam name="T">Type of the handler</typeparam>
+        </member>
+        <member name="M:DbLocalizationProvider.SetHandlerExpression`1.#ctor(System.Collections.Concurrent.ConcurrentDictionary{System.Type,System.ValueTuple{System.Type,DbLocalizationProvider.ServiceFactory}},System.Collections.Concurrent.ConcurrentDictionary{System.Type,System.Type},DbLocalizationProvider.TypeFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DbLocalizationProvider.SetHandlerExpression`1" /> class.
+            </summary>
+            <param name="mappings">The mappings.</param>
+            <param name="decoratorMappings">The decorator mappings.</param>
+            <param name="typeFactory">Just to support fluent API</param>
+        </member>
+        <member name="M:DbLocalizationProvider.SetHandlerExpression`1.SetHandler``1">
+            <summary>
+            Sets the handler for specified command or query.
+            </summary>
+            <typeparam name="THandler">The type of the handler.</typeparam>
+        </member>
+        <member name="M:DbLocalizationProvider.SetHandlerExpression`1.SetHandler``1(System.Func{``0})">
+            <summary>
+            Sets the handler for the specified command or query.
+            </summary>
+            <typeparam name="THandler">The type of the handler.</typeparam>
+            <param name="instanceFactory">The instance factory.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.SetHandlerExpression`1.DecorateWith``1">
+            <summary>
+            Decorates (adds interceptor) command or query.
+            </summary>
+            <typeparam name="TDecorator">The type of the decorator.</typeparam>
+        </member>
+        <member name="T:DbLocalizationProvider.Sync.Collectors.IResourceCollector">
+            <summary>
+            Interface for implementing custom resource collector
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.Collectors.IResourceCollector.GetDiscoveredResources(System.Type,System.Object,System.Reflection.MemberInfo,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String,System.String,System.Type,System.Type,System.Boolean)">
+            <summary>
+            Gets the discovered resources.
+            </summary>
+            <param name="target">The target.</param>
+            <param name="instance">The instance.</param>
+            <param name="mi">The mi.</param>
+            <param name="translation">The translation.</param>
+            <param name="resourceKey">The resource key.</param>
+            <param name="resourceKeyPrefix">The resource key prefix.</param>
+            <param name="typeKeyPrefixSpecified">if set to <c>true</c> [type key prefix specified].</param>
+            <param name="isHidden">if set to <c>true</c> [is hidden].</param>
+            <param name="typeOldName">Old name of the type.</param>
+            <param name="typeOldNamespace">The type old namespace.</param>
+            <param name="declaringType">Type of the declaring.</param>
+            <param name="returnType">Type of the return.</param>
+            <param name="isSimpleType">if set to <c>true</c> [is simple type].</param>
+            <returns></returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Sync.DiscoveredTranslationBuilder">
+            <summary>
+            Helper class to be more DI friendly with extension methods.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.DiscoveredTranslationBuilder.#ctor(DbLocalizationProvider.IQueryExecutor)">
+            <summary>
+            Creates new instance of the class.
+            </summary>
+            <param name="executor">The executor of queries.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.DiscoveredTranslationBuilder.FromSingle(System.String)">
+            <summary>
+            Creates new translation class from single found text.
+            </summary>
+            <param name="translation">Text of the resource translation.</param>
+            <returns>Discovered translation (as list for easier other API support)</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.DiscoveredTranslationBuilder.GetAllTranslations(System.Reflection.MemberInfo,System.String,System.String)">
+            <summary>
+            Gets all translations.
+            </summary>
+            <param name="mi">The member info type to get resources from.</param>
+            <param name="resourceKey">The resource key.</param>
+            <param name="defaultTranslation">The default translation.</param>
+            <returns>List of discovered resources</returns>
+            <exception cref="T:DbLocalizationProvider.DuplicateResourceTranslationsException">
+            Duplicate translations for the same culture for following
+            resource: `{resourceKey}`
+            </exception>
+        </member>
+        <member name="T:DbLocalizationProvider.Sync.IManualResourceProvider">
+            <summary>
+            You can use this interface to provide list of manually crafted resources those should be registered.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.IManualResourceProvider.GetResources">
+            <summary>
+            Return list of manually crafted resources.
+            </summary>
+            <returns>Return list of manually crafted resources.</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Sync.ISynchronizer">
+            <summary>
+            Ensures that resources from code and/or manually crafted are pushed down to underlying storage.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.ISynchronizer.RegisterManually(System.Collections.Generic.IEnumerable{DbLocalizationProvider.Sync.ManualResource})">
+            <summary>
+            Synchronizes manually crafted resources
+            </summary>
+            <param name="resources"></param>
+        </member>
+        <member name="T:DbLocalizationProvider.Sync.ManualResource">
+            <summary>
+            Instance of manually crafted resource.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.ManualResource.#ctor(System.String,System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Create new manual resource.
+            </summary>
+            <param name="key">Key of the resource.</param>
+            <param name="translation">Translation of the resource for given <paramref name="language" />.</param>
+            <param name="language">For which language this translation is.</param>
+        </member>
+        <member name="P:DbLocalizationProvider.Sync.ManualResource.Key">
+            <summary>
+            Key of the resource.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Sync.ManualResource.Translation">
+            <summary>
+            Translation of the resource for given <see cref="P:DbLocalizationProvider.Sync.ManualResource.Language" />.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Sync.ManualResource.Language">
+            <summary>
+            For which language this translation is.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Sync.ManualResourceProviderCollection">
+            <summary>
+            Collection of manual resource providers.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Sync.ManualResourceProviderCollection.Providers">
+            <summary>
+            Collection of manual resource providers.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.ManualResourceProviderCollection.Add``1">
+            <summary>
+            Creates new instance of manual resource provider collection.
+            </summary>
+            <typeparam name="T">Type of the manual resource.</typeparam>
+            <returns>The same collection for easier chaining.</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Sync.ScanState">
+            <summary>
+            Holds a state of scanning process.
+            </summary>
+        </member>
+        <member name="P:DbLocalizationProvider.Sync.ScanState.UseResourceAttributeCache">
+            <summary>
+            Cache of [UseResource] usages (this is for perf reasons).
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Sync.Synchronizer">
+            <summary>
+            This class is responsible for trigger underlying storage schema sync process at correct time.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.Synchronizer.#ctor(DbLocalizationProvider.Sync.TypeDiscoveryHelper,DbLocalizationProvider.IQueryExecutor,DbLocalizationProvider.ICommandExecutor,DbLocalizationProvider.Abstractions.IResourceRepository,DbLocalizationProvider.Logging.ILogger,DbLocalizationProvider.ConfigurationContext)">
+            <summary>
+            Initializes new instance of the resource scanner.
+            </summary>
+            <param name="helper">Discovery helper to use to locate resources.</param>
+            <param name="queryExecutor">The executor fo queries.</param>
+            <param name="commandExecutor">The executor of commands.</param>
+            <param name="repository">Resource repository.</param>
+            <param name="logger">This guy will help us out in debug support cases.</param>
+            <param name="configurationContext">Context of what has been configured.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.Synchronizer.RegisterManually(System.Collections.Generic.IEnumerable{DbLocalizationProvider.Sync.ManualResource})">
+            <summary>
+            Registers manually crafted resources.
+            </summary>
+            <param name="resources">List of resources.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.Synchronizer.UpdateStorageSchema">
+            <summary>
+            Updates the underlying storage schema.
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.Synchronizer.SyncResources(System.Boolean)">
+            <summary>
+            Synchronizes resources.
+            </summary>
+            <param name="registerResources">If <c>true</c> discovered resources are stored in underlying database</param>
+        </member>
+        <member name="P:DbLocalizationProvider.Sync.ThreadSafeSingleShotFlag.CheckAndSetFirstCall">
+            <summary>Explicit call to check and set if this is the first call</summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.ThreadSafeSingleShotFlag.op_Implicit(System.Boolean)~DbLocalizationProvider.Sync.ThreadSafeSingleShotFlag">
+            <summary>usually init by false</summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.ThreadSafeSingleShotFlag.op_LogicalNot(DbLocalizationProvider.Sync.ThreadSafeSingleShotFlag)">
+            <summary>
+            if init to false, returns true with the first call, then always false -
+            if init to true, always returns false.
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Sync.TypeDiscoveryHelper">
+            <summary>
+            This class can help you to discover types in assemblies and provide meta-data about found localizable resources
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.TypeDiscoveryHelper.#ctor(System.Collections.Generic.IEnumerable{DbLocalizationProvider.Sync.IResourceTypeScanner},DbLocalizationProvider.ConfigurationContext)">
+            <summary>
+            Creates new instance of this class.
+            </summary>
+            <param name="scanners">List of scanners.</param>
+            <param name="configurationContext">Configuration settings.</param>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.TypeDiscoveryHelper.ScanResources(System.Type,System.String,DbLocalizationProvider.Sync.IResourceTypeScanner)">
+            <summary>
+            Scan assemblies and return discovered resources from target type
+            </summary>
+            <param name="target">Class to scan resources in</param>
+            <param name="keyPrefix">Resource key prefix (if needed)</param>
+            <param name="scanner">Which scanner to use to discover resources</param>
+            <returns>Discovered resources from found assemblies</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.TypeDiscoveryHelper.GetTypes(System.Func{System.Type,System.Boolean}[])">
+            <summary>
+            Returns found types (assemblies are limited by <see cref="P:DbLocalizationProvider.ConfigurationContext.AssemblyScanningFilter" />)
+            </summary>
+            <param name="filters">List of additional type filters (this is used to collect various types with single scan operation - sort of profiles)</param>
+            <returns>List of found types for provided filters</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.TypeDiscoveryHelper.GetTypesWithAttribute``1">
+            <summary>
+            Finds types with specified attribute
+            </summary>
+            <typeparam name="T">Attribute type</typeparam>
+            <returns>List of found types by specified attribute</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.Sync.TypeDiscoveryHelper.GetTypesChildOf``1">
+            <summary>
+            Finds all child classes of specified base class
+            </summary>
+            <typeparam name="T">Type of the base class</typeparam>
+            <returns>Child classes of specified base class</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.Sync.UpdateSchema">
+            <summary>
+            Command to be executed when storage implementation is requested to get its affairs in order and initialize data structures if needed
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.Sync.UpdateSchema.Command">
+            <summary>
+            Command definition itself
+            </summary>
+        </member>
+        <member name="T:DbLocalizationProvider.ServiceFactory">
+            <summary>
+            Callback for creating new instances of the handlers. Usually this delegate is replaced by <c>DependencyContainer.GetService</c> method.
+            </summary>
+            <param name="serviceType">Type of the service to create.</param>
+            <returns>Service instance if successful; otherwise <c>null</c>.</returns>
+        </member>
+        <member name="T:DbLocalizationProvider.TypeFactory">
+            <summary>
+            Inspiration came from https://github.com/jbogard/MediatR
+            </summary>
+        </member>
+        <member name="M:DbLocalizationProvider.TypeFactory.#ctor(DbLocalizationProvider.ConfigurationContext,DbLocalizationProvider.ServiceFactory)">
+            <summary>
+            Creates new instance of the class.
+            </summary>
+            <param name="serviceFactory">Factory delegate for the services.</param>
+            <param name="configurationContext"></param>
+        </member>
+        <member name="M:DbLocalizationProvider.TypeFactory.ActivatorFactory(System.Type)">
+            <summary>
+            Used for <see cref="T:System.Activator" /> based factory.
+            </summary>
+            <param name="serviceType">Type of the service to create.</param>
+            <returns>Service instance; otherwise throws various exceptions.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.TypeFactory.ForQuery``1">
+            <summary>
+            Start registration of the handler for query with this method.
+            </summary>
+            <typeparam name="TQuery">The type of the query.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DbLocalizationProvider.TypeFactory.ForCommand``1">
+            <summary>
+            Start registration of the handler for command with this method.
+            </summary>
+            <typeparam name="TCommand">The type of the command.</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:DbLocalizationProvider.TypeFactory.AddTransient``2">
+            <summary>
+            Adds a transient service of the type specified in <typeparamref name="TService"/> with an
+            implementation type specified in <typeparamref name="TImplementation"/>.
+            </summary>
+            <typeparam name="TService">The type of the service to add.</typeparam>
+            <typeparam name="TImplementation">The type of the implementation to use.</typeparam>
+            <returns>A reference to this instance after the operation has completed.</returns>
+        </member>
+        <member name="M:DbLocalizationProvider.TypeFactory.GetHandlerType``1">
+            <summary>
+            Returns type of the handler for command or query.
+            </summary>
+            <typeparam name="T">Type of the command or query.</typeparam>
+            <returns>Type of the handler; otherwise of course <c>null</c> if not found.</returns>
+        </member>
+    </members>
+</doc>

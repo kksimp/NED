@@ -14,6 +14,7 @@ namespace Fault_Code_Search
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());
+
         }
     }
 }

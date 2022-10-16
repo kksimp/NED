@@ -86,3 +86,24 @@ C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\obj\Debug\Fault Code Searc
 C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\obj\Debug\Fault Code Search.exe.manifest
 C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\obj\Debug\Fault Code Search.application
 C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\obj\Debug\Fault Code Search.csproj.CopyComplete
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Microsoft.Web.WebView2.Core.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Microsoft.Web.WebView2.Core.xml
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\DeltaCompressionDotNet.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Mono.Cecil.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Mono.Cecil.Mdb.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Mono.Cecil.Pdb.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Mono.Cecil.Rocks.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\SharpCompress.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Mono.Cecil.pdb
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Mono.Cecil.Mdb.pdb
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Mono.Cecil.Pdb.pdb
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\Mono.Cecil.Rocks.pdb
+C:\Users\ksimpson\Desktop\Fault app\Fault Code Search\bin\Debug\System.Text.Encoding.CodePages.xml

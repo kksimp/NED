@@ -3,8 +3,8 @@
   <PropertyGroup>
     <PublishUrlHistory>publish\</PublishUrlHistory>
     <InstallUrlHistory />
-    <SupportUrlHistory />
-    <UpdateUrlHistory />
+    <SupportUrlHistory>https://github.com/kksimp/NED</SupportUrlHistory>
+    <UpdateUrlHistory>https://www.github.com/kksimp/NED/tree/main/publish/|https://github.com/kksimp/NED/releases/latest/|https://github.com/kksimp/NED/tree/main/Releases/</UpdateUrlHistory>
     <BootstrapperUrlHistory />
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>
