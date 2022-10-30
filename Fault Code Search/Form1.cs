@@ -302,14 +302,7 @@ namespace Fault_Code_Search
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            try
-            {
-                VisitLink();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Unable to open link that was clicked.");
-            }
+            
         }
 
         private void VisitLink()
@@ -323,6 +316,28 @@ namespace Fault_Code_Search
         }
 
         private void manufactureBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ned_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CheckUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                VisitLink();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unable to open link that was clicked.");
+            }
+        }
+
+        private void SearchControlBox_Enter(object sender, EventArgs e)
         {
 
         }

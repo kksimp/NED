@@ -31,7 +31,7 @@
     <UpdateUrl>https://raw.githubusercontent.com/kksimp/NED/main/publish/Fault%2520Code%2520Search.application/</UpdateUrl>
     <SupportUrl>https://github.com/kksimp/NED</SupportUrl>
     <TargetCulture>en</TargetCulture>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>3</ApplicationRevision>
     <ApplicationVersion>1.3.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -76,6 +76,12 @@
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>C9C48C77E6835915A97E6F3D3B068F83CBD834A1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ContentSQLiteInteropFiles>true</ContentSQLiteInteropFiles>
+    <CopySQLiteInteropFiles>false</CopySQLiteInteropFiles>
+    <CleanSQLiteInteropFiles>false</CleanSQLiteInteropFiles>
+    <CollectSQLiteInteropFiles>false</CollectSQLiteInteropFiles>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>Fault Code Search_TemporaryKey.pfx</ManifestKeyFile>

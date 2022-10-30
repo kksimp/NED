@@ -32,6 +32,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.engineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.faultDB = new Fault_Code_Search.FaultDB();
+            this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.manufactureBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controllersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.VersionNUM = new System.Windows.Forms.Label();
+            this.manufactureTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.ManufactureTableAdapter();
+            this.typeTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.TypeTableAdapter();
+            this.engineTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.EngineTableAdapter();
+            this.controllersTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.ControllersTableAdapter();
+            this.Ned = new System.Windows.Forms.PictureBox();
             this.SearchProgress = new System.Windows.Forms.TableLayoutPanel();
             this.SearchControlBox = new System.Windows.Forms.GroupBox();
             this.Clear = new System.Windows.Forms.Button();
@@ -48,30 +59,17 @@
             this.Type = new System.Windows.Forms.ComboBox();
             this.Manufacture = new System.Windows.Forms.ComboBox();
             this.Controllers = new System.Windows.Forms.ComboBox();
-            this.Ned = new System.Windows.Forms.PictureBox();
             this.SearchResults = new System.Windows.Forms.DataGridView();
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.Version = new System.Windows.Forms.LinkLabel();
-            this.VersionNUM = new System.Windows.Forms.Label();
-            this.faultDB = new Fault_Code_Search.FaultDB();
-            this.manufactureBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.manufactureTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.ManufactureTableAdapter();
-            this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.typeTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.TypeTableAdapter();
-            this.engineBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.engineTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.EngineTableAdapter();
-            this.controllersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.controllersTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.ControllersTableAdapter();
+            this.CheckUpdate = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.engineBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.faultDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manufactureBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controllersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ned)).BeginInit();
             this.SearchProgress.SuspendLayout();
             this.SearchControlBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Ned)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchResults)).BeginInit();
-            this.toolStripContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.faultDB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manufactureBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.engineBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controllersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -104,24 +102,85 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1402, 0);
             this.tableLayoutPanel3.TabIndex = 18;
             // 
+            // engineBindingSource
+            // 
+            this.engineBindingSource.DataMember = "Engine";
+            this.engineBindingSource.DataSource = this.faultDB;
+            // 
+            // faultDB
+            // 
+            this.faultDB.DataSetName = "FaultDB";
+            this.faultDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // typeBindingSource
+            // 
+            this.typeBindingSource.DataMember = "Type";
+            this.typeBindingSource.DataSource = this.faultDB;
+            // 
+            // manufactureBindingSource
+            // 
+            this.manufactureBindingSource.DataMember = "Manufacture";
+            this.manufactureBindingSource.DataSource = this.faultDB;
+            // 
+            // controllersBindingSource
+            // 
+            this.controllersBindingSource.DataMember = "Controllers";
+            this.controllersBindingSource.DataSource = this.faultDB;
+            // 
+            // VersionNUM
+            // 
+            this.VersionNUM.AutoSize = true;
+            this.VersionNUM.Location = new System.Drawing.Point(10, 10);
+            this.VersionNUM.Name = "VersionNUM";
+            this.VersionNUM.Size = new System.Drawing.Size(35, 13);
+            this.VersionNUM.TabIndex = 20;
+            this.VersionNUM.Text = "label1";
+            this.VersionNUM.Click += new System.EventHandler(this.label1_Click_4);
+            // 
+            // manufactureTableAdapter
+            // 
+            this.manufactureTableAdapter.ClearBeforeFill = true;
+            // 
+            // typeTableAdapter
+            // 
+            this.typeTableAdapter.ClearBeforeFill = true;
+            // 
+            // engineTableAdapter
+            // 
+            this.engineTableAdapter.ClearBeforeFill = true;
+            // 
+            // controllersTableAdapter
+            // 
+            this.controllersTableAdapter.ClearBeforeFill = true;
+            // 
+            // Ned
+            // 
+            this.Ned.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Ned.Image = ((System.Drawing.Image)(resources.GetObject("Ned.Image")));
+            this.Ned.Location = new System.Drawing.Point(3, 33);
+            this.Ned.Name = "Ned";
+            this.Ned.Size = new System.Drawing.Size(1396, 268);
+            this.Ned.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Ned.TabIndex = 17;
+            this.Ned.TabStop = false;
+            // 
             // SearchProgress
             // 
             this.SearchProgress.AutoScroll = true;
             this.SearchProgress.ColumnCount = 1;
             this.SearchProgress.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.SearchProgress.Controls.Add(this.SearchControlBox, 0, 1);
-            this.SearchProgress.Controls.Add(this.Ned, 0, 0);
-            this.SearchProgress.Controls.Add(this.SearchResults, 0, 2);
-            this.SearchProgress.Controls.Add(this.toolStripContainer1, 0, 3);
+            this.SearchProgress.Controls.Add(this.Ned, 0, 1);
+            this.SearchProgress.Controls.Add(this.SearchResults, 0, 3);
+            this.SearchProgress.Controls.Add(this.SearchControlBox, 0, 2);
+            this.SearchProgress.Controls.Add(this.CheckUpdate, 0, 0);
             this.SearchProgress.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SearchProgress.Location = new System.Drawing.Point(0, 0);
             this.SearchProgress.Name = "SearchProgress";
             this.SearchProgress.RowCount = 4;
-            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.47561F));
-            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.52439F));
-            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 463F));
-            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.73599F));
+            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.12204F));
+            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.83064F));
+            this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.1868F));
             this.SearchProgress.Size = new System.Drawing.Size(1402, 803);
             this.SearchProgress.TabIndex = 17;
             this.SearchProgress.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
@@ -144,11 +203,12 @@
             this.SearchControlBox.Controls.Add(this.Type);
             this.SearchControlBox.Controls.Add(this.Manufacture);
             this.SearchControlBox.Controls.Add(this.Controllers);
-            this.SearchControlBox.Location = new System.Drawing.Point(441, 238);
+            this.SearchControlBox.Location = new System.Drawing.Point(441, 307);
             this.SearchControlBox.Name = "SearchControlBox";
-            this.SearchControlBox.Size = new System.Drawing.Size(519, 78);
+            this.SearchControlBox.Size = new System.Drawing.Size(519, 89);
             this.SearchControlBox.TabIndex = 16;
             this.SearchControlBox.TabStop = false;
+            this.SearchControlBox.Enter += new System.EventHandler(this.SearchControlBox_Enter);
             // 
             // Clear
             // 
@@ -294,114 +354,36 @@
             this.Controllers.ValueMember = "Controllers";
             this.Controllers.SelectedIndexChanged += new System.EventHandler(this.Controllers_SelectedIndexChanged);
             // 
-            // Ned
-            // 
-            this.Ned.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Ned.Image = ((System.Drawing.Image)(resources.GetObject("Ned.Image")));
-            this.Ned.Location = new System.Drawing.Point(3, 3);
-            this.Ned.Name = "Ned";
-            this.Ned.Size = new System.Drawing.Size(1396, 229);
-            this.Ned.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Ned.TabIndex = 17;
-            this.Ned.TabStop = false;
-            // 
             // SearchResults
             // 
             this.SearchResults.AllowUserToAddRows = false;
             this.SearchResults.AllowUserToDeleteRows = false;
+            this.SearchResults.AllowUserToOrderColumns = true;
+            this.SearchResults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.SearchResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.SearchResults.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.SearchResults.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.SearchResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SearchResults.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SearchResults.Location = new System.Drawing.Point(3, 322);
+            this.SearchResults.Location = new System.Drawing.Point(3, 402);
             this.SearchResults.Name = "SearchResults";
             this.SearchResults.ReadOnly = true;
-            this.SearchResults.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.SearchResults.Size = new System.Drawing.Size(1396, 457);
+            this.SearchResults.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.SearchResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.SearchResults.Size = new System.Drawing.Size(1396, 398);
             this.SearchResults.TabIndex = 19;
             this.SearchResults.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchResults_CellContentClick);
             // 
-            // toolStripContainer1
+            // CheckUpdate
             // 
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1396, 0);
-            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.toolStripContainer1.Location = new System.Drawing.Point(3, 785);
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(1396, 15);
-            this.toolStripContainer1.TabIndex = 20;
-            this.toolStripContainer1.Text = "toolStripContainer1";
-            // 
-            // Version
-            // 
-            this.Version.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Version.AutoSize = true;
-            this.Version.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.Version.LinkColor = System.Drawing.Color.Black;
-            this.Version.Location = new System.Drawing.Point(1300, 5);
-            this.Version.Name = "Version";
-            this.Version.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Version.Size = new System.Drawing.Size(94, 13);
-            this.Version.TabIndex = 19;
-            this.Version.TabStop = true;
-            this.Version.Text = "Check For Update";
-            this.Version.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Version.VisitedLinkColor = System.Drawing.Color.Black;
-            this.Version.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // VersionNUM
-            // 
-            this.VersionNUM.AutoSize = true;
-            this.VersionNUM.Location = new System.Drawing.Point(10, 5);
-            this.VersionNUM.Name = "VersionNUM";
-            this.VersionNUM.Size = new System.Drawing.Size(35, 13);
-            this.VersionNUM.TabIndex = 20;
-            this.VersionNUM.Text = "label1";
-            this.VersionNUM.Click += new System.EventHandler(this.label1_Click_4);
-            // 
-            // faultDB
-            // 
-            this.faultDB.DataSetName = "FaultDB";
-            this.faultDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // manufactureBindingSource
-            // 
-            this.manufactureBindingSource.DataMember = "Manufacture";
-            this.manufactureBindingSource.DataSource = this.faultDB;
-            // 
-            // manufactureTableAdapter
-            // 
-            this.manufactureTableAdapter.ClearBeforeFill = true;
-            // 
-            // typeBindingSource
-            // 
-            this.typeBindingSource.DataMember = "Type";
-            this.typeBindingSource.DataSource = this.faultDB;
-            // 
-            // typeTableAdapter
-            // 
-            this.typeTableAdapter.ClearBeforeFill = true;
-            // 
-            // engineBindingSource
-            // 
-            this.engineBindingSource.DataMember = "Engine";
-            this.engineBindingSource.DataSource = this.faultDB;
-            // 
-            // engineTableAdapter
-            // 
-            this.engineTableAdapter.ClearBeforeFill = true;
-            // 
-            // controllersBindingSource
-            // 
-            this.controllersBindingSource.DataMember = "Controllers";
-            this.controllersBindingSource.DataSource = this.faultDB;
-            // 
-            // controllersTableAdapter
-            // 
-            this.controllersTableAdapter.ClearBeforeFill = true;
+            this.CheckUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.CheckUpdate.AutoSize = true;
+            this.CheckUpdate.Location = new System.Drawing.Point(1290, 3);
+            this.CheckUpdate.Name = "CheckUpdate";
+            this.CheckUpdate.Size = new System.Drawing.Size(109, 23);
+            this.CheckUpdate.TabIndex = 21;
+            this.CheckUpdate.Text = "Check For Update";
+            this.CheckUpdate.UseVisualStyleBackColor = true;
+            this.CheckUpdate.Click += new System.EventHandler(this.CheckUpdate_Click);
             // 
             // Main
             // 
@@ -413,11 +395,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1402, 803);
-            this.Controls.Add(this.SearchProgress);
             this.Controls.Add(this.VersionNUM);
-            this.Controls.Add(this.Version);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.SearchProgress);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -426,19 +407,17 @@
             this.Name = "Main";
             this.Text = "Fault Code Search";
             this.Load += new System.EventHandler(this.Main_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.engineBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.faultDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manufactureBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controllersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ned)).EndInit();
             this.SearchProgress.ResumeLayout(false);
             this.SearchProgress.PerformLayout();
             this.SearchControlBox.ResumeLayout(false);
             this.SearchControlBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Ned)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchResults)).EndInit();
-            this.toolStripContainer1.ResumeLayout(false);
-            this.toolStripContainer1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.faultDB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manufactureBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.engineBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.controllersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,8 +427,20 @@
         
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label VersionNUM;
+        private FaultDB faultDB;
+        private System.Windows.Forms.BindingSource manufactureBindingSource;
+        private FaultDBTableAdapters.ManufactureTableAdapter manufactureTableAdapter;
+        private System.Windows.Forms.BindingSource typeBindingSource;
+        private FaultDBTableAdapters.TypeTableAdapter typeTableAdapter;
+        private System.Windows.Forms.BindingSource engineBindingSource;
+        private FaultDBTableAdapters.EngineTableAdapter engineTableAdapter;
+        private System.Windows.Forms.BindingSource controllersBindingSource;
+        private FaultDBTableAdapters.ControllersTableAdapter controllersTableAdapter;
+        private System.Windows.Forms.PictureBox Ned;
         private System.Windows.Forms.TableLayoutPanel SearchProgress;
         private System.Windows.Forms.GroupBox SearchControlBox;
+        private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Button Searcbutton;
         private System.Windows.Forms.TextBox FMItextBox;
         private System.Windows.Forms.TextBox SPNtextBox;
@@ -463,22 +454,8 @@
         private System.Windows.Forms.ComboBox Type;
         private System.Windows.Forms.ComboBox Manufacture;
         private System.Windows.Forms.ComboBox Controllers;
-        private System.Windows.Forms.PictureBox Ned;
-       
-        private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.DataGridView SearchResults;
-        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
-        private System.Windows.Forms.LinkLabel Version;
-        private System.Windows.Forms.Label VersionNUM;
-        private FaultDB faultDB;
-        private System.Windows.Forms.BindingSource manufactureBindingSource;
-        private FaultDBTableAdapters.ManufactureTableAdapter manufactureTableAdapter;
-        private System.Windows.Forms.BindingSource typeBindingSource;
-        private FaultDBTableAdapters.TypeTableAdapter typeTableAdapter;
-        private System.Windows.Forms.BindingSource engineBindingSource;
-        private FaultDBTableAdapters.EngineTableAdapter engineTableAdapter;
-        private System.Windows.Forms.BindingSource controllersBindingSource;
-        private FaultDBTableAdapters.ControllersTableAdapter controllersTableAdapter;
+        private System.Windows.Forms.Button CheckUpdate;
     }
 }
 
