@@ -44,5 +44,15 @@ namespace Fault_Code_Search.Properties {
                 return ((string)(this["MaybeConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"C:\\Users\\ksimpson\\Desktop\\Fault app\\Fault Code Search\\fault.db\"")]
+        public string FaultDB {
+            get {
+                return ((string)(this["FaultDB"]));
+            }
+        }
     }
 }

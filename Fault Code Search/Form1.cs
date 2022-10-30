@@ -1,9 +1,14 @@
 ﻿using System;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Reflection;
 using System.Windows.Forms;
+
+
+
+
+
+
 
 namespace Fault_Code_Search
 {
@@ -20,21 +25,23 @@ namespace Fault_Code_Search
             catch (Exception)
             {
                 VersionNUM.Text = "V" + Assembly.GetExecutingAssembly().GetName().Version;
+
             }
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'codesDataSet.Engine' table. You can move, or remove it, as needed.
-            this.engineTableAdapter.Fill(this.codesDataSet.Engine);
-            // TODO: This line of code loads data into the 'database1DataSet5.Type' table. You can move, or remove it, as needed.
-            this.typeTableAdapter.Fill(this.database1DataSet5.Type);
-            // TODO: This line of code loads data into the 'database1DataSet4.Manufacture' table. You can move, or remove it, as needed.
-            this.manufactureTableAdapter.Fill(this.database1DataSet4.Manufacture);
-            // TODO: This line of code loads data into the 'database1DataSet3.UniqueControllers' table. You can move, or remove it, as needed.
-            this.uniqueControllersTableAdapter2.Fill(this.database1DataSet3.UniqueControllers);
-            // TODO: This line of code loads data into the 'database1DataSet2.UniqueControllers' table. You can move, or remove it, as needed.
-            this.uniqueControllersTableAdapter1.Fill(this.database1DataSet2.UniqueControllers);
+            // TODO: This line of code loads data into the 'faultDB.Controllers' table. You can move, or remove it, as needed.
+            this.controllersTableAdapter.Fill(this.faultDB.Controllers);
+            // TODO: This line of code loads data into the 'faultDB.Engine' table. You can move, or remove it, as needed.
+            this.engineTableAdapter.Fill(this.faultDB.Engine);
+            // TODO: This line of code loads data into the 'faultDB.Type' table. You can move, or remove it, as needed.
+            this.typeTableAdapter.Fill(this.faultDB.Type);
+            // TODO: This line of code loads data into the 'faultDB.Manufacture' table. You can move, or remove it, as needed.
+            this.manufactureTableAdapter.Fill(this.faultDB.Manufacture);
+
+
+
 
         }
 
@@ -52,27 +59,15 @@ namespace Fault_Code_Search
 
         private void fillByControllerToolStripButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.codeTableAdapter.FillByController(this.database1DataSet.Code);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+
+
 
         }
 
         private void fillByControllerToolStripButton1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.codeTableAdapter.FillByController(this.database1DataSet.Code);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+
+
 
         }
 
@@ -109,6 +104,7 @@ namespace Fault_Code_Search
         private void NedPicture_Click(object sender, EventArgs e)
         {
 
+
         }
 
         private void CodeTextBox_TextChanged(object sender, EventArgs e)
@@ -131,73 +127,82 @@ namespace Fault_Code_Search
 
         }
 
+
+
+
         private void Searcbutton_Click(object sender, EventArgs e)
         {
-
             try
             {
+                String Database = @"Data Source = fault.db";
 
-                using (SqlConnection cn = new SqlConnection(ConfigurationManager.ConnectionStrings["Fault_Code_Search.Properties.Settings.Manufactures"].ConnectionString))
+
+                using (DataTable dt = new DataTable("SearchedCodes"))
+
                 {
-                    if (cn.State == ConnectionState.Closed)
-                        cn.Open();
-                    using (DataTable dt = new DataTable("SearchedCodes"))
+                    string varFMI = null;
+                    string varEngine = null;
+                    string varControllers = null;
+                    string varType = null;
+                    string varManufacture = null;
 
+                    if (FMItextBox.Text == "")
                     {
-                        string varFMI = null;
-                        string varEngine = null;
-                        string varControllers = null;
-                        string varType = null;
-                        string varManufacture = null;
+                        varFMI = null;
+                    }
+                    else
+                    {
+                        varFMI = " and FMI=@FMI";
+                    }
 
-                        if (FMItextBox.Text == "")
+                    if (Controllers.Text == "ALL       ")
+                    {
+                        varControllers = null;
+                    }
+                    else
+                    {
+                        varControllers = " and Controllers=@Controllers";
+                    }
+
+                    if (EngineBox.Text == "ALL       ")
+                    {
+                        varEngine = null;
+                    }
+                    else
+                    {
+                        varEngine = " and Engine=@Engine";
+                    }
+
+                    if (Type.Text == "ALL")
+                    {
+                        varType = null;
+                    }
+                    else
+                    {
+                        varType = " and Type=@Type";
+                    }
+                    if (Manufacture.Text == "ALL       ")
+                    {
+                        varManufacture = null;
+                    }
+                    else
+                    {
+                        varManufacture = " and Manufacture=@Manufacture";
+                    }
+
+                    using (SQLiteConnection cn = new SQLiteConnection(Database))
+                    {
+                        if (cn.State != ConnectionState.Open)
                         {
-                            varFMI = null;
-                        }
-                        else
-                        {
-                            varFMI = " and FMI=@FMI";
+                            cn.Close();
+                            cn.Open();
                         }
 
-                        if (Controllers.Text == "ALL       ")
+                        using (SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM Code Where SPN=@SPN" + varFMI + varControllers + varType + varEngine + varManufacture, cn))
                         {
-                            varControllers = null;
-                        }
-                        else
-                        {
-                            varControllers = " and Controllers=@Controllers";
-                        }
 
-                        if (EngineBox.Text == "ALL       ")
-                        {
-                            varEngine = null;
-                        }
-                        else
-                        {
-                            varEngine = " and Engine=@Engine";
-                        }
-
-                        if (Type.Text == "ALL")
-                        {
-                            varType = null;
-                        }
-                        else
-                        {
-                            varType = " and Type=@Type";
-                        }
-                        if (Manufacture.Text == "ALL       ")
-                        {
-                            varManufacture = null;
-                        }
-                        else
-                        {
-                            varManufacture = " and Manufacture=@Manufacture";
-                        }
-
-                        using (SqlCommand cmd = new SqlCommand("select *from Code Where SPN=@SPN" + varFMI + varControllers + varType + varEngine + varManufacture, cn))
-                        {
                             cmd.Parameters.AddWithValue("SPN", SPNtextBox.Text);
-                            cmd.Parameters.AddWithValue("FMI", FMItextBox.Text);
+
                             if (varFMI != null)
                             {
                                 cmd.Parameters.AddWithValue("FMI", FMItextBox.Text);
@@ -218,22 +223,30 @@ namespace Fault_Code_Search
                             {
                                 cmd.Parameters.AddWithValue("Manufacture", Manufacture.Text);
                             }
-                            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                            cmd.ExecuteNonQuery();
+
+                            SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
                             adapter.Fill(dt);
                             SearchResults.DataSource = dt;
-                        }
+                            cn.Close();
 
+
+                        }
                     }
+
                 }
             }
-            catch (SqlException ex)
+
+
+            catch (SQLiteException ex)
             {
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+
+
+
             }
 
         }
-
-
         private void SPNtextBox_TextChanged(object sender, EventArgs e)
         {
 
@@ -305,6 +318,11 @@ namespace Fault_Code_Search
         }
 
         private void label1_Click_4(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manufactureBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }

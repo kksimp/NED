@@ -30,28 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.codeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet = new Fault_Code_Search.Database1DataSet();
-            this.codeTableAdapter = new Fault_Code_Search.Database1DataSetTableAdapters.CodeTableAdapter();
-            this.uniqueControllersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet11 = new Fault_Code_Search.Database1DataSet1();
-            this.database1DataSet1 = new Fault_Code_Search.Database1DataSet();
-            this.database1DataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uniqueControllersTableAdapter = new Fault_Code_Search.Database1DataSet1TableAdapters.UniqueControllersTableAdapter();
-            this.uniqueControllersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet2 = new Fault_Code_Search.Database1DataSet2();
-            this.uniqueControllersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.uniqueControllersTableAdapter1 = new Fault_Code_Search.Database1DataSet2TableAdapters.UniqueControllersTableAdapter();
-            this.uniqueControllersBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet3 = new Fault_Code_Search.Database1DataSet3();
-            this.uniqueControllersTableAdapter2 = new Fault_Code_Search.Database1DataSet3TableAdapters.UniqueControllersTableAdapter();
-            this.manufactureBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet4 = new Fault_Code_Search.Database1DataSet4();
-            this.manufactureTableAdapter = new Fault_Code_Search.Database1DataSet4TableAdapters.ManufactureTableAdapter();
-            this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet5 = new Fault_Code_Search.Database1DataSet5();
-            this.typeTableAdapter = new Fault_Code_Search.Database1DataSet5TableAdapters.TypeTableAdapter();
-            this.dataSet1 = new System.Data.DataSet();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.SearchProgress = new System.Windows.Forms.TableLayoutPanel();
@@ -64,8 +42,6 @@
             this.SPNText = new System.Windows.Forms.Label();
             this.EngineText = new System.Windows.Forms.Label();
             this.EngineBox = new System.Windows.Forms.ComboBox();
-            this.engineBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.codesDataSet = new Fault_Code_Search.CodesDataSet();
             this.TypeText = new System.Windows.Forms.Label();
             this.ManufactureText = new System.Windows.Forms.Label();
             this.ControllerText = new System.Windows.Forms.Label();
@@ -75,135 +51,28 @@
             this.Ned = new System.Windows.Forms.PictureBox();
             this.SearchResults = new System.Windows.Forms.DataGridView();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.engineTableAdapter = new Fault_Code_Search.CodesDataSetTableAdapters.EngineTableAdapter();
             this.Version = new System.Windows.Forms.LinkLabel();
             this.VersionNUM = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.codeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uniqueControllersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uniqueControllersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uniqueControllersBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uniqueControllersBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manufactureBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            this.faultDB = new Fault_Code_Search.FaultDB();
+            this.manufactureBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.manufactureTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.ManufactureTableAdapter();
+            this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.typeTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.TypeTableAdapter();
+            this.engineBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.engineTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.EngineTableAdapter();
+            this.controllersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.controllersTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.ControllersTableAdapter();
             this.SearchProgress.SuspendLayout();
             this.SearchControlBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.engineBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codesDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ned)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchResults)).BeginInit();
             this.toolStripContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.faultDB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manufactureBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.engineBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controllersBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // codeBindingSource
-            // 
-            this.codeBindingSource.DataMember = "Code";
-            this.codeBindingSource.DataSource = this.database1DataSet;
-            // 
-            // database1DataSet
-            // 
-            this.database1DataSet.DataSetName = "Database1DataSet";
-            this.database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // codeTableAdapter
-            // 
-            this.codeTableAdapter.ClearBeforeFill = true;
-            // 
-            // uniqueControllersBindingSource
-            // 
-            this.uniqueControllersBindingSource.DataMember = "UniqueControllers";
-            this.uniqueControllersBindingSource.DataSource = this.database1DataSet11;
-            // 
-            // database1DataSet11
-            // 
-            this.database1DataSet11.DataSetName = "Database1DataSet1";
-            this.database1DataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // database1DataSet1
-            // 
-            this.database1DataSet1.DataSetName = "Database1DataSet";
-            this.database1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // database1DataSet1BindingSource
-            // 
-            this.database1DataSet1BindingSource.DataSource = this.database1DataSet1;
-            this.database1DataSet1BindingSource.Position = 0;
-            // 
-            // uniqueControllersTableAdapter
-            // 
-            this.uniqueControllersTableAdapter.ClearBeforeFill = true;
-            // 
-            // uniqueControllersBindingSource1
-            // 
-            this.uniqueControllersBindingSource1.DataMember = "UniqueControllers";
-            // 
-            // database1DataSet2
-            // 
-            this.database1DataSet2.DataSetName = "Database1DataSet2";
-            this.database1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uniqueControllersBindingSource2
-            // 
-            this.uniqueControllersBindingSource2.DataMember = "UniqueControllers";
-            this.uniqueControllersBindingSource2.DataSource = this.database1DataSet2;
-            // 
-            // uniqueControllersTableAdapter1
-            // 
-            this.uniqueControllersTableAdapter1.ClearBeforeFill = true;
-            // 
-            // uniqueControllersBindingSource3
-            // 
-            this.uniqueControllersBindingSource3.DataMember = "UniqueControllers";
-            this.uniqueControllersBindingSource3.DataSource = this.database1DataSet3;
-            // 
-            // database1DataSet3
-            // 
-            this.database1DataSet3.DataSetName = "Database1DataSet3";
-            this.database1DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uniqueControllersTableAdapter2
-            // 
-            this.uniqueControllersTableAdapter2.ClearBeforeFill = true;
-            // 
-            // manufactureBindingSource
-            // 
-            this.manufactureBindingSource.DataMember = "Manufacture";
-            this.manufactureBindingSource.DataSource = this.database1DataSet4;
-            // 
-            // database1DataSet4
-            // 
-            this.database1DataSet4.DataSetName = "Database1DataSet4";
-            this.database1DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // manufactureTableAdapter
-            // 
-            this.manufactureTableAdapter.ClearBeforeFill = true;
-            // 
-            // typeBindingSource
-            // 
-            this.typeBindingSource.DataMember = "Type";
-            this.typeBindingSource.DataSource = this.database1DataSet5;
-            // 
-            // database1DataSet5
-            // 
-            this.database1DataSet5.DataSetName = "Database1DataSet5";
-            this.database1DataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // typeTableAdapter
-            // 
-            this.typeTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "NewDataSet";
             // 
             // tableLayoutPanel1
             // 
@@ -347,6 +216,7 @@
             // 
             // EngineBox
             // 
+            this.EngineBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.engineBindingSource, "Engine", true));
             this.EngineBox.DataSource = this.engineBindingSource;
             this.EngineBox.DisplayMember = "Engine";
             this.EngineBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -356,16 +226,6 @@
             this.EngineBox.Size = new System.Drawing.Size(121, 21);
             this.EngineBox.TabIndex = 6;
             this.EngineBox.ValueMember = "Engine";
-            // 
-            // engineBindingSource
-            // 
-            this.engineBindingSource.DataMember = "Engine";
-            this.engineBindingSource.DataSource = this.codesDataSet;
-            // 
-            // codesDataSet
-            // 
-            this.codesDataSet.DataSetName = "CodesDataSet";
-            this.codesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // TypeText
             // 
@@ -396,6 +256,7 @@
             // 
             // Type
             // 
+            this.Type.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.typeBindingSource, "Type", true));
             this.Type.DataSource = this.typeBindingSource;
             this.Type.DisplayMember = "Type";
             this.Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -408,6 +269,7 @@
             // 
             // Manufacture
             // 
+            this.Manufacture.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.manufactureBindingSource, "Manufacture", true));
             this.Manufacture.DataSource = this.manufactureBindingSource;
             this.Manufacture.DisplayMember = "Manufacture";
             this.Manufacture.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -420,7 +282,8 @@
             // 
             // Controllers
             // 
-            this.Controllers.DataSource = this.uniqueControllersBindingSource3;
+            this.Controllers.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.controllersBindingSource, "Controllers", true));
+            this.Controllers.DataSource = this.controllersBindingSource;
             this.Controllers.DisplayMember = "Controllers";
             this.Controllers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Controllers.FormattingEnabled = true;
@@ -472,10 +335,6 @@
             this.toolStripContainer1.TabIndex = 20;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
-            // engineTableAdapter
-            // 
-            this.engineTableAdapter.ClearBeforeFill = true;
-            // 
             // Version
             // 
             this.Version.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -503,6 +362,47 @@
             this.VersionNUM.Text = "label1";
             this.VersionNUM.Click += new System.EventHandler(this.label1_Click_4);
             // 
+            // faultDB
+            // 
+            this.faultDB.DataSetName = "FaultDB";
+            this.faultDB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // manufactureBindingSource
+            // 
+            this.manufactureBindingSource.DataMember = "Manufacture";
+            this.manufactureBindingSource.DataSource = this.faultDB;
+            // 
+            // manufactureTableAdapter
+            // 
+            this.manufactureTableAdapter.ClearBeforeFill = true;
+            // 
+            // typeBindingSource
+            // 
+            this.typeBindingSource.DataMember = "Type";
+            this.typeBindingSource.DataSource = this.faultDB;
+            // 
+            // typeTableAdapter
+            // 
+            this.typeTableAdapter.ClearBeforeFill = true;
+            // 
+            // engineBindingSource
+            // 
+            this.engineBindingSource.DataMember = "Engine";
+            this.engineBindingSource.DataSource = this.faultDB;
+            // 
+            // engineTableAdapter
+            // 
+            this.engineTableAdapter.ClearBeforeFill = true;
+            // 
+            // controllersBindingSource
+            // 
+            this.controllersBindingSource.DataMember = "Controllers";
+            this.controllersBindingSource.DataSource = this.faultDB;
+            // 
+            // controllersTableAdapter
+            // 
+            this.controllersTableAdapter.ClearBeforeFill = true;
+            // 
             // Main
             // 
             this.AcceptButton = this.Searcbutton;
@@ -513,9 +413,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1402, 803);
+            this.Controls.Add(this.SearchProgress);
             this.Controls.Add(this.VersionNUM);
             this.Controls.Add(this.Version);
-            this.Controls.Add(this.SearchProgress);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel3);
             this.DoubleBuffered = true;
@@ -526,61 +426,26 @@
             this.Name = "Main";
             this.Text = "Fault Code Search";
             this.Load += new System.EventHandler(this.Main_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.codeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uniqueControllersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uniqueControllersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uniqueControllersBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uniqueControllersBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.manufactureBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.database1DataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.SearchProgress.ResumeLayout(false);
             this.SearchProgress.PerformLayout();
             this.SearchControlBox.ResumeLayout(false);
             this.SearchControlBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.engineBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.codesDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ned)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SearchResults)).EndInit();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.faultDB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.manufactureBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.engineBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.controllersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Database1DataSet database1DataSet;
-        private System.Windows.Forms.BindingSource codeBindingSource;
-        private Database1DataSetTableAdapters.CodeTableAdapter codeTableAdapter;
-        private System.Windows.Forms.BindingSource database1DataSet1BindingSource;
-        private Database1DataSet database1DataSet1;
-        private Database1DataSet1 database1DataSet11;
-        private System.Windows.Forms.BindingSource uniqueControllersBindingSource;
-        private Database1DataSet1TableAdapters.UniqueControllersTableAdapter uniqueControllersTableAdapter;
-      
-        private System.Windows.Forms.BindingSource uniqueControllersBindingSource1;
-        private Database1DataSet2 database1DataSet2;
-        private System.Windows.Forms.BindingSource uniqueControllersBindingSource2;
-        private Database1DataSet2TableAdapters.UniqueControllersTableAdapter uniqueControllersTableAdapter1;
-        private Database1DataSet3 database1DataSet3;
-        private System.Windows.Forms.BindingSource uniqueControllersBindingSource3;
-        private Database1DataSet3TableAdapters.UniqueControllersTableAdapter uniqueControllersTableAdapter2;
-        private Database1DataSet4 database1DataSet4;
-        private System.Windows.Forms.BindingSource manufactureBindingSource;
-        private Database1DataSet4TableAdapters.ManufactureTableAdapter manufactureTableAdapter;
-        private Database1DataSet5 database1DataSet5;
-        private System.Windows.Forms.BindingSource typeBindingSource;
-        private Database1DataSet5TableAdapters.TypeTableAdapter typeTableAdapter;
-        private System.Data.DataSet dataSet1;
+        
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel SearchProgress;
@@ -599,14 +464,21 @@
         private System.Windows.Forms.ComboBox Manufacture;
         private System.Windows.Forms.ComboBox Controllers;
         private System.Windows.Forms.PictureBox Ned;
-        private CodesDataSet codesDataSet;
-        private System.Windows.Forms.BindingSource engineBindingSource;
-        private CodesDataSetTableAdapters.EngineTableAdapter engineTableAdapter;
+       
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.DataGridView SearchResults;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.LinkLabel Version;
         private System.Windows.Forms.Label VersionNUM;
+        private FaultDB faultDB;
+        private System.Windows.Forms.BindingSource manufactureBindingSource;
+        private FaultDBTableAdapters.ManufactureTableAdapter manufactureTableAdapter;
+        private System.Windows.Forms.BindingSource typeBindingSource;
+        private FaultDBTableAdapters.TypeTableAdapter typeTableAdapter;
+        private System.Windows.Forms.BindingSource engineBindingSource;
+        private FaultDBTableAdapters.EngineTableAdapter engineTableAdapter;
+        private System.Windows.Forms.BindingSource controllersBindingSource;
+        private FaultDBTableAdapters.ControllersTableAdapter controllersTableAdapter;
     }
 }
 
