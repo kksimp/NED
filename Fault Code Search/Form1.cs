@@ -1,13 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Reflection;
+using System.Text;
 using System.Windows.Forms;
-
-
-
-
-
 
 
 namespace Fault_Code_Search
@@ -18,6 +16,7 @@ namespace Fault_Code_Search
         public Main()
         {
             InitializeComponent();
+           
             try
             {
                 VersionNUM.Text = "V" + System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion;
@@ -27,282 +26,304 @@ namespace Fault_Code_Search
                 VersionNUM.Text = "V" + Assembly.GetExecutingAssembly().GetName().Version;
 
             }
+            SPNtextBox.Text = "";
+            FMItextBox.Text = "";
+            Controllers.Text = "ALL";
+            EngineBox.Text = "ALL";
+            Type.Text = "ALL";
+            Manufacture.Text = "ALL";
+
+            typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty, null, SearchResults, new object[] { true });
+
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'faultDB.Controllers' table. You can move, or remove it, as needed.
-            this.controllersTableAdapter.Fill(this.faultDB.Controllers);
-            // TODO: This line of code loads data into the 'faultDB.Engine' table. You can move, or remove it, as needed.
-            this.engineTableAdapter.Fill(this.faultDB.Engine);
-            // TODO: This line of code loads data into the 'faultDB.Type' table. You can move, or remove it, as needed.
-            this.typeTableAdapter.Fill(this.faultDB.Type);
-            // TODO: This line of code loads data into the 'faultDB.Manufacture' table. You can move, or remove it, as needed.
-            this.manufactureTableAdapter.Fill(this.faultDB.Manufacture);
+            String Database = @"Data Source = fault.db";
+
+            try
+
+            {
+                using (DataTable dt = new DataTable("SearchedCodes"))
+
+                {
 
 
 
+                    using (SQLiteConnection cn = new SQLiteConnection(Database))
+                    {
+                        cn.Open();
 
+                        using (SQLiteConnection destination = new SQLiteConnection("Data Source=:memory:"))
+                        {
+                            destination.Open();
+
+                            cn.BackupDatabase(destination, "main", "main", -1, null, 0);
+                            cn.Close();
+
+                            if (destination.State != ConnectionState.Open)
+                            {
+                                destination.Close();
+                                destination.Open();
+                            }
+                            SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM Code", destination);
+                            cmd.ExecuteNonQuery();
+                            SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                            adapter.Fill(dt);
+                            SearchResults.DataSource = dt;
+                            destination.Close();
+                            SearchResults.Columns[0].Width = 100;
+                            SearchResults.Columns[1].Width = 100;
+                            SearchResults.Columns[2].Width = 100;
+                            SearchResults.Columns[3].Width = 100;
+                            SearchResults.Columns[4].Width = 100;
+                            SearchResults.Columns[5].Width = 100;
+                            SearchResults.Columns[6].Width = 725;
+
+
+                        }
+                    }
+                }
+            }
+            catch (SQLiteException ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
         }
 
-
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Controller_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fillByControllerToolStripButton_Click(object sender, EventArgs e)
-        {
-
-
-
-        }
-
-        private void fillByControllerToolStripButton1_Click(object sender, EventArgs e)
-        {
-
-
-
-        }
-
-        private void fillByControllerToolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_3(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FMIText_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NedPicture_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void CodeTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
 
 
 
         private void Searcbutton_Click(object sender, EventArgs e)
         {
-            try
+            String Database = @"Data Source = fault.db";
+
+            if ((SPNtextBox.Text == "")
+             && (FMItextBox.Text == "")
+             && (Controllers.Text == "ALL")
+             && (EngineBox.Text == "ALL")
+             && (Type.Text == "ALL")
+             && (Manufacture.Text == "ALL"))
+
             {
-                String Database = @"Data Source = fault.db";
-
-
-                using (DataTable dt = new DataTable("SearchedCodes"))
+                try
 
                 {
-                    string varFMI = null;
-                    string varEngine = null;
-                    string varControllers = null;
-                    string varType = null;
-                    string varManufacture = null;
+                    using (DataTable dt = new DataTable("SearchedCodes"))
 
-                    if (FMItextBox.Text == "")
                     {
-                        varFMI = null;
-                    }
-                    else
-                    {
-                        varFMI = " and FMI=@FMI";
-                    }
 
-                    if (Controllers.Text == "ALL       ")
-                    {
-                        varControllers = null;
-                    }
-                    else
-                    {
-                        varControllers = " and Controllers=@Controllers";
-                    }
 
-                    if (EngineBox.Text == "ALL       ")
-                    {
-                        varEngine = null;
-                    }
-                    else
-                    {
-                        varEngine = " and Engine=@Engine";
-                    }
 
-                    if (Type.Text == "ALL")
-                    {
-                        varType = null;
-                    }
-                    else
-                    {
-                        varType = " and Type=@Type";
-                    }
-                    if (Manufacture.Text == "ALL       ")
-                    {
-                        varManufacture = null;
-                    }
-                    else
-                    {
-                        varManufacture = " and Manufacture=@Manufacture";
-                    }
-
-                    using (SQLiteConnection cn = new SQLiteConnection(Database))
-                    {
-                        if (cn.State != ConnectionState.Open)
+                        using (SQLiteConnection cn = new SQLiteConnection(Database))
                         {
-                            cn.Close();
                             cn.Open();
-                        }
 
-                        using (SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM Code Where SPN=@SPN" + varFMI + varControllers + varType + varEngine + varManufacture, cn))
-                        {
+                            using (SQLiteConnection destination = new SQLiteConnection("Data Source=:memory:"))
 
-                            cmd.Parameters.AddWithValue("SPN", SPNtextBox.Text);
-
-                            if (varFMI != null)
                             {
-                                cmd.Parameters.AddWithValue("FMI", FMItextBox.Text);
-                            }
-                            if (varControllers != null)
-                            {
-                                cmd.Parameters.AddWithValue("Controllers", Controllers.Text);
-                            }
-                            if (varType != null)
-                            {
-                                cmd.Parameters.AddWithValue("Type", Type.Text);
-                            }
-                            if (varEngine != null)
-                            {
-                                cmd.Parameters.AddWithValue("Engine", EngineBox.Text);
-                            }
-                            if (varManufacture != null)
-                            {
-                                cmd.Parameters.AddWithValue("Manufacture", Manufacture.Text);
-                            }
-                            cmd.ExecuteNonQuery();
+                                destination.Open();
 
-                            SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
-                            adapter.Fill(dt);
-                            SearchResults.DataSource = dt;
-                            cn.Close();
+                                cn.BackupDatabase(destination, "main", "main", -1, null, 0);
+                                cn.Close();
+
+                                if (destination.State != ConnectionState.Open)
+                                {
+                                    destination.Close();
+                                    destination.Open();
 
 
+                                }
+                                SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM Code", destination);
+                                cmd.ExecuteNonQuery();
+                                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                                adapter.Fill(dt);
+                                SearchResults.DataSource = dt;
+                                destination.Close();
+                                SearchResults.Columns[0].Width = 100;
+                                SearchResults.Columns[1].Width = 100;
+                                SearchResults.Columns[2].Width = 100;
+                                SearchResults.Columns[3].Width = 100;
+                                SearchResults.Columns[4].Width = 100;
+                                SearchResults.Columns[5].Width = 100;
+                                SearchResults.Columns[6].Width = 725;
+
+
+
+                            }
                         }
                     }
+                }
+                catch (SQLiteException ex)
+                {
+                    MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+
+
 
                 }
             }
-
-
-            catch (SQLiteException ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                string varSPN = null;
+                if (SPNtextBox.Text != "")
+                {
+                    varSPN = SPNtextBox.Text;
+                }
+                else
+                {
+                    varSPN = null;
+                }
+
+                string varFMI = null;
+                if (FMItextBox.Text != "")
+                {
+                    varFMI = FMItextBox.Text;
+                }
+                else
+                {
+                    varFMI = null;
+                }
+
+                string varControllers;
+                if (Controllers.Text != "ALL")
+                {
+                    varControllers = Controllers.Text;
+                }
+                else
+                {
+                    varControllers = null;
+                }
+
+                string varType;
+                if (Type.Text != "ALL")
+                {
+                    varType = Type.Text;
+                }
+                else
+                {
+                    varType = null;
+                }
+
+                string varEngine;
+                if (EngineBox.Text != "ALL")
+                {
+                    varEngine = EngineBox.Text;
+                }
+                else
+                {
+                    varEngine = null;
+                }
+
+                string varManufacture;
+                if (Manufacture.Text != "ALL")
+                {
+                    varManufacture = Manufacture.Text;
+                }
+                else
+                {
+                    varManufacture = null;
+                }
+                try
+                {
+                    using (DataTable dt = new DataTable("SearchedCodes"))
+                    {
+
+                        using (SQLiteConnection cn = new SQLiteConnection(Database))
+                        {
+                            cn.Open();
+
+                            using (SQLiteConnection destination = new SQLiteConnection("Data Source=:memory:"))
+
+                            {
+                                destination.Open();
+
+                                cn.BackupDatabase(destination, "main", "main", -1, null, 0);
+                                cn.Close();
+                                if (destination.State != ConnectionState.Open)
+                                {
+                                    destination.Close();
+                                    destination.Open();
+
+
+                                }
+
+                                var parameters = new Dictionary<string, object>();
+                                parameters["SPN"] = varSPN;
+                                parameters["FMI"] = varFMI;
+                                parameters["Controllers"] = varControllers;
+                                parameters["Type"] = varType;
+                                parameters["Engine"] = varEngine;
+                                parameters["Manufacture"] = varManufacture;
+
+
+                                StringBuilder builder = new StringBuilder("SELECT * FROM Code WHERE 1=1 ");
+                                SQLiteCommand cmd = new SQLiteCommand(destination);
+                                foreach (var parameter in parameters)
+                                {
+                                    if (!string.IsNullOrWhiteSpace(parameter.Value?.ToString()))
+                                    {
+                                        builder.Append(" AND " + parameter.Key + "=@" + parameter.Key);
+                                        cmd.Parameters.AddWithValue("@" + parameter.Key, parameter.Value);
+                                    }
+                                }
+                                cmd.CommandText = builder.ToString() + " COLLATE NOCASE";
+                                cmd.ExecuteNonQuery();
+
+                                SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
+                                adapter.Fill(dt);
+                                SearchResults.DataSource = dt;
+                                destination.Close();
+                                SearchResults.Columns[0].Width = 100;
+                                SearchResults.Columns[1].Width = 100;
+                                SearchResults.Columns[2].Width = 100;
+                                SearchResults.Columns[3].Width = 100;
+                                SearchResults.Columns[4].Width = 100;
+                                SearchResults.Columns[5].Width = 100;
+                                SearchResults.Columns[6].Width = 725;
+
+
+                            }
+                        }
+                    }
+                }
+                catch (SQLiteException ex)
+                {
+                    MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+
+
+
+                }
+
 
 
 
             }
 
-        }
-        private void SPNtextBox_TextChanged(object sender, EventArgs e)
-        {
+
+
+
 
         }
 
-        private void CodesTetBox_TextChanged(object sender, EventArgs e)
-        {
 
-        }
+
+
+
+
 
         private void Clear_Click(object sender, EventArgs e)
         {
 
             FMItextBox.Text = null;
             SPNtextBox.Text = null;
-            Controllers.Text = "ALL       ";
-            EngineBox.Text = "ALL       ";
+            Controllers.Text = "ALL";
+            EngineBox.Text = "ALL";
             Type.Text = "ALL";
-            Manufacture.Text = "ALL       ";
+            Manufacture.Text = "ALL";
             SearchResults.DataSource = null;
 
 
-        }
-
-
-
-        private void Controllers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void SearchResults_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UpdateCheck_Click(object sender, EventArgs e)
-        {
-
-
-
-
-
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            
         }
 
         private void VisitLink()
@@ -310,20 +331,7 @@ namespace Fault_Code_Search
             System.Diagnostics.Process.Start("https://github.com/kksimp/NED/releases/latest");
         }
 
-        private void label1_Click_4(object sender, EventArgs e)
-        {
 
-        }
-
-        private void manufactureBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Ned_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void CheckUpdate_Click(object sender, EventArgs e)
         {
@@ -335,11 +343,6 @@ namespace Fault_Code_Search
             {
                 MessageBox.Show("Unable to open link that was clicked.");
             }
-        }
-
-        private void SearchControlBox_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

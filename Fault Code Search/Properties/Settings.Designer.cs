@@ -26,29 +26,7 @@ namespace Fault_Code_Search.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Codes.mdf;Int" +
-            "egrated Security=True")]
-        public string Manufactures {
-            get {
-                return ((string)(this["Manufactures"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Maybe.mdf;Int" +
-            "egrated Security=True;Connect Timeout=30")]
-        public string MaybeConnectionString {
-            get {
-                return ((string)(this["MaybeConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"C:\\Users\\ksimpson\\Desktop\\Fault app\\Fault Code Search\\fault.db\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=fault.db")]
         public string FaultDB {
             get {
                 return ((string)(this["FaultDB"]));

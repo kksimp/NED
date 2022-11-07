@@ -1,4 +1,7 @@
-﻿namespace Fault_Code_Search
+﻿using System.Reflection;
+using System.Windows.Forms;
+
+namespace Fault_Code_Search
 {
     partial class Main
     {
@@ -26,6 +29,8 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        /// 
+        
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
@@ -44,6 +49,7 @@
             this.controllersTableAdapter = new Fault_Code_Search.FaultDBTableAdapters.ControllersTableAdapter();
             this.Ned = new System.Windows.Forms.PictureBox();
             this.SearchProgress = new System.Windows.Forms.TableLayoutPanel();
+            this.SearchResults = new System.Windows.Forms.DataGridView();
             this.SearchControlBox = new System.Windows.Forms.GroupBox();
             this.Clear = new System.Windows.Forms.Button();
             this.Searcbutton = new System.Windows.Forms.Button();
@@ -59,8 +65,8 @@
             this.Type = new System.Windows.Forms.ComboBox();
             this.Manufacture = new System.Windows.Forms.ComboBox();
             this.Controllers = new System.Windows.Forms.ComboBox();
-            this.SearchResults = new System.Windows.Forms.DataGridView();
             this.CheckUpdate = new System.Windows.Forms.Button();
+            this.InitialLoad = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.engineBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.faultDB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
@@ -68,8 +74,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.controllersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ned)).BeginInit();
             this.SearchProgress.SuspendLayout();
-            this.SearchControlBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SearchResults)).BeginInit();
+            this.SearchControlBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -135,7 +141,6 @@
             this.VersionNUM.Size = new System.Drawing.Size(35, 13);
             this.VersionNUM.TabIndex = 20;
             this.VersionNUM.Text = "label1";
-            this.VersionNUM.Click += new System.EventHandler(this.label1_Click_4);
             // 
             // manufactureTableAdapter
             // 
@@ -183,7 +188,23 @@
             this.SearchProgress.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.1868F));
             this.SearchProgress.Size = new System.Drawing.Size(1402, 803);
             this.SearchProgress.TabIndex = 17;
-            this.SearchProgress.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
+            // 
+            // SearchResults
+            // 
+            this.SearchResults.AllowUserToAddRows = false;
+            this.SearchResults.AllowUserToDeleteRows = false;
+            this.SearchResults.AllowUserToResizeColumns = false;
+            this.SearchResults.AllowUserToResizeRows = false;
+            this.SearchResults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.SearchResults.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.SearchResults.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.SearchResults.Location = new System.Drawing.Point(3, 402);
+            this.SearchResults.Name = "SearchResults";
+            this.SearchResults.ReadOnly = true;
+            this.SearchResults.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.SearchResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.SearchResults.Size = new System.Drawing.Size(1396, 398);
+            this.SearchResults.TabIndex = 19;
             // 
             // SearchControlBox
             // 
@@ -208,7 +229,6 @@
             this.SearchControlBox.Size = new System.Drawing.Size(519, 89);
             this.SearchControlBox.TabIndex = 16;
             this.SearchControlBox.TabStop = false;
-            this.SearchControlBox.Enter += new System.EventHandler(this.SearchControlBox_Enter);
             // 
             // Clear
             // 
@@ -245,7 +265,6 @@
             this.SPNtextBox.Size = new System.Drawing.Size(75, 20);
             this.SPNtextBox.TabIndex = 10;
             this.SPNtextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.SPNtextBox.TextChanged += new System.EventHandler(this.SPNtextBox_TextChanged);
             // 
             // FMIText
             // 
@@ -277,15 +296,19 @@
             // EngineBox
             // 
             this.EngineBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.engineBindingSource, "Engine", true));
-            this.EngineBox.DataSource = this.engineBindingSource;
-            this.EngineBox.DisplayMember = "Engine";
             this.EngineBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EngineBox.FormattingEnabled = true;
+            this.EngineBox.Items.AddRange(new object[] {
+            "ALL",
+            "Cummins",
+            "Perkins",
+            "Yanmar",
+            "Scania",
+            "Mitsubishi"});
             this.EngineBox.Location = new System.Drawing.Point(266, 52);
             this.EngineBox.Name = "EngineBox";
             this.EngineBox.Size = new System.Drawing.Size(121, 21);
             this.EngineBox.TabIndex = 6;
-            this.EngineBox.ValueMember = "Engine";
             // 
             // TypeText
             // 
@@ -317,61 +340,54 @@
             // Type
             // 
             this.Type.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.typeBindingSource, "Type", true));
-            this.Type.DataSource = this.typeBindingSource;
-            this.Type.DisplayMember = "Type";
             this.Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Type.FormattingEnabled = true;
+            this.Type.Items.AddRange(new object[] {
+            "ALL",
+            "Loader",
+            "Roller",
+            "Excavator",
+            "Forklift",
+            "Lamtrac"});
             this.Type.Location = new System.Drawing.Point(139, 52);
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(121, 21);
             this.Type.TabIndex = 2;
-            this.Type.ValueMember = "Type";
             // 
             // Manufacture
             // 
             this.Manufacture.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.manufactureBindingSource, "Manufacture", true));
-            this.Manufacture.DataSource = this.manufactureBindingSource;
-            this.Manufacture.DisplayMember = "Manufacture";
             this.Manufacture.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Manufacture.FormattingEnabled = true;
+            this.Manufacture.Items.AddRange(new object[] {
+            "ALL",
+            "Hyundai",
+            "Bell"});
             this.Manufacture.Location = new System.Drawing.Point(14, 52);
             this.Manufacture.Name = "Manufacture";
             this.Manufacture.Size = new System.Drawing.Size(121, 21);
             this.Manufacture.TabIndex = 1;
-            this.Manufacture.ValueMember = "Manufacture";
             // 
             // Controllers
             // 
             this.Controllers.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.controllersBindingSource, "Controllers", true));
-            this.Controllers.DataSource = this.controllersBindingSource;
-            this.Controllers.DisplayMember = "Controllers";
             this.Controllers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Controllers.FormattingEnabled = true;
+            this.Controllers.Items.AddRange(new object[] {
+            "ALL",
+            "ECM",
+            "EHCU",
+            "MCU",
+            "TCU",
+            "CCU/OEU",
+            "MDU",
+            "MMU",
+            "SSM",
+            "ECU"});
             this.Controllers.Location = new System.Drawing.Point(392, 52);
             this.Controllers.Name = "Controllers";
             this.Controllers.Size = new System.Drawing.Size(121, 21);
             this.Controllers.TabIndex = 0;
-            this.Controllers.ValueMember = "Controllers";
-            this.Controllers.SelectedIndexChanged += new System.EventHandler(this.Controllers_SelectedIndexChanged);
-            // 
-            // SearchResults
-            // 
-            this.SearchResults.AllowUserToAddRows = false;
-            this.SearchResults.AllowUserToDeleteRows = false;
-            this.SearchResults.AllowUserToOrderColumns = true;
-            this.SearchResults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.SearchResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.SearchResults.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.SearchResults.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SearchResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SearchResults.Location = new System.Drawing.Point(3, 402);
-            this.SearchResults.Name = "SearchResults";
-            this.SearchResults.ReadOnly = true;
-            this.SearchResults.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.SearchResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SearchResults.Size = new System.Drawing.Size(1396, 398);
-            this.SearchResults.TabIndex = 19;
-            this.SearchResults.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SearchResults_CellContentClick);
             // 
             // CheckUpdate
             // 
@@ -415,9 +431,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Ned)).EndInit();
             this.SearchProgress.ResumeLayout(false);
             this.SearchProgress.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchResults)).EndInit();
             this.SearchControlBox.ResumeLayout(false);
             this.SearchControlBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SearchResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,6 +472,7 @@
         private System.Windows.Forms.ComboBox Controllers;
         private System.Windows.Forms.DataGridView SearchResults;
         private System.Windows.Forms.Button CheckUpdate;
+        private System.ComponentModel.BackgroundWorker InitialLoad;
     }
 }
 
