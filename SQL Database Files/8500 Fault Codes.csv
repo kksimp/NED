@@ -1,0 +1,199 @@
+﻿Manufcature,Type,Engine,Controller,SPN,FMI,Code,,,,
+Bomag,Trench Roller,Kubota,BLM,1030,,"Output is switched off, function no longer possible Output valve driving forward, Y 16
+The current flow from this output is too high output     was switched off! Excessive current flow in current path,
+probably because of a defective coil or a short circuit to ground Terminal On BLM X3:22",,,,
+Bomag,Trench Roller,Kubota,BLM,1031,,"Output is switched off, function no longer possible Output valve driving forward, Y 16
+Short circuit current flowing from this output output was switched off ! Short circuit to ground in current path Lines rubbed through
+Valve defective Terminal On BLM X3:22",,,,
+Bomag,Trench Roller,Kubota,BLM,1032,,"Output is switched off, function no longer possible Output valve driving forward, Y 16
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:22",,,,
+Bomag,Trench Roller,Kubota,BLM,1033,,"Engine is shut down Output valve driving forward, Y 16 Although the output is switched off, voltage is present Current path connected to +12V Terminal On BLM X3:22",,,,
+Bomag,Trench Roller,Kubota,BLM,1040,,"Output is switched off, function no longer possible Output valve driving reverse, Y 17
+The current flow from this output is too high output     was switched off! Excessive current flow in current path, probably because of a defective coil or
+a short circuit to ground Terminal On BLM X3:24",,,,
+Bomag,Trench Roller,Kubota,BLM,1041,,"Output is switched off, function no longer possible Output valve driving reverse, Y 17
+Short circuit current flowing from this output output was switched off ! Short circuit to ground in current path Lines rubbed through
+Valve defective Terminal On BLM X3:24",,,,
+Bomag,Trench Roller,Kubota,BLM,1042,,"Output is switched off, function no longer possible Output valve driving reverse, Y 17
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:24",,,,
+Bomag,Trench Roller,Kubota,BLM,1043,,"Engine is shut down Output valve driving reverse, Y 17
+Although the output is switched off, voltage is present Current path connected to +12V Terminal On BLM X3:24",,,,
+Bomag,Trench Roller,Kubota,BLM,1050,,"Output is switched off, function no longer possible Output valve 2nd gear, Y 03
+The current flow from this output is too high output     was switched off! Excessive current flow in current path, probably because of a defective coil or
+a short circuit to ground Terminal On BLM X3:11",,,,
+Bomag,Trench Roller,Kubota,BLM,1051,,"Output is switched off, function no longer possible Output valve driving forward, Y 16
+The current flow from this output is too high output     was switched off! Short circuit to ground in current path Lines rubbed through
+Valve defective Terminal On BLM X3:11",,,,
+Bomag,Trench Roller,Kubota,BLM,1052,,"Output is switched off, function no longer possible Output valve 2nd gear, Y 03
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:11",,,,
+Bomag,Trench Roller,Kubota,BLM,1053,,"Output is switched off, engine runs only with idle speed Output valve 2nd gear, Y 03
+Although the output is switched off, voltage is present Current path connected to +12V Terminal On BLM X3:11",,,,
+Bomag,Trench Roller,Kubota,BLM,1060,,"Output is switched off, function no longer possible Output braking valve, Y 04
+The current flow from this output is too high output     was switched off! Excessive current flow in current path,
+probably because of a defective coil or a short circuit to ground Terminal On BLM X3:40",,,,
+Bomag,Trench Roller,Kubota,BLM,1061,,"Output is switched off, function no longer possible Output brakingvalve, Y 04
+Short circuit current flowing from this output output was switched off ! Short circuit to ground in current path Lines rubbed through
+Valve defective Terminal On BLM X3:40",,,,
+Bomag,Trench Roller,Kubota,BLM,1062,,"Output is switched off, function no longer possible Output braking valve, Y 04
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:40",,,,
+Bomag,Trench Roller,Kubota,BLM,1063,,"Output is switched off, engine runs only with idle speed Output braking valve, Y 04
+Although the output is switched off, voltage is present Current path connected to +12V Terminal On BLM X3:40",,,,
+Bomag,Trench Roller,Kubota,BLM,1305,,"Output is switched off, function no longer possible Output valve driving forward, Y 16
+The current flow from this output is too high output     was switched off! Excessive current flow in current path,
+probably because of a defective coil or a short circuit to ground Terminal On BLM X3:12",,,,
+Bomag,Trench Roller,Kubota,BLM,1306,,"Output is switched off, function no longer possible Output valve small amplitude, Y 56
+Short circuit current flowing from this output output was switched off ! Short circuit to ground in current path Lines rubbed through
+Valve defective Terminal On BLM X3:12",,,,
+Bomag,Trench Roller,Kubota,BLM,1307,,"Output is switched off, function no longer possible Output small amplitude, Y 56
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:12",,,,
+Bomag,Trench Roller,Kubota,BLM,1308,,"Output is switched off, engine runs
+only with idle speed, 2nd gear is locked Output small amplitude, Y 56
+Although the output is switched off, voltage is present Current path connected to +12V Terminal On BLM X3:12",,,,
+Bomag,Trench Roller,Kubota,BLM,1310,,"Output is switched off, function no longer possible Output big amplitude, Y 57
+The current flow from this output is too high output     was switched off! Excessive current flow in current path, probably because of a defective coil or
+a short circuit to ground Terminal On BLM X3:13",,,,
+Bomag,Trench Roller,Kubota,BLM,1311,,"Output is switched off, function no longer possible Output big amplitude, Y 57
+Short circuit current flowing from this output output was switched off ! Short circuit to ground in current path Lines rubbed through
+Valve defective Terminal On BLM X3:13",,,,
+Bomag,Trench Roller,Kubota,BLM,1312,,"Output is switched off, function no longer possible Output big amplitude, Y 57
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:13",,,,
+Bomag,Trench Roller,Kubota,BLM,1313,,"Output is switched off, engine runs only with idle speed, 2nd gear is
+locked Output big amplitude, Y 57
+Although the output is switched off, voltage is present Current path connected to +12V Terminal On BLM X3:13",,,,
+Bomag,Trench Roller,Kubota,BLM,20I0,,"Output is switched off, function no longer possible Output valve driving forward, Y 16
+The current flow from this output is too high output     was switched off! Excessive current flow in current path, probably because of a defective coil or a short circuit to ground Terminal On BLM X3:21",,,,
+Bomag,Trench Roller,Kubota,BLM,2011,,"Output is switched off, function no longer possible Output valve steering right, Y 237
+Short circuit current flowing from this output output was switched off! Short circuit to ground in current path Lines rubbed through
+Valve defective Terminal On BLM X3:21",,,,
+Bomag,Trench Roller,Kubota,BLM,2012,,"Output is switched off, function no longer possible Output valve steering right, Y 237
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:21",,,,
+Bomag,Trench Roller,Kubota,BLM,2013,,"Engine is shut down Output valve steering right, Y 237
+Although the output is switched off, voltage is present Current path connected to +12V Terminal On BLM X3:21",,,,
+Bomag,Trench Roller,Kubota,BLM,2020,,"Output is switched off, function no longer possible Output valve steering left, Y 238
+The current flow from this output is too high
+output was switched off! Excessive current flow in current path, probably because of a defective coil or a short circuit to ground Terminal On BLM X3:19",,,,
+Bomag,Trench Roller,Kubota,BLM,2021,,"Output is switched off, function no longer possible Output valve steering left, Y 238
+Short circuit current flowing from this output output was switched off! Short circuit to ground in current path Lines rubbed through
+Valve defective Terminal On BLM X3:19",,,,
+Bomag,Trench Roller,Kubota,BLM,2022,,"Output is switched off, function no longer possible Output valve steering left, Y 238
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:19",,,,
+Bomag,Trench Roller,Kubota,BLM,2023,,"Engine is shut down Output valve steering left, Y 238
+Although the output is switched off, voltage is present Current path connected to +12V Terminal On BLM X3:19",,,,
+Bomag,Trench Roller,Kubota,BLM,2500,,"Engine is stopped, all functions are locked, horn sounds Output valve driving forward, Y 16
+The current flow from this output is too high output     was switched off! A remote control with cable and a wireless remote control are operated at the same time.",,,,
+Bomag,Trench Roller,Kubota,BLM,2600,,"Engine stopped, emergency stop relay in the control is switched off, all
+outputs on control are switched off Remote control emergency stop Emergency stop on remote control operated",,,,
+Bomag,Trench Roller,Kubota,BLM,2601,,"Engine stopped, emergency stop relay in the control is switched off, all outputs on control are switched off Fault in data transfer between remote control sender and receiver Battery empty
+Radio or infrared transmission disturbed
+Distance between sender an machine
+too big",,,,
+Bomag,Trench Roller,Kubota,BLM,2605,,"Engine stopped, emergency stop relay in the control is switched off, all outputs on control are switched off Receive signal too weak. Output of error code 2605 only with software version older than 1.11! Radio or infrared transmission disturbed
+Distance between sender an machine too big",,,,
+Bomag,Trench Roller,Kubota,BLM,2611,,"Engine is shut down. CANopen – fault in bus communication CANopen Slave cable control has not
+sent a node guarding answer",,,,
+Bomag,Trench Roller,Kubota,BLM,2612,,Engine is shut down CANopen – fault in bus communication CANopen Slave radio remote control has not sent a node guarding answer,,,,
+Bomag,Trench Roller,Kubota,BLM,2613,,"Engine is shut down CANopen – fault in bus communication CANopen Slave infrared remote control
+has not sent a node guarding answer",,,,
+Bomag,Trench Roller,Kubota,BLM,5015,,"Only warning, horn sounds, display module is dark Output valve driving forward, Y 16
+The current flow from this output is too high output     was switched off! Fuse F 103 defective Relay K11 defective
+Cable breakage in wiring loom Terminal On BLM X3:20",,,,
+Bomag,Trench Roller,Kubota,BLM,5016,,"Only warning Battery voltage too low
+Battery voltage already below 11 Volt when switching on Battery acid level too low Battery defective
+Battery discharged",,,,
+Bomag,Trench Roller,Kubota,BLM,5020,,"Only warning, horn sounds Input engine oil pressure, B 06
+Oil pressure switch delivers the signal „no engine oil pressure“ only evaluated and displayed when the engine is running. The oil pressure switch has measured a too low oil pressure. The engine may be shut down.
+Should this message be displayed even though the engine is not running, the following faults should be examined:
+Current path has short circuit to ground Engine oil level not correct
+Engine oil pump defective
+Pressure relief valve after engine oil filter soiled
+Oil pressure switch defective Terminal On BLM X3:03",,,,
+Bomag,Trench Roller,Kubota,BLM,5021,,"Engine shut down by too low oil pressure Input engine oil pressure, B 06
+Fault 5 0 2 0  present longer than 8 seconds Engine is shut down. only evaluated and displayed when the engine is running. see fault code 5 0 2 0 Terminal On BLM X3:03",,,,
+Bomag,Trench Roller,Kubota,BLM,5025,,"Engine running No rotary speed signal from the generator regulator
+Only warning Generator regulator defective
+Line between regulator and control interrupted Terminal On BLM X3:41",,,,
+Bomag,Trench Roller,Kubota,BLM,5031,,"Machine standing Output valve driving forward, Y 16
+The current flow from this output is too high output     was switched off! Lack of fuel
+Engine stopped even though the BLM control did not submit a corresponding command",,,,
+Bomag,Trench Roller,Kubota,BLM,5040,,"Output is switched off, engine stops Output holding coil shut off solenoid, Y 13
+The current flow from this output is too high output     was switched off! Excessive current flow in current path, probably because of a defective coil or a short circuit to ground Terminal On BLM X3:10",,,,
+Bomag,Trench Roller,Kubota,BLM,5041,,"Output is switched off, engine stops Output holding coil shut off solenoid, Y 13
+Short circuit current flowing from this output output was switched off ! Short circuit to ground in current path Lines rubbed through
+Valve defective Terminal On BLM X3:10",,,,
+Bomag,Trench Roller,Kubota,BLM,5042,,"Output is switched off, engine stops Output holding coil shut off solenoid, Y 13
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:10",,,,
+Bomag,Trench Roller,Kubota,BLM,5043,,"Output is switched off, engine stops Output holding coil shut off solenoid, Y 13
+Although the output is switched off, voltage is present Current path connected to +12V Terminal On BLM X3:10",,,,
+Bomag,Trench Roller,Kubota,BLM,5050,,"Output is switched off, engine runs only with idle speed Output relay K 114, Engine speed solenoid
+The current flow from this output is too high
+output     was switched off! Excessive current flow in current path, probably because of a defective coil or a short circuit to ground Terminal On BLM X3:09",,,,
+Bomag,Trench Roller,Kubota,BLM,5051,,"Output is switched off, engine runs only with idle speed Output relay K 114, Engine speed solenoid
+Short circuit current flowing from this output output was switched off ! Short circuit to ground in current path Lines rubbed through Terminal On BLM X3:09",,,,
+Bomag,Trench Roller,Kubota,BLM,5052,,"Output is switched off, engine runs only with idle speed Output relay K 114, Engine speed solenoid
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:09",,,,
+Bomag,Trench Roller,Kubota,BLM,5053,,"Output is switched off, engine runs only with idle speed Output relay K 114,
+Engine speed solenoid
+output is switched off, but voltage present Current path connected to +12V Terminal On BLM X3:09",,,,
+Bomag,Trench Roller,Kubota,BLM,5054,, Input Aux – Signal rpm solenoid Y 13 Wire breakage in current path Terminal On BLM X3:04,,,,
+Bomag,Trench Roller,Kubota,BLM,5060,,"Output switched off, no potential 15  on machine, control is working, engine is stopped or cannot be started Output relay K 11, changeover of potential 15
+The current flow from this output is too high output     was switched off! Excessive current flow in current path, probably because of a defective coil or a short circuit to ground. No display for fault codes 5060 to 5063, because the display module is not supplied with voltage. The horn sounds if these faults occur. These faults are only
+stored and serve only for internal processing in the control. Terminal On BLM X3:07",,,,
+Bomag,Trench Roller,Kubota,BLM,5061,,"Output switched off, no potential 15  on machine, control is working, engine is stopped or cannot be started Output relay K 11, changeover of potential 15
+Short circuit current flowing from this output output was switched off ! Short circuit to ground in current path Lines rubbed through. No display for fault codes 5060 to 5063, because the display module is not supplied with voltage. The horn sounds if these faults occur. These faults are only
+stored and serve only for internal processing in the control. Terminal On BLM X3:07",,,,
+Bomag,Trench Roller,Kubota,BLM,5062,,"Output switched off, no potential 15  on machine, control is working, engine is stopped or cannot be started Output relay K 11, changeover of potential 15
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V. No display for fault codes 5060 to 5063, because the display module is not supplied with voltage. The horn sounds if these faults occur. These faults are only
+stored and serve only for internal processing in the control. Terminal On BLM X3:07",,,,
+Bomag,Trench Roller,Kubota,BLM,5063,,"Output switched off, no potential 15  on machine, control is working, engine is stopped or cannot be started Output relay K 11, changeover of potential 15
+Although the output is switched off, voltage is present Current path connected to +12V. No display for fault codes 5060 to 5063, because the display module is not supplied with voltage. The horn sounds if these faults occur. These faults are only
+stored and serve only for internal processing in the control. Terminal On BLM X3:07",,,,
+Bomag,Trench Roller,Kubota,BLM,5070,,"Output switched off, engine cannot be started Output relay K 39, starter
+The current flow from this output is too high output     was switched off! Excessive current flow in current path, probably because of a defective coil or
+a short circuit to ground Terminal On BLM X3:06",,,,
+Bomag,Trench Roller,Kubota,BLM,5071,,"Output switched off, engine cannot be started Output relay K 39, starter
+Short circuit current flowing from this output output was switched off ! Wire breakage in current path Current path connected to +12V Lines rubbed through Terminal On BLM X3:06",,,,
+Bomag,Trench Roller,Kubota,BLM,5072,,"Output switched off, engine cannot be started Output relay K 39, starter
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:06",,,,
+Bomag,Trench Roller,Kubota,BLM,5073,,"All outputs switched off, engine stopped, safety relay switched off Output relay K 39, starter
+Although the output is switched off, voltage is present Current path connected to +12V Terminal On BLM X3:06",,,,
+Bomag,Trench Roller,Kubota,BLM,"5080
+",,"Output switched off, horn cannot sound Output horn, H 07
+The current flow from this output is too high output     was switched off! Excessive current flow in current path, probably because of a defective coil or a short circuit to ground Terminal On BLM X3:08 X3:36",,,,
+Bomag,Trench Roller,Kubota,BLM,"5081
+",,"Output switched off, horn cannot sound Output valve driving forward, Y 16
+The current flow from this output is too high output     was switched off! Short circuit to ground in current path Lines rubbed through
+Horn defective Terminal On BLM X3:08 X3:36",,,,
+Bomag,Trench Roller,Kubota,BLM,"5082
+",,"Output switched off, horn cannot sound Output horn, H 07
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:08 X3:36",,,,
+Bomag,Trench Roller,Kubota,BLM,"5083
+",,"Horn may sound continuously Output horn, H 07
+Although the output is switched off, voltage is present Current path connected to +12V Terminal On BLM X3:08 X3:36",,,,
+Bomag,Trench Roller,Kubota,BLM,5090,,"Machine does not start Input inclination switch B56
+The machine cannot be started, because the input does not receive a signal from the inclination switch Wire breakage in current path Switch defective
+The switch is in actuated state (incorrect installation position) Terminal On BLM X3:23",,,,
+Bomag,Trench Roller,Kubota,BLM,5091,,"Shut down of diesel engine Input inclination switch B 56
+The diesel engine is shut down because the input on the control does not receive a signal from the inclination sensor Wire breakage in current path Switch defective
+The switch is in actuated state (machine has turned over) The machine must first be shut down after it has been placed in correct position. Terminal On BLM X3:23",,,,
+Bomag,Trench Roller,Kubota,BLM,5100,,"Horn sounds, just warning Input cooling water temperature B 53
+Cooling water temperature is too high deficit of cooling water cooler broken
+sensor broken Terminal On BLM X3:05",,,,
+Bomag,Trench Roller,Kubota,BLM,5101,,"2nd gear and vibration is stopped Input cooling water temperature B 53
+Cooling water temperature is too high for a longer period deficit of cooling water cooler broken
+sensor broken Terminal On BLM X3:05",,,,
+Bomag,Trench Roller,Kubota,BLM,7010,,"Machine cannot be started, module is
+not completely initialized Output valve driving forward, Y 16
+The current flow from this output is too high output     was switched off! Module is new, parameters were deleted. When reading out the error log this error is usually present.",,,,
+Bomag,Trench Roller,Kubota,BLM,"
+5085",,"Output switched off, horn cannot sound Output horn, H 07
+The current flow from this output is too high output     was switched off! Excessive current flow in current path, probably because of a defective coil or a short circuit to ground Terminal On BLM X3:08 X3:36",,,,
+Bomag,Trench Roller,Kubota,BLM,"
+5086",,"Output switched off, horn cannot sound Output valve driving forward, Y 16
+The current flow from this output is too high output     was switched off! Short circuit to ground in current path Lines rubbed through
+Horn defective Terminal On BLM X3:08 X3:36",,,,
+Bomag,Trench Roller,Kubota,BLM,"
+5087",,"Output switched off, horn cannot sound Output horn, H 07
+No or too low current flow out of this output Wire breakage in current path Current path connected to +12V Terminal On BLM X3:08 X3:36",,,,
+Bomag,Trench Roller,Kubota,BLM,"
+5088",,"Horn may sound continuously Output horn, H 07
+Although the output is switched off, voltage is present Current path connected to +12V Terminal On BLM X3:08 X3:36",,,,

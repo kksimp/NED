@@ -1,0 +1,723 @@
+﻿Manufcature,Type,Engine,Controller,"Cummins Code
+",SPN,FMI,Code
+Cummins,,Cummins,Ecm,"111
+",629,12,Engine Control Module – Critical internal failure
+Cummins,,Cummins,Ecm,"112
+",635,7,Engine Timing Actuator is not responding to ECM commands
+Cummins,,Cummins,Ecm,"113
+",635,3,Engine Timing Actuator Circuit - shorted high
+Cummins,,Cummins,Ecm,"114
+",635,4,Engine Timing Actuator Circuit - shorted low
+Cummins,,Cummins,Ecm,"115
+",190,2,Engine Speed/Position Sensor Circuit - lost both of two signals from the magnetic pickup sensor
+Cummins,,Cummins,Ecm,"116
+",156,3,Fuel Timing Pressure Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"117
+",156,4,Fuel Timing Pressure Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"118
+",135,3,Fuel Pump Delivery Pressure Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"119
+",135,4,Fuel Pump Delivery Pressure Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"121
+",190,10,Engine Speed/Position Sensor Circuit - lost one of two signals from the magnetic pickup sensor
+Cummins,,Cummins,Ecm,"122
+",102,3,Intake Manifold Pressure Sensor #1 Circuit - shorted high
+Cummins,,Cummins,Ecm,"123
+",102,4,Intake Manifold Pressure Sensor #1 Circuit - shorted low
+Cummins,,Cummins,Ecm,"124
+",102,16,High Intake Manifold Pressure Left Bank
+Cummins,,Cummins,Ecm,"125
+",102,18,Low Intake Manifold Pressure Left Bank
+Cummins,,Cummins,Ecm,"126
+",1129,16,High Intake Manifold Pressure Right Bank
+Cummins,,Cummins,Ecm,"127
+",1129,18,Low Intake Manifold Pressure Right Bank
+Cummins,,Cummins,Ecm,"128
+",1129,3,Right Bank Intake Manifold Pressure Sensor Circuit Failed High
+Cummins,,Cummins,Ecm,"129
+",1129,4,Right Bank Intake Manifold Pressure Sensor Circuit Failed Low
+Cummins,,Cummins,Ecm,"131
+",91,3,Accelerator Pedal Position Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"132
+",91,4,Accelerator Pedal Position Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"133
+",974,3,Remote Accelerator Pedal Position Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"133
+",29,3,Remote Accelerator Pedal Position Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"134
+",974,4,Remote Accelerator Pedal Position Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"134
+",29,4,Remote Accelerator Pedal Position Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"135
+",100,3,Engine Oil Pressure Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"136
+",1208,3,Pre Filter Oil Pressure Sensor Circuit Failed High
+Cummins,,Cummins,Ecm,"137
+",1208,4,Pre Filter Oil Pressure Sensor Circuit Failed Low
+Cummins,,Cummins,Ecm,"141
+",100,4,Engine Oil Pressure Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"143
+",100,18,Engine Oil Pressure Low – Warning
+Cummins,,Cummins,Ecm,"143
+",100,1,Engine Oil Pressure Low – Warning
+Cummins,,Cummins,Ecm,"144
+",110,3,Engine Coolant Temperature Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"145
+",110,4,Engine Coolant Temperature Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"146
+",110,16,Engine Coolant Temperature High – Warning
+Cummins,,Cummins,Ecm,"147
+",91,8,Accelerator Pedal Position Sensor Circuit - low frequency
+Cummins,,Cummins,Ecm,"148
+",91,8,Accelerator Pedal Position Sensor Circuit - high frequency
+Cummins,,Cummins,Ecm,"151
+",110,0,Engine Coolant Temperature High – Critical
+Cummins,,Cummins,Ecm,"151
+",110,0,Engine Coolant Temperature High – Critical
+Cummins,,Cummins,Ecm,"153
+",105,3,Intake Manifold Temperature Sensor #1 Circuit - shorted high
+Cummins,,Cummins,Ecm,"154
+",105,4,Intake Manifold Temperature Sensor #1 Circuit - shorted low
+Cummins,,Cummins,Ecm,"155
+",105,0,Intake Manifold Temperature #1 High - Critical
+Cummins,,Cummins,Ecm,"155
+",105,0,Intake Manifold Temperature #1 High – Critical
+Cummins,,Cummins,Ecm,"156
+",1131,3,Left Bank Rear Intake Manifold Temp Sensor Circuit Failed High
+Cummins,,Cummins,Ecm,"157
+",1131,4,Left Bank Rear Intake Manifold Temp Sensor Circuit Failed Low
+Cummins,,Cummins,Ecm,"158
+",1131,0,High Intake Manifold Temp - Left Bank Rear
+Cummins,,Cummins,Ecm,"159
+",1132,3,Right Bank Front Intake Manifold Temperature Sensor Circuit Failed High
+Cummins,,Cummins,Ecm,"161
+",1132,4,Right Bank Front Intake Manifold Temperature Sensor Circuit Failed Low
+Cummins,,Cummins,Ecm,"162
+",1132,0,High Intake Manifold Temperature - Right Bank Front
+Cummins,,Cummins,Ecm,"163
+",1133,3,Right Bank Rear Intake Manifold Temperature Sensor Circuit Failed High
+Cummins,,Cummins,Ecm,"164
+",1133,4,Right Bank Rear Intake Manifold Temperature Sensor Circuit Failed Low
+Cummins,,Cummins,Ecm,"165
+",1133,0,High Intake Manifold Temperature - Right Bank Rear
+Cummins,,Cummins,Ecm,"166
+",733,3,Rack Position Sensor #1 Circuit - shorted high
+Cummins,,Cummins,Ecm,"172
+",638,6,Rack Actuator Position #1 Circuit - grounded circuit
+Cummins,,Cummins,Ecm,"173
+",638,7,Rack Actuator - mechanically stuck open
+Cummins,,Cummins,Ecm,"184
+",609,2,Engine Control Module Identification Input State Error
+Cummins,,Cummins,Ecm,"185
+",639,2,Engine Control Module Network Communication Error
+Cummins,,Cummins,Ecm,"187
+",620,4,Sensor Supply Voltage #2 Circuit - shorted low
+Cummins,,Cummins,Ecm,"211
+",1484,31,Additional OEM/Vehicle Diagnostic Codes have been logged.  Check other ECM's for DTC's.
+Cummins,,Cummins,Ecm,"211
+",613,14,OEM Component Failure
+Cummins,,Cummins,Ecm,"212
+",175,3,Engine Oil Temperature Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"212
+",175,3,Engine Oil Temperature Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"213
+",175,4,Engine Oil Temperature Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"213
+",175,4,Engine Oil Temperature Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"214
+",175,0,Engine Oil Temperature High - Critical
+Cummins,,Cummins,Ecm,"214
+",175,0,Engine Oil Temperature High – Critical
+Cummins,,Cummins,Ecm,"219
+",1380,17,Low Oil Level in the Centinel makeup oil tank
+Cummins,,Cummins,Ecm,"219
+",1380,1,Low Oil Level in the Centinel makeup oil tank
+Cummins,,Cummins,Ecm,"221
+",108,3,Ambient Air Pressure Sensor Circuit – shorted high
+Cummins,,Cummins,Ecm,"222
+",108,4,Ambient Air Pressure Sensor Circuit – shorted low
+Cummins,,Cummins,Ecm,"223
+",1265,4,Engine Oil Burn Valve Solenoid Circuit – shorted low
+Cummins,,Cummins,Ecm,"225
+",1266,4,Engine Oil Replacement Valve Solenoid Circuit - shorted low
+Cummins,,Cummins,Ecm,"227
+",620,3,Sensor Supply Voltage #2 Circuit - shorted high
+Cummins,,Cummins,Ecm,"284
+",1043,4,Engine Speed/Position Sensor #1 (Crankshaft) Supply Voltage Circuit - shorted low
+Cummins,,Cummins,Ecm,"285
+",639,9,SAE J1939 Multiplexing PGN Timeout Error
+Cummins,,Cummins,Ecm,"286
+",639,13,SAE J1939 Multiplexing Configuration Error
+Cummins,,Cummins,Ecm,"287
+",91,19,SAE J1939 Multiplexing Accelerator Pedal Sensor System Error
+Cummins,,Cummins,Ecm,"288
+",974,19,SAE J1939 Multiplexing Remote Throttle Data Error
+Cummins,,Cummins,Ecm,"292
+",1083,14,Auxiliary Temperature Sensor Input # 1 Engine Protection - Critical
+Cummins,,Cummins,Ecm,"293
+",441,3,Auxiliary Temperature Sensor Input # 1 Circuit – shorted high
+Cummins,,Cummins,Ecm,"293
+",1083,3,Auxiliary Temperature Sensor Input # 1 Circuit – shorted high
+Cummins,,Cummins,Ecm,"293
+",1083,3,Auxiliary Temperature Sensor Input # 1 Circuit – shorted high
+Cummins,,Cummins,Ecm,"294
+",441,4,Auxiliary Temperature Sensor Input # 1 Circuit – shorted low
+Cummins,,Cummins,Ecm,"294
+",1083,4,Auxiliary Temperature Sensor Input # 1 Circuit – shorted low
+Cummins,,Cummins,Ecm,"294
+",1083,4,Auxiliary Temperature Sensor Input # 1 Circuit – shorted low
+Cummins,,Cummins,Ecm,"295
+",108,2,Ambient Air Pressure Sensor Circuit - data incorrect
+Cummins,,Cummins,Ecm,"296
+",1387,14,Auxiliary Pressure Sensor Input # 2 Engine Protection - Critical
+Cummins,,Cummins,Ecm,"296
+",1084,14,Auxiliary Pressure Sensor Input # 2 Engine Protection - Critical
+Cummins,,Cummins,Ecm,"297
+",1387,3,Auxiliary Pressure Sensor Input # 2 Circuit – shorted high
+Cummins,,Cummins,Ecm,"297
+",1084,3,Auxiliary Pressure Sensor Input # 2 Circuit – shorted high
+Cummins,,Cummins,Ecm,"298
+",1387,4,Auxiliary Pressure Sensor Input # 2 Circuit – shorted low
+Cummins,,Cummins,Ecm,"231
+",109,3,"Engine Coolant Pressure Sensor Circuit
+- shorted high"
+Cummins,,Cummins,Ecm,"232
+",109,4,"Engine Coolant Pressure Sensor Circuit
+- shorted low"
+Cummins,,Cummins,Ecm,"233
+",109,18,Engine Coolant Pressure Low – Warning
+Cummins,,Cummins,Ecm,"233
+",109,1,Engine Coolant Pressure Low – Warning
+Cummins,,Cummins,Ecm,"234
+",190,0,Engine Speed High – Critical
+Cummins,,Cummins,Ecm,"235
+",111,1,Engine Coolant Level Low - Critical
+Cummins,,Cummins,Ecm,"235
+",111,1,Engine Coolant Level Low – Critical
+Cummins,,Cummins,Ecm,"237
+",644,2,External Speed Input (Multiple Unit Sychronization) - data incorrect
+Cummins,,Cummins,Ecm,"241
+",84,2,Vehicle Speed Sensor Circuit - data incorrect
+Cummins,,Cummins,Ecm,"242
+",84,10,Vehicle Speed Sensor Circuit - tampering has been detected
+Cummins,,Cummins,Ecm,"243
+",513,4,Engine Brake Driver #1 Circuit - shorted low
+Cummins,,Cummins,Ecm,"245
+",647,4,Fan Clutch Circuit - shorted low
+Cummins,,Cummins,Ecm,"252
+",98,2,Engine Oil Level #1 Sensor Circuit - data incorrect
+Cummins,,Cummins,Ecm,"253
+",98,1,Engine Oil Level #1 Low – Critical
+Cummins,,Cummins,Ecm,"254
+",632,4,Fuel Shutoff Valve Circuit - shorted low
+Cummins,,Cummins,Ecm,"254
+",632,4,Fuel Shutoff Valve Circuit - shorted low
+Cummins,,Cummins,Ecm,"255
+",632,3,Fuel Shutoff Valve Circuit - shorted high
+Cummins,,Cummins,Ecm,"259
+",632,7,Fuel Shutoff Valve - stuck open
+Cummins,,Cummins,Ecm,"261
+",174,16,Fuel Temperature High – Warning
+Cummins,,Cummins,Ecm,"261
+",174,0,Fuel Temperature High – Warning
+Cummins,,Cummins,Ecm,"263
+",174,3,Fuel Temperature Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"264
+",174,11,Fuel Temperature Sensor Circuit - data out-of-range
+Cummins,,Cummins,Ecm,"265
+",174,4,Fuel Temperature Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"268
+",94,2,Fuel Pressure Sensor Circuit - data incorrect
+Cummins,,Cummins,Ecm,"271
+",1347,4,High Fuel Pressure Solenoid Valve #1 Circuit - shorted low
+Cummins,,Cummins,Ecm,"272
+",1347,3,High Fuel Pressure Solenoid Valve #1 Circuit - shorted high
+Cummins,,Cummins,Ecm,"273
+",1348,4,High Fuel Pressure Solenoid Valve #2 Circuit - shorted low
+Cummins,,Cummins,Ecm,"274
+",1348,3,High Fuel Pressure Solenoid Valve #2 Circuit - shorted high
+Cummins,,Cummins,Ecm,"275
+",1347,7,Fuel Pumping Element #1 (Front) - mechanically stuck
+Cummins,,Cummins,Ecm,"276
+",633,3,Fuel Injection Control Valve Circuit - shorted high
+Cummins,,Cummins,Ecm,"277
+",633,7,Fuel Injection Control Valve - mechanically stuck
+Cummins,,Cummins,Ecm,"278
+",1075,11,Fuel Priming Pump Control Circuit - shorted  high/low
+Cummins,,Cummins,Ecm,"279
+",633,4,Fuel Injection Control Valve Circuit - shorted low
+Cummins,,Cummins,Ecm,"281
+",1347,7,High Fuel Pressure Solenoid Valve #1 - mechanically stuck
+Cummins,,Cummins,Ecm,"282
+",1348,7,High Fuel Pressure Solenoid Valve #2 - mechanically stuck
+Cummins,,Cummins,Ecm,"283
+",1043,3,Engine Speed/Position Sensor #1 (Crankshaft) Supply Voltage Circuit - shorted high
+Cummins,,Cummins,Ecm,"298
+",1084,4,Auxiliary Pressure Sensor Input # 2 Circuit – shorted low
+Cummins,,Cummins,Ecm,"299
+",1384,31,Engine Shutdown Commanded by J1939
+Cummins,,Cummins,Ecm,"299
+",1384,31,Engine Shutdown Commanded by J1939
+Cummins,,Cummins,Ecm,"311
+",651,6,Injector Solenoid Valve Cylinder #1 Circuit – grounded circuit
+Cummins,,Cummins,Ecm,"312
+",655,6,Injector Solenoid Valve Cylinder #5 Circuit – grounded circuit
+Cummins,,Cummins,Ecm,"313
+",653,6,Injector Solenoid Valve Cylinder #3 Circuit – grounded circuit
+Cummins,,Cummins,Ecm,"314
+",656,6,Injector Solenoid Valve Cylinder #6 Circuit - grounded circuit
+Cummins,,Cummins,Ecm,"315
+",652,6,Injector Solenoid Valve Cylinder #2 Circuit – grounded circuit
+Cummins,,Cummins,Ecm,"316
+",931,3,Fuel Supply Pump Actuator Circuit - shorted high
+Cummins,,Cummins,Ecm,"318
+",931,7,Fuel Supply Pump Actuator – mechanically stuck
+Cummins,,Cummins,Ecm,"319
+",251,2,Real Time Clock - Power Interrupt
+Cummins,,Cummins,Ecm,"321
+",654,6,Injector Solenoid Valve Cylinder #4 Circuit - grounded circuit
+Cummins,,Cummins,Ecm,"322
+",651,5,Injector Solenoid Valve Cylinder #1 Circuit - open circuit
+Cummins,,Cummins,Ecm,"323
+",655,5,Injector Solenoid Valve Cylinder #5 Circuit – open circuit
+Cummins,,Cummins,Ecm,"324
+",653,5,Injector Solenoid Valve Cylinder #3 Circuit – open circuit
+Cummins,,Cummins,Ecm,"325
+",656,5,Injector Solenoid Valve Cylinder #6 Circuit – open circuit
+Cummins,,Cummins,Ecm,"328
+",1348,7,Fuel Pumping Element #2 (Rear) - mechanically stuck
+Cummins,,Cummins,Ecm,"329
+",1077,14,Fuel System Leakage error
+Cummins,,Cummins,Ecm,"331
+",652,5,Injector Solenoid Valve Cylinder #2 Circuit – open circuit
+Cummins,,Cummins,Ecm,"332
+",654,5,Injector Solenoid Valve Cylinder #4 Circuit – open circuit
+Cummins,,Cummins,Ecm,"341
+",630,2,Engine Control Module – data lost
+Cummins,,Cummins,Ecm,"342
+",630,13,Engine Control Module – out of calibration
+Cummins,,Cummins,Ecm,"343
+",629,12,Engine Control Module - Warning internal hardware failure
+Cummins,,Cummins,Ecm,"346
+",630,12,Engine Control Module - Warning Software error
+Cummins,,Cummins,Ecm,"349
+",191,16,Transmission Output Shaft (Tailshaft) Speed High – Warning
+Cummins,,Cummins,Ecm,"349
+",191,0,Transmission Output Shaft (Tailshaft) Speed High – Warning
+Cummins,,Cummins,Ecm,"352
+",1079,4,Sensor Supply Voltage #1 Circuit - shorted low
+Cummins,,Cummins,Ecm,"361
+",1076,3,"Fuel Pump Control Module, Fuel Control Valve Circuit - shorted high"
+Cummins,,Cummins,Ecm,"362
+",1076,4,"Fuel Pump Control Module, Fuel Control Valve Circuit - shorted low"
+Cummins,,Cummins,Ecm,"363
+",1076,7,"Fuel Pump Control Module, Fuel Control Valve - mechanically stuck"
+Cummins,,Cummins,Ecm,"364
+",1077,9,"Fuel Pump Control Module, CAN Communication Error - abnormal update rate"
+Cummins,,Cummins,Ecm,"365
+",1077,4,"Fuel Pump Control Module, Supply Voltage Circuit - shorted low"
+Cummins,,Cummins,Ecm,"366
+",1077,2,"Fuel Pump Control Module, Supply Voltage Circuit - data incorrect"
+Cummins,,Cummins,Ecm,"367
+",1078,11,"Fuel Pump Control Module, Increment Angle Time Sensor Error"
+Cummins,,Cummins,Ecm,"368
+",1078,8,"Fuel Pump Control Module, Timing Error"
+Cummins,,Cummins,Ecm,"369
+",1078,2,"Fuel Pump Control Module, Engine Synchronization Error"
+Cummins,,Cummins,Ecm,"372
+",1077,11,"Fuel Pump Control Module, Idle Validation Error"
+Cummins,,Cummins,Ecm,"373
+",1077,3,"Fuel Pump Control Module, Fuel Shutoff Error"
+Cummins,,Cummins,Ecm,"374
+",1077,12,"Fuel Pump Control Module, Self-Test Error"
+Cummins,,Cummins,Ecm,"375
+",629,2,"Fuel Pump Control Module, Electronic Calibration Code Error"
+Cummins,,Cummins,Ecm,"376
+",1077,13,"Fuel Pump Control Module, Fueling or Engine Speed Mismatch"
+Cummins,,Cummins,Ecm,"377
+",1077,7,"Fuel Pump Control Module, Stuck Relay Error"
+Cummins,,Cummins,Ecm,"378
+",633,5,Fueling Actuator #1 Circuit - open circuit
+Cummins,,Cummins,Ecm,"379
+",633,6,Fueling Actuator #1 Circuit - grounded circuit
+Cummins,,Cummins,Ecm,"381
+",626,11,Intake Air Heater (Relay Enable) #1 Circuit - data incorrect
+Cummins,,Cummins,Ecm,"382
+",626,11,Intake Air Heater (Relay Enable) #2 Circuit - data incorrect
+Cummins,,Cummins,Ecm,"384
+",626,11,Start Assist Device Control Circuit Error (Ether Injection)
+Cummins,,Cummins,Ecm,"385
+",620,3,OEM Sensor Supply Voltage Circuit - shorted high
+Cummins,,Cummins,Ecm,"386
+",1079,3,Sensor Supply Voltage #1 Circuit - shorted high
+Cummins,,Cummins,Ecm,"387
+",1043,3,Accelerator Pedal Position Sensor Supply Voltage Circuit - shorted high
+Cummins,,Cummins,Ecm,"389
+",647,11,Fan Clutch Circuit Error
+Cummins,,Cummins,Ecm,"391
+",632,11,Fuel Shutoff Valve Supply Voltage error
+Cummins,,Cummins,Ecm,"394
+",635,5,Timing Actuator #1 Circuit - open circuit
+Cummins,,Cummins,Ecm,"395
+",635,6,Timing Actuator #1 Circuit - grounded circuit
+Cummins,,Cummins,Ecm,"396
+",1244,5,Fueling Actuator #2 Circuit - open circuit
+Cummins,,Cummins,Ecm,"397
+",1244,6,Fueling Actuator #2 Circuit - grounded circuit
+Cummins,,Cummins,Ecm,"398
+",1245,5,Timing Actuator #2 Circuit - open circuit
+Cummins,,Cummins,Ecm,"399
+",1245,6,Timing Actuator #2 Circuit - grounded circuit
+Cummins,,Cummins,Ecm,"414
+",608,9,Data Communication error over the J1587 data link Circuit
+Cummins,,Cummins,Ecm,"415
+",100,1,Engine Oil Pressure Low – Critical
+Cummins,,Cummins,Ecm,"415
+",100,1,Engine Oil Pressure Low – Critical
+Cummins,,Cummins,Ecm,"418
+
+",97,15,Water in Fuel Indicator High – Maintenance
+Cummins,,Cummins,Ecm,"419
+",1319,2,Intake Manifold  Boost Pressure Imbalance
+Cummins,,Cummins,Ecm,"422
+",111,2,Engine Coolant Level Sensor Circuit - data incorrect
+Cummins,,Cummins,Ecm,"423
+",156,2,Fuel Timing Pressure or Timing Actuator Stuck
+Cummins,,Cummins,Ecm,"426
+",639,2,SAE J1939 datalink - cannot transmit
+Cummins,,Cummins,Ecm,"426
+",639,2,SAE J1939 datalink - cannot transmit
+Cummins,,Cummins,Ecm,"426
+",639,2,SAE J1939 datalink - cannot transmit
+Cummins,,Cummins,Ecm,"427
+",639,9,SAE J1939 not fast enough
+Cummins,,Cummins,Ecm,"428
+",97,3,Water in Fuel Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"429
+",97,4,Water in Fuel Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"431
+",558,2,"Accelerator Pedal Idle Validation Circuit
+- data incorrect"
+Cummins,,Cummins,Ecm,"431
+",91,2,"Accelerator Pedal Idle Validation Circuit
+- data incorrect"
+Cummins,,Cummins,Ecm,"432
+",558,13,"Accelerator Pedal Idle Validation Circuit
+- out of calibration"
+Cummins,,Cummins,Ecm,"432
+",91,13,"Accelerator Pedal Idle Validation Circuit
+- out of calibration"
+Cummins,,Cummins,Ecm,"433
+",102,2,"Intake Manifold Pressure Sensor Circuit
+- data incorrect"
+Cummins,,Cummins,Ecm,"434
+",627,2,Power Lost without Ignition Off
+Cummins,,Cummins,Ecm,"435
+",100,2,Engine Oil Pressure Sensor Circuit - data incorrect
+Cummins,,Cummins,Ecm,"441
+",168,18,Battery #1 Voltage Low - Warning
+Cummins,,Cummins,Ecm,"441
+",168,1,Battery #1 Voltage Low - Warning
+Cummins,,Cummins,Ecm,"442
+",168,16,Battery #1 Voltage High - Warning
+Cummins,,Cummins,Ecm,"442
+",168,0,Battery #1 Voltage High – Warning
+Cummins,,Cummins,Ecm,"443
+",1043,4,Accelerator Pedal Position Sensor Supply Voltage Circuit - shorted low
+Cummins,,Cummins,Ecm,"444
+",620,18,OEM Sensor Supply Voltage Low - Warning
+Cummins,,Cummins,Ecm,"446
+",,,GSP Communication Failure
+Cummins,,Cummins,Ecm,"447
+",,,RPC Number Not Supported
+Cummins,,Cummins,Ecm,"448
+",,,RPC Argument Mismatch
+Cummins,,Cummins,Ecm,"449
+",94,16,Fuel Pressure High - Warning
+Cummins,,Cummins,Ecm,"451
+",157,3,Injector Metering Rail #1 Pressure Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"451
+",157,3,Injector Metering Rail #1 Pressure Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"452
+",157,4,Injector Metering Rail #1 Pressure Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"452
+",157,4,Injector Metering Rail #1 Pressure Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"455
+",633,3,Fuel Control Valve Circuit - shorted high
+Cummins,,Cummins,Ecm,"466
+",1188,4,Turbocharger #1 Wastegate  Control Circuit - shorted low
+Cummins,,Cummins,Ecm,"467
+",635,2,Timing Rail Actuator Circuit - data incorrect
+Cummins,,Cummins,Ecm,"468
+",633,2,Fuel Rail Actuator Circuit - data incorrect
+Cummins,,Cummins,Ecm,"471
+",98,1,Engine Oil Level Low – Maintenance
+Cummins,,Cummins,Ecm,"472
+",1380,2,Engine Oil Level #2 Low – Maintenance
+Cummins,,Cummins,Ecm,"473
+",1380,2,Engine Oil Level #2 Low – Warning
+Cummins,,Cummins,Ecm,"479
+",1318,9,Exhaust Port Temperature Bank Imbalance
+Cummins,,Cummins,Ecm,"482
+",94,18,Fuel Pressure Low - Warning
+Cummins,,Cummins,Ecm,"483
+",1349,3,Injector Metering Rail #2 Pressure Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"484
+",1349,4,Injector Metering Rail #2 Pressure Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"485
+",1349,16,Injector Metering Rail #2 Pressure High - Warning
+Cummins,,Cummins,Ecm,"486
+",1349,18,Injector Metering Rail #2 Pressure Low - Warning
+Cummins,,Cummins,Ecm,"487
+",626,1,Start Assist Device - Canister Empty (Ether Injection)
+Cummins,,Cummins,Ecm,"488
+",105,16,Intake Manifold Temperature High – Warningl
+Cummins,,Cummins,Ecm,"489
+",191,18,Transmission Output Shaft (Tailshaft) Speed Low – Warning
+Cummins,,Cummins,Ecm,"489
+",191,1,Transmission Output Shaft (Aux Gov) Speed Low – Warning
+Cummins,,Cummins,Ecm,493,1076,13,Fuel Pump Calibration Trim Circuit Error
+Cummins,,Cummins,Ecm,"496
+",1043,11,Engine Speed/Position Sensor #2 (Camshaft) Supply Voltage
+Cummins,,Cummins,Ecm,"497
+",1377,2,Multiple Unit Synchronization Switch Circuit - data incorrect
+Cummins,,Cummins,Ecm,"514
+",633,7,Fuel Control Valve - mechanically stuck
+Cummins,,Cummins,Ecm,"515
+",91,3,Accelerator Pedal Frequency Position Sensor Supply Circuit - shorted high
+Cummins,,Cummins,Ecm,"516
+",91,4,Accelerator Pedal Frequency Position Sensor Supply Circuit - shorted low
+Cummins,,Cummins,Ecm,"517
+",1076,12,Fuel Metering Solenoid - bad device
+Cummins,,Cummins,Ecm,"524
+",113,2,"OEM  Alternate Droop Switch Validation
+- data incorrect"
+Cummins,,Cummins,Ecm,"527
+",702,3,Auxiliary Input/Output #2 Circuit - shorted high
+Cummins,,Cummins,Ecm,"527
+",702,3,Auxiliary Input/Output #2 Circuit - shorted high
+Cummins,,Cummins,Ecm,"528
+",93,2,OEM Alternate torque validation switch - data incorrect
+Cummins,,Cummins,Ecm,"529
+",703,3,Auxiliary Input/Output #3 Circuit - shorted high
+Cummins,,Cummins,Ecm,"539
+",633,11,Injector Control Valve Electronic Filter (Transorb) Error
+Cummins,,Cummins,Ecm,"546
+",94,3,Fuel Delivery Pressure Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"547
+",94,4,Fuel Delivery Pressure Sensor Circuit- shorted low
+Cummins,,Cummins,Ecm,"551
+",558,4,"Accelerator Pedal Idle Validation Circuit
+- shorted low"
+Cummins,,Cummins,Ecm,"551
+",91,4,"Accelerator Pedal Idle Validation Circuit
+- shorted low"
+Cummins,,Cummins,Ecm,"553
+",157,16,Injector Metering Rail #1 Pressure High - warning level
+Cummins,,Cummins,Ecm,"553
+",157,0,Injector Metering Rail #1 Pressure High - warning level
+Cummins,,Cummins,Ecm,"554
+",157,2,Fuel Pressure Sensor Error
+Cummins,,Cummins,Ecm,"555
+",1264,16,Engine Blowby - Warning Level
+Cummins,,Cummins,Ecm,"555
+",1264,0,Engine Blowby - Warning Level
+Cummins,,Cummins,Ecm,"581
+",1381,3,Fuel Supply Pump Inlet Pressure Sensor Circuit - shorted high
+Cummins,,Cummins,Ecm,"582
+",1381,4,Fuel Supply Pump Inlet Pressure Sensor Circuit – shorted low
+Cummins,,Cummins,Ecm,"583
+",1381,18,Fuel Supply Pump Inlet Pressure Low - warning level
+Cummins,,Cummins,Ecm,"595
+",103,16,Turbocharger #1 Speed High - warning level
+Cummins,,Cummins,Ecm,"596
+",167,16,"Electrical Charging System Voltage High
+- warning level"
+Cummins,,Cummins,Ecm,"597
+",167,18,"Electrical Charging System Voltage Low
+- Warning Level"
+Cummins,,Cummins,Ecm,"598
+",167,1,"Electrical Charging System Voltage Low
+- Critical Level"
+Cummins,,Cummins,Ecm,"599
+",640,14,OEM Commanded Dual Output Shutdown
+Cummins,,Cummins,Ecm,"611
+",1383,31,Engine Hot Shutdown
+Cummins,,Cummins,Ecm,"611
+",1383,31,Engine Hot Shutdown
+Cummins,,Cummins,Ecm,"612
+",99,1,High Lubricating Oil Filter Restriction
+Cummins,,Cummins,Ecm,"616
+",1173,16,High Turbo Compressor Inlet Temp RB
+Cummins,,Cummins,Ecm,"617
+",1172,0,High Turbo Compressor Inlet Temp LB
+Cummins,,Cummins,Ecm,"621
+",1137,18,Low #1 LB Cylinder Power
+Cummins,,Cummins,Ecm,"622
+",1138,18,Low #2 LB Cylinder Power
+Cummins,,Cummins,Ecm,"623
+",1139,18,Low #3 LB Cylinder Power
+Cummins,,Cummins,Ecm,"624
+",1140,18,Low #4 LB Cylinder Power
+Cummins,,Cummins,Ecm,"625
+",1141,18,Low #5 LB Cylinder Power
+Cummins,,Cummins,Ecm,"626
+",1142,18,Low #6 LB Cylinder Power
+Cummins,,Cummins,Ecm,"627
+",1143,18,Low #7 LB Cylinder Power
+Cummins,,Cummins,Ecm,"628
+",1144,18,Low #8 LB Cylinder Power
+Cummins,,Cummins,Ecm,"631
+",1145,18,Low #1 RB Cylinder Power
+Cummins,,Cummins,Ecm,"631
+",1329,1,Low #1 RB Cylinder Power
+Cummins,,Cummins,Ecm,"647
+",1143,0,High #7 LB Cylinder Exhaust Temperature
+Cummins,,Cummins,Ecm,"648
+",1144,0,High #8 LB Cylinder Exhaust Temperature
+Cummins,,Cummins,Ecm,"649
+",1378,0,Change Lubricating Oil and Filter
+Cummins,,Cummins,Ecm,"636
+",1329,1,Low #6 RB Cylinder Power
+Cummins,,Cummins,Ecm,"637
+",1151,18,Low #7 RB Cylinder Power
+Cummins,,Cummins,Ecm,"638
+",1152,18,Low #8 RB Cylinder Power
+Cummins,,Cummins,Ecm,"641
+",1137,0,High #1 LB Cylinder Exhaust Temperature
+Cummins,,Cummins,Ecm,"642
+",1138,0,High #2 LB Cylinder Exhaust Temperature
+Cummins,,Cummins,Ecm,"643
+",1139,0,High #3 LB Cylinder Exhaust Temperature
+Cummins,,Cummins,Ecm,"644
+",1140,0,High #4 LB Cylinder Exhaust Temperature
+Cummins,,Cummins,Ecm,"645
+",1141,0,High #5 LB Cylinder Exhaust Temperature
+Cummins,,Cummins,Ecm,"646
+",1142,0,High #6 LB Cylinder Exhaust Temperature
+Cummins,,Cummins,Ecm,"661
+",1137,16,High #1 LB Cylinder Power
+Cummins,,Cummins,Ecm,"661
+",1323,0,High #1 LB Cylinder Power
+Cummins,,Cummins,Ecm,"662
+",1138,16,High #2 LB Cylinder Power
+Cummins,,Cummins,Ecm,"662
+",1324,0,High #2 LB Cylinder Power
+Cummins,,Cummins,Ecm,"663
+",1139,16,High #3 LB Cylinder Power
+Cummins,,Cummins,Ecm,"663
+",1325,0,High #3 LB Cylinder Power
+Cummins,,Cummins,Ecm,"664
+",1140,16,High #4 LB Cylinder Power
+Cummins,,Cummins,Ecm,"664
+",1326,0,High #4 LB Cylinder Power
+Cummins,,Cummins,Ecm,"665
+",1141,16,High #5 LB Cylinder Power
+Cummins,,Cummins,Ecm,"665
+",1327,0,High #5 LB Cylinder Power
+Cummins,,Cummins,Ecm,"666
+",1142,16,High #6 LB Cylinder Power
+Cummins,,Cummins,Ecm,"666
+",1328,0,High #6 LB Cylinder Power
+Cummins,,Cummins,Ecm,"667
+",1143,16,High #7 LB Cylinder Power
+Cummins,,Cummins,Ecm,"668
+",1144,16,High #8 LB Cylinder Power
+Cummins,,Cummins,Ecm,"669
+",,,Change coolant filter
+Cummins,,Cummins,Ecm,"671
+",1137,4,Cyl #1 LB Exhaust Temp Sens Failed Low
+Cummins,,Cummins,Ecm,"672
+",1138,4,Cyl #2 LB Exhaust Temp Sens Failed Low
+Cummins,,Cummins,Ecm,"673
+",1139,4,Cyl #3 LB Exhaust Temp Sens Failed Low
+Cummins,,Cummins,Ecm,"674
+",1140,4,Cyl #4 LB Exhaust Temp Sens Failed Low
+Cummins,,Cummins,Ecm,"675
+",1141,4,Cyl #5 LB Exhaust Temp Sens Failed Low
+Cummins,,Cummins,Ecm,"676
+",1142,4,Cyl #6 LB Exhaust Temp Sens Failed Low
+Cummins,,Cummins,Ecm,"677
+",1143,4,Cyl #7 LB Exhaust Temp Sens Failed Low
+Cummins,,Cummins,Ecm,"678
+",1144,4,Cyl #8 LB Exhaust Temp Sens Failed Low
+Cummins,,Cummins,Ecm,"679
+",,,Change Coolant
+Cummins,,Cummins,Ecm,"691
+",1172,3,LBF Turbo Comp Inlet Temp Sens Failed High
+Cummins,,Cummins,Ecm,"692
+",1172,4,LBR Turbo Comp Inlet Temp Sens Failed Low
+Cummins,,Cummins,Ecm,"694
+",1173,3,RBF Turbo Comp Inlet Temp Sens Failed High
+Cummins,,Cummins,Ecm,"695
+",1174,4,RBR Turbo Comp Inlet Temp Sens Failed Low
+Cummins,,Cummins,Ecm,"727
+",1151,4,Cyl #7 RB Exhaust Temp Sens Failed Low
+Cummins,,Cummins,Ecm,"728
+",1152,4,Cyl #8 RB Exhaust Temp Sens Failed Low
+Cummins,,Cummins,Ecm,"729
+",1264,4,Crankcase Blowby Pressure Sensor Circuit - shorted low
+Cummins,,Cummins,Ecm,"747
+",,,Trend Data Memory Nearly Full
+Cummins,,Cummins,Ecm,"748
+",,,Trend Data Memory Full
+Cummins,,Cummins,Ecm,"749
+",,,Fault Log Snapshot Data Nearly Full
+Cummins,,Cummins,Ecm,"753
+",723,2,Engine Speed/Position #2 - Cam sync error
+Cummins,,Cummins,Ecm,"754
+",,,Fault Log Snapshot Data Full
+Cummins,,Cummins,Ecm,"755
+",157,7,Injector Metering Rail #1 Pressure Malfunction
+Cummins,,Cummins,Ecm,"756
+",,,Change Lubricating Oil Filters
+Cummins,,Cummins,Ecm,"757
+",,,Catastrophic Power Loss - ECM Data Lost
+Cummins,,Cummins,Ecm,"758
+",1349,7,Injector Metering Rail #2 Pressure Malfunction
+Cummins,,Cummins,Ecm,"768
+",923,11,Output Device Driver (VGT or Transmission shift PWM signal)
+Cummins,,Cummins,Ecm,"777
+",1180,0,Turbocharger #1 Turbine Inlet Temperature High - warning level
+Cummins,,Cummins,Ecm,"779
+",703,11,Auxiliary Equipment Sensor Input # 3 (OEM Switch)
+Cummins,,Cummins,Ecm,783,,,Rapid Rise in Intake Manifold Temperature LBF
+Cummins,,Cummins,Ecm,"951
+",166,2,Cylinder Power Imbalance between cylinders
+Cummins,,Cummins,Ecm,"1000
+",,,Vehicle Controller initiated fault log
+Cummins,,Cummins,Ecm,2144,1153,0,High #9 LB Cylinder Exhaust Temperature
+Cummins,,Cummins,Ecm,2145,1154,0,High #9 RB Cylinder Exhaust Temperature
+Cummins,,Cummins,Ecm,2146,1153,4,Exhaust Gas Temperature Sensor Circuit Failed Low Cyl # 9 RB
+Cummins,,Cummins,Ecm,2147,1154,4,Exhaust Gas Temperature Sensor Circuit Failed Low Cyl # 9 LB
+Cummins,,Cummins,Ecm,2148,1340,16,High Power – Cylinder # 9 Left Bank
+Cummins,,Cummins,Ecm,2149,1341,16,High Power – Cylinder # 9 Right Bank
+Cummins,,Cummins,Ecm,2151,1340,18,Low Power – Cylinder # 9 Left Bank
+Cummins,,Cummins,Ecm,2152,1341,18,Low Power – Cylinder # 9 Right Bank
+Cummins,,Cummins,Ecm,"2154
+",611,3,Post-Filter Oil Pressure Sensor Circuit- Shorted high
+Cummins,,Cummins,Ecm,"2155
+",611,4,Post-Filter Oil Pressure Sensor Circuit- Shorted Low
+Cummins,,Cummins,Ecm,2157,1131,10,Rapid Rise in Intake Manifold Temperature LBR
+Cummins,,Cummins,Ecm,2158,1132,10,Rapid Rise in Intake Manifold Temperature RBF
+Cummins,,Cummins,Ecm,2159,1133,10,Rapid Rise in Intake Manifold Temperature RBR
+Cummins,,Cummins,Ecm,"2194
+",1387,11,Auxiliary Equipment Sensor Input # 2 (OEM Pressure Sensor) Engine Protection – Warning
+Cummins,,Cummins,Ecm,"2195
+",703,14,Auxiliary Equipment Sensor Input # 3 (OEM Switch) Engine Protection - Critical
+Cummins,,Cummins,Ecm,2241,,,Left Bank Middle High Intake Manifold Temperature - EP
+Cummins,,Cummins,Ecm,2242,,,Left Bank Middle Intake Manifold Temp Sensor Circuit Failed High
+Cummins,,Cummins,Ecm,2243,,,Left Bank Middle Intake Manifold Temp Sensor Circuit Failed Low
+Cummins,,Cummins,Ecm,2244,,,Rapid Rise in Intake Manifold Temperature LBM
+Cummins,,Cummins,Ecm,2245,,,Right Bank Middle High Intake Manifold Temperature - EP
+Cummins,,Cummins,Ecm,2246,,,Right Bank Middle Intake Manifold Temp Sensor Circuit Failed High
+Cummins,,Cummins,Ecm,2247,,,Right Bank Middle Intake Manifold Temp Sensor Circuit Failed Low
+Cummins,,Cummins,Ecm,2248,,,Rapid Rise in Intake Manifold Temperature RBM
+Cummins,,Cummins,Ecm,2251,,,Front Intercooler Boost Pressure High
+Cummins,,Cummins,Ecm,2252,,,Front Intercooler Boost Pressure Low
+Cummins,,Cummins,Ecm,2253,,,Front Intercooler Boost Pressure Out of Range High
+Cummins,,Cummins,Ecm,2254,,,Front Intercooler Boost Pressure Out of Range Low
+Cummins,,Cummins,Ecm,2255,,,Rear Intercooler Boost Pressure High
+Cummins,,Cummins,Ecm,2256,,,Rear Intercooler Boost Pressure Low
+Cummins,,Cummins,Ecm,2257,,,Rear Intercooler Boost Pressure Out of Range High
+Cummins,,Cummins,Ecm,2258,,,Rear Intercooler Boost Pressure Out of Range Low

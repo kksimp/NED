@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Reflection;
@@ -16,7 +15,7 @@ namespace Fault_Code_Search
         public Main()
         {
             InitializeComponent();
-           
+
             try
             {
                 VersionNUM.Text = "V" + System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion;
@@ -34,7 +33,8 @@ namespace Fault_Code_Search
             Manufacture.Text = "ALL";
 
             typeof(DataGridView).InvokeMember("DoubleBuffered", BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.SetProperty, null, SearchResults, new object[] { true });
-
+            this.SearchResults.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+           
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -72,13 +72,17 @@ namespace Fault_Code_Search
                             adapter.Fill(dt);
                             SearchResults.DataSource = dt;
                             destination.Close();
-                            SearchResults.Columns[0].Width = 100;
+                            SearchResults.Columns[0].Width = 75;
                             SearchResults.Columns[1].Width = 100;
                             SearchResults.Columns[2].Width = 100;
                             SearchResults.Columns[3].Width = 100;
-                            SearchResults.Columns[4].Width = 100;
-                            SearchResults.Columns[5].Width = 100;
-                            SearchResults.Columns[6].Width = 725;
+                            SearchResults.Columns[4].Width = 50;
+                            SearchResults.Columns[5].Width = 50;
+                            SearchResults.Columns[6].Width = 690;
+                            SearchResults.Columns[7].Width = 50;
+                            SearchResults.Columns[8].Width = 50;
+                            SearchResults.Columns[9].Width = 50;
+
 
 
                         }
@@ -141,14 +145,16 @@ namespace Fault_Code_Search
                                 adapter.Fill(dt);
                                 SearchResults.DataSource = dt;
                                 destination.Close();
-                                SearchResults.Columns[0].Width = 100;
+                                SearchResults.Columns[0].Width = 75;
                                 SearchResults.Columns[1].Width = 100;
                                 SearchResults.Columns[2].Width = 100;
                                 SearchResults.Columns[3].Width = 100;
-                                SearchResults.Columns[4].Width = 100;
-                                SearchResults.Columns[5].Width = 100;
-                                SearchResults.Columns[6].Width = 725;
-
+                                SearchResults.Columns[4].Width = 50;
+                                SearchResults.Columns[5].Width = 50;
+                                SearchResults.Columns[6].Width = 690;
+                                SearchResults.Columns[7].Width = 50;
+                                SearchResults.Columns[8].Width = 50;
+                                SearchResults.Columns[9].Width = 50;
 
 
                             }
@@ -166,9 +172,11 @@ namespace Fault_Code_Search
             else
             {
                 string varSPN = null;
+
                 if (SPNtextBox.Text != "")
                 {
                     varSPN = SPNtextBox.Text;
+
                 }
                 else
                 {
@@ -247,9 +255,18 @@ namespace Fault_Code_Search
 
 
                                 }
+                                string SPN = null;
+                                if (varSPN != null)
+                                {
+                                    SPN = " AND SPN=@SPN OR KWP=@SPN OR Blink=@SPN";
+                                }
+                                else
+                                {
+                                    SPN = null;
+                                }
 
                                 var parameters = new Dictionary<string, object>();
-                                parameters["SPN"] = varSPN;
+
                                 parameters["FMI"] = varFMI;
                                 parameters["Controllers"] = varControllers;
                                 parameters["Type"] = varType;
@@ -267,20 +284,30 @@ namespace Fault_Code_Search
                                         cmd.Parameters.AddWithValue("@" + parameter.Key, parameter.Value);
                                     }
                                 }
-                                cmd.CommandText = builder.ToString() + " COLLATE NOCASE";
+
+                                if (varSPN != null)
+                                {
+                                    cmd.Parameters.AddWithValue("@SPN", varSPN);
+                                }
+
+                                cmd.CommandText = builder.ToString() + SPN + " COLLATE NOCASE";
                                 cmd.ExecuteNonQuery();
+
 
                                 SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd);
                                 adapter.Fill(dt);
                                 SearchResults.DataSource = dt;
                                 destination.Close();
-                                SearchResults.Columns[0].Width = 100;
+                                SearchResults.Columns[0].Width = 75;
                                 SearchResults.Columns[1].Width = 100;
                                 SearchResults.Columns[2].Width = 100;
                                 SearchResults.Columns[3].Width = 100;
-                                SearchResults.Columns[4].Width = 100;
-                                SearchResults.Columns[5].Width = 100;
-                                SearchResults.Columns[6].Width = 725;
+                                SearchResults.Columns[4].Width = 50;
+                                SearchResults.Columns[5].Width = 50;
+                                SearchResults.Columns[6].Width = 690;
+                                SearchResults.Columns[7].Width = 50;
+                                SearchResults.Columns[8].Width = 50;
+                                SearchResults.Columns[9].Width = 50;
 
 
                             }
@@ -343,6 +370,16 @@ namespace Fault_Code_Search
             {
                 MessageBox.Show("Unable to open link that was clicked.");
             }
+        }
+
+        private void SearchControlBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Manufacture_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

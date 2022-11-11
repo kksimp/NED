@@ -1,0 +1,822 @@
+﻿Manufacture,Type,Engine,Controllers,SPN,FMI,Code,KWP,Blink
+Deutz,Deutz,Deutz,ECM,132,11,Engine - Air mass - Root cause not known,1,226
+Deutz,Deutz,Deutz,ECM,172,2,Engine - Ambient air temperature sensor - Data erratic intermittent or incorrect,9,226
+Deutz,Deutz,Deutz,ECM,523924,3,Engine - Actuator relay 2 - Voltage above normal or shorted to high source,37,167
+Deutz,Deutz,Deutz,ECM,523925,3,Engine - Actuator relay 3 - Voltage above normal or shorted to high source,38,731
+Deutz,Deutz,Deutz,ECM,523927,3,Engine - Actuator relay 6 - Voltage above normal or shorted to high source,40,733
+Deutz,Deutz,Deutz,ECM,523924,4,Engine - Actuator relay 2 - Voltage below normal or shorted to low source,42,167
+Deutz,Deutz,Deutz,ECM,523925,4,Engine - Actuator relay 3 - Voltage below normal or shorted to low source,43,731
+Deutz,Deutz,Deutz,ECM,523926,4,Engine - Actuator relay 4 - Voltage below normal or shorted to low source,44,732
+Deutz,Deutz,Deutz,ECM,168,3,Machine - Battery voltage - Voltage above normal or shorted to high source,45,318
+Deutz,Deutz,Deutz,ECM,168,4,Machine - Battery voltage - Voltage below normal or shorted to low source,46,318
+Deutz,Deutz,Deutz,ECM,168,2,Machine - Battery voltage - Data erratic intermittent or incorrect,47,318
+Deutz,Deutz,Deutz,ECM,168,2,Machine - Battery voltage - Data erratic intermittent or incorrect,48,318
+Deutz,Deutz,Deutz,ECM,523910,14,Exhaust aftertreatment - Burner air pump - Special instructions,55,6-9-5
+Deutz,Deutz,Deutz,ECM,524013,7,Exhaust aftertreatment - Burner operation - Mechanical system not responding or out of adjustment,56,8-5-6
+Deutz,Deutz,Deutz,ECM,524020,14,Exhaust aftertreatment - Burner regeneration lack of oxygen - Special instructions,57,8-6-3
+Deutz,Deutz,Deutz,ECM,523911,0,Exhaust aftertreatment - Burner dosing valve - Data above normal operational range (Most severe level),58,723
+Deutz,Deutz,Deutz,ECM,523911,4,Exhaust aftertreatment - Burner dosing valve - Voltage below normal or shorted to low source,62,723
+Deutz,Deutz,Deutz,ECM,523911,11,Exhaust aftertreatment - Burner dosing valve - Root cause not known,63,723
+Deutz,Deutz,Deutz,ECM,523912,2,Exhaust aftertreatment - Pressure sensor after burner dosing valve - Data erratic intermittent or incorrect,64,7-2-2
+Deutz,Deutz,Deutz,ECM,523912,0,Exhaust aftertreatment - Pressure sensor after burner dosing valve - Data above normal operational range (Most severe level),66,7-2-2
+Deutz,Deutz,Deutz,ECM,523912,1,Exhaust aftertreatment - Pressure sensor after burner dosing valve - Data below normal operational range (Most severe level),69,7-2-2
+Deutz,Deutz,Deutz,ECM,523912,3,Exhaust aftertreatment - Pressure sensor after burner dosing valve - Voltage above normal or shorted to high source,72,722
+Deutz,Deutz,Deutz,ECM,523912,4,Exhaust aftertreatment - Pressure sensor after burner dosing valve - Voltage below normal or shorted to low source,73,722
+Deutz,Deutz,Deutz,ECM,523913,3,Engine - Diagnostic cable glow plug control - Voltage above normal or shorted to high source,74,721
+Deutz,Deutz,Deutz,ECM,523913,4,Engine - Diagnostic cable glow plug control - Voltage below normal or shorted to low source,75,721
+Deutz,Deutz,Deutz,ECM,523914,5,Engine - Glow plug control - Current below normal or open circuit,76,721
+Deutz,Deutz,Deutz,ECM,523914,12,Engine - Glow plug control - Bad intelligent device or component,77,721
+Deutz,Deutz,Deutz,ECM,523914,3,Engine - Glow plug control - Voltage above normal or shorted to high source,78,721
+Deutz,Deutz,Deutz,ECM,523914,4,Engine - Glow plug control - Voltage below normal or shorted to low source,79,721
+Deutz,Deutz,Deutz,ECM,1235,14,Machine - CAN - Special instructions,82,271
+Deutz,Deutz,Deutz,ECM,639,14,Machine - CAN - Special instructions,84,271
+Deutz,Deutz,Deutz,ECM,1231,14,Machine - CAN - Special instructions,85,271
+Deutz,Deutz,Deutz,ECM,1235,14,Machine - CAN - Special instructions,86,271
+Deutz,Deutz,Deutz,ECM,102,2,Engine - Charge air pressure sensor - Data erratic intermittent or incorrect,88,223
+Deutz,Deutz,Deutz,ECM,102,2,Engine - Charge air pressure sensor - Data erratic intermittent or incorrect,89,223
+Deutz,Deutz,Deutz,ECM,110,0,Engine - Coolant temperature sensor - Data above normal operational range (Most severe level),92,225
+Deutz,Deutz,Deutz,ECM,110,1,Engine - Coolant temperature sensor - Data below normal operational range (Most severe level),93,225
+Deutz,Deutz,Deutz,ECM,110,3,Engine - Coolant temperature sensor - Voltage above normal or shorted to high source,96,225
+Deutz,Deutz,Deutz,ECM,110,4,Engine - Coolant temperature sensor - Voltage below normal or shorted to low source,97,225
+Deutz,Deutz,Deutz,ECM,110,0,Engine - Coolant temperature sensor - Data above normal operational range (Most severe level),98,232
+Deutz,Deutz,Deutz,ECM,110,0,Engine - Coolant temperature sensor - Data above normal operational range (Most severe level),99,232
+Deutz,Deutz,Deutz,ECM,111,1,Engine - Coolant level sensor - Data below normal operational range (Most severe level),101,235
+Deutz,Deutz,Deutz,ECM,1109,2,Engine - Protection system requested shutdown - Data erratic intermittent or incorrect,121,341
+Deutz,Deutz,Deutz,ECM,523698,11,Engine - Shut down request from internal ECU monitoring - Root cause not known,122,591
+Deutz,Deutz,Deutz,ECM,523717,12,Engine - CAN ambient conditions - Bad intelligent device or component,125,595
+Deutz,Deutz,Deutz,ECM,523603,9,Engine - CAN ambient temperature - Abnormal update rate timeout,126,338
+Deutz,Deutz,Deutz,ECM,3224,9,Exhaust aftertreatment - NOx sensor mixing section - Abnormal update rate timeout,128,597
+Deutz,Deutz,Deutz,ECM,3224,2,Exhaust aftertreatment - NOx sensor mixing section - Data erratic intermittent or incorrect,129,596
+Deutz,Deutz,Deutz,ECM,3224,9,Exhaust aftertreatment - NOx sensor mixing section - Abnormal update rate timeout,130,597
+Deutz,Deutz,Deutz,ECM,523938,9,Exhaust aftertreatment - CAN exhaust inlet - Abnormal update rate timeout,133,766
+Deutz,Deutz,Deutz,ECM,523939,9,Exhaust aftertreatment - CAN exhaust inlet - Abnormal update rate timeout,134,766
+Deutz,Deutz,Deutz,ECM,523940,9,Exhaust aftertreatment - CAN exhaust inlet - Abnormal update rate timeout,135,766
+Deutz,Deutz,Deutz,ECM,3234,9,Exhaust aftertreatment - NOx sensor after SCR - Abnormal update rate timeout,137,117
+Deutz,Deutz,Deutz,ECM,3234,2,Exhaust aftertreatment - NOx sensor after SCR - Data erratic intermittent or incorrect,138,114
+Deutz,Deutz,Deutz,ECM,3234,9,Exhaust aftertreatment - NOx sensor after SCR - Abnormal update rate timeout,139,117
+Deutz,Deutz,Deutz,ECM,523941,9,Exhaust aftertreatment - CAN exhaust inlet - Abnormal update rate timeout,140,767
+Deutz,Deutz,Deutz,ECM,523942,9,Exhaust aftertreatment - CAN exhaust inlet - Abnormal update rate timeout,141,767
+Deutz,Deutz,Deutz,ECM,523943,9,Exhaust aftertreatment - CAN exhaust inlet - Abnormal update rate timeout,142,767
+Deutz,Deutz,Deutz,ECM,523992,9,Engine - Fan - Abnormal update rate timeout,153,7-9-3
+Deutz,Deutz,Deutz,ECM,523211,9,Engine - CAN engine brake - Abnormal update rate timeout,164,331
+Deutz,Deutz,Deutz,ECM,523704,12,Engine - Engine controller 3 - Bad intelligent device or component,167,615
+Deutz,Deutz,Deutz,ECM,523935,12,Engine - Engine controller 3 - Bad intelligent device or component,168,763
+Deutz,Deutz,Deutz,ECM,523936,12,Engine - Engine controller 3 - Bad intelligent device or component,169,764
+Deutz,Deutz,Deutz,ECM,523212,9,Engine - CAN engine protection - Abnormal update rate timeout,171,333
+Deutz,Deutz,Deutz,ECM,523741,14,Machine - CAN shut down request from engine shut down - Special instructions,172,618
+Deutz,Deutz,Deutz,ECM,523240,9,Engine - CAN Functional mode control - Abnormal update rate timeout,179,527
+Deutz,Deutz,Deutz,ECM,523216,9,Engine - CAN pre heating - Abnormal update rate timeout,198,337
+Deutz,Deutz,Deutz,ECM,523793,9,Engine - CAN AGS - Abnormal update rate timeout,202,678
+Deutz,Deutz,Deutz,ECM,523794,9,Engine - CAN AGS - Abnormal update rate timeout,203,678
+Deutz,Deutz,Deutz,ECM,523803,9,Exhaust aftertreatment -  - Abnormal update rate timeout,212,678
+Deutz,Deutz,Deutz,ECM,523766,9,Machine - CAN torque rotation speed control - Abnormal update rate timeout,281,118
+Deutz,Deutz,Deutz,ECM,523767,9,Machine - CAN torque rotation speed control - Abnormal update rate timeout,282,118
+Deutz,Deutz,Deutz,ECM,523768,9,Machine - CAN torque rotation speed control - Abnormal update rate timeout,283,119
+Deutz,Deutz,Deutz,ECM,523769,9,Machine - CAN torque rotation speed control - Abnormal update rate timeout,284,119
+Deutz,Deutz,Deutz,ECM,523776,9,Machine - CAN torque rotation speed control - Abnormal update rate timeout,291,119
+Deutz,Deutz,Deutz,ECM,523777,9,Machine - CAN torque rotation speed control - Abnormal update rate timeout,292,119
+Deutz,Deutz,Deutz,ECM,523778,9,Machine - CAN torque rotation speed control - Abnormal update rate timeout,293,118
+Deutz,Deutz,Deutz,ECM,523779,9,Machine - CAN torque rotation speed control - Abnormal update rate timeout,294,118
+Deutz,Deutz,Deutz,ECM,523788,12,Engine - CAN TC - Bad intelligent device or component,299,655
+Deutz,Deutz,Deutz,ECM,523605,9,Machine - CAN torque rotation speed control - Abnormal update rate timeout,300,118
+Deutz,Deutz,Deutz,ECM,523606,9,Machine - CAN torque rotation speed control - Abnormal update rate timeout,301,119
+Deutz,Deutz,Deutz,ECM,898,9,Machine - Externally requested engine rotation speed - Abnormal update rate timeout,305,118
+Deutz,Deutz,Deutz,ECM,520,9,Machine - CAN torque rotation speed control - Abnormal update rate timeout,306,119
+Deutz,Deutz,Deutz,ECM,523858,12,Engine - CAN AGS purification - Bad intelligent device or component,313,679
+Deutz,Deutz,Deutz,ECM,523867,12,Engine - CAN AGS burner air pump - Bad intelligent device or component,322,679
+Deutz,Deutz,Deutz,ECM,523982,0,Engine - Power stage diagnostic - Data above normal operational range (Most severe level),360,737
+Deutz,Deutz,Deutz,ECM,523982,1,Engine - Power stage diagnostic - Data below normal operational range (Most severe level),361,737
+Deutz,Deutz,Deutz,ECM,523090,2,Machine - Pre selection switch engine brake - Data erratic intermittent or incorrect,362,329
+Deutz,Deutz,Deutz,ECM,630,12,Engine - ECU calibration memory - Bad intelligent device or component,376,281
+Deutz,Deutz,Deutz,ECM,630,12,Engine - ECU calibration memory - Bad intelligent device or component,377,281
+Deutz,Deutz,Deutz,ECM,630,12,Engine - ECU calibration memory - Bad intelligent device or component,378,281
+Deutz,Deutz,Deutz,ECM,411,4,Engine - EGR differential pressure - Voltage below normal or shorted to low source,381,693
+Deutz,Deutz,Deutz,ECM,2791,12,Engine - EGR actuator - Bad intelligent device or component,384,415
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,387,555
+Deutz,Deutz,Deutz,ECM,190,0,Engine - Rotation speed - Data above normal operational range (Most severe level),388,214
+Deutz,Deutz,Deutz,ECM,190,0,Engine - Rotation speed - Data above normal operational range (Most severe level),389,214
+Deutz,Deutz,Deutz,ECM,190,11,Engine - Rotation speed - Root cause not known,390,214
+Deutz,Deutz,Deutz,ECM,190,14,Engine - Rotation speed - Special instructions,391,214
+Deutz,Deutz,Deutz,ECM,108,0,Engine - Ambient pressure sensor - Data above normal operational range (Most severe level),409,292
+Deutz,Deutz,Deutz,ECM,108,1,Engine - Ambient pressure sensor - Data below normal operational range (Most severe level),410,292
+Deutz,Deutz,Deutz,ECM,108,11,Engine - Ambient pressure sensor - Root cause not known,411,292
+Deutz,Deutz,Deutz,ECM,108,3,Engine - Ambient pressure sensor - Voltage above normal or shorted to high source,412,292
+Deutz,Deutz,Deutz,ECM,108,4,Engine - Ambient pressure sensor - Voltage below normal or shorted to low source,413,292
+Deutz,Deutz,Deutz,ECM,171,0,Engine - Ambient air temperature sensor - Data above normal operational range (Most severe level),415,312
+Deutz,Deutz,Deutz,ECM,171,1,Engine - Ambient air temperature sensor - Data below normal operational range (Most severe level),416,312
+Deutz,Deutz,Deutz,ECM,171,3,Engine - Ambient air temperature sensor - Voltage above normal or shorted to high source,417,312
+Deutz,Deutz,Deutz,ECM,171,4,Engine - Ambient air temperature sensor - Voltage below normal or shorted to low source,418,312
+Deutz,Deutz,Deutz,ECM,190,8,Engine - Rotation speed - Abnormal frequency or pulse width or period,419,212
+Deutz,Deutz,Deutz,ECM,190,12,Engine - Rotation speed - Bad intelligent device or component,420,212
+Deutz,Deutz,Deutz,ECM,190,2,Engine - Rotation speed - Data erratic intermittent or incorrect,421,213
+Deutz,Deutz,Deutz,ECM,190,8,Engine - Rotation speed - Abnormal frequency or pulse width or period,422,212
+Deutz,Deutz,Deutz,ECM,190,12,Engine - Rotation speed - Bad intelligent device or component,423,212
+Deutz,Deutz,Deutz,ECM,975,5,Engine - Fan - Current below normal or open circuit,455,238
+Deutz,Deutz,Deutz,ECM,975,3,Engine - Fan - Voltage above normal or shorted to high source,457,238
+Deutz,Deutz,Deutz,ECM,975,4,Engine - Fan - Voltage below normal or shorted to low source,458,238
+Deutz,Deutz,Deutz,ECM,1639,12,Engine - Fan rotation speed - Bad intelligent device or component,459,238
+Deutz,Deutz,Deutz,ECM,1639,0,Engine - Fan rotation speed - Data above normal operational range (Most severe level),460,238
+Deutz,Deutz,Deutz,ECM,1639,1,Engine - Fan rotation speed - Data below normal operational range (Most severe level),461,238
+Deutz,Deutz,Deutz,ECM,523602,0,Engine - Fan rotation speed - Data above normal operational range (Most severe level),462,238
+Deutz,Deutz,Deutz,ECM,523602,0,Engine - Fan rotation speed - Data above normal operational range (Most severe level),463,238
+Deutz,Deutz,Deutz,ECM,97,3,Engine - Water in fuel sensor - Voltage above normal or shorted to high source,464,228
+Deutz,Deutz,Deutz,ECM,97,4,Engine - Water in fuel sensor - Voltage below normal or shorted to low source,465,228
+Deutz,Deutz,Deutz,ECM,94,3,Engine - Fuel low pressure sensor - Voltage above normal or shorted to high source,472,216
+Deutz,Deutz,Deutz,ECM,94,4,Engine - Fuel low pressure sensor - Voltage below normal or shorted to low source,473,216
+Deutz,Deutz,Deutz,ECM,94,1,Engine - Fuel low pressure sensor - Data below normal operational range (Most severe level),474,216
+Deutz,Deutz,Deutz,ECM,94,1,Engine - Fuel low pressure sensor - Data below normal operational range (Most severe level),475,216
+Deutz,Deutz,Deutz,ECM,523618,3,Machine - Transmission oil sensor - Voltage above normal or shorted to high source,486,133
+Deutz,Deutz,Deutz,ECM,523618,4,Machine - Transmission oil sensor - Voltage below normal or shorted to low source,487,133
+Deutz,Deutz,Deutz,ECM,523619,2,Exhaust aftertreatment - Temperature before SCR Cat - Data erratic intermittent or incorrect,488,133
+Deutz,Deutz,Deutz,ECM,523619,2,Exhaust aftertreatment - Temperature before SCR Cat - Data erratic intermittent or incorrect,489,133
+Deutz,Deutz,Deutz,ECM,523915,0,"Exhaust aftertreatment - Burner post injection metering valve
+- Data above normal operational range (Most severe level)",500,165
+Deutz,Deutz,Deutz,ECM,523915,12,"Exhaust aftertreatment - Burner post injection metering valve
+- Bad intelligent device or component",501,166
+Deutz,Deutz,Deutz,ECM,523915,3,"Exhaust aftertreatment - Burner post injection metering valve
+- Voltage above normal or shorted to high source",502,159
+Deutz,Deutz,Deutz,ECM,523915,3,"Exhaust aftertreatment - Burner post injection metering valve
+- Voltage above normal or shorted to high source",503,164
+Deutz,Deutz,Deutz,ECM,523915,4,"Exhaust aftertreatment - Burner post injection metering valve
+- Voltage below normal or shorted to low source",504,159
+Deutz,Deutz,Deutz,ECM,523915,11,"Exhaust aftertreatment - Burner post injection metering valve
+- Root cause not known",505,164
+Deutz,Deutz,Deutz,ECM,523916,2,Exhaust aftertreatment - Fuel pressure sensor after burner post injection metering valve - Data erratic intermittent or incorrect,506,719
+Deutz,Deutz,Deutz,ECM,523916,0,Exhaust aftertreatment - Fuel pressure sensor after burner post injection metering valve - Data above normal operational range (Most severe level),508,719
+Deutz,Deutz,Deutz,ECM,523916,1,Exhaust aftertreatment - Fuel pressure sensor after burner post injection metering valve - Data below normal operational range (Most severe level),511,719
+Deutz,Deutz,Deutz,ECM,523916,3,Exhaust aftertreatment - Fuel pressure sensor after burner post injection metering valve - Voltage above normal or shorted to high source,514,719
+Deutz,Deutz,Deutz,ECM,523916,4,Exhaust aftertreatment - Fuel pressure sensor after burner post injection metering valve - Voltage below normal or shorted to low source,515,719
+Deutz,Deutz,Deutz,ECM,523917,3,Exhaust aftertreatment - Pressure before burner fuel valve - Voltage above normal or shorted to high source,524,718
+Deutz,Deutz,Deutz,ECM,523917,4,Exhaust aftertreatment - Pressure before burner fuel valve - Voltage below normal or shorted to low source,525,718
+Deutz,Deutz,Deutz,ECM,523918,3,Exhaust aftertreatment - Burner metering unit - Voltage above normal or shorted to high source,534,717
+Deutz,Deutz,Deutz,ECM,523918,4,Exhaust aftertreatment - Burner metering unit - Voltage below normal or shorted to low source,535,717
+Deutz,Deutz,Deutz,ECM,676,11,Engine - Glow plug relay - Root cause not known,543,263
+Deutz,Deutz,Deutz,ECM,676,11,Engine - Glow plug relay - Root cause not known,544,263
+Deutz,Deutz,Deutz,ECM,729,5,Engine - Preheating relay - Current below normal or open circuit,545,263
+Deutz,Deutz,Deutz,ECM,729,12,Engine - Preheating relay - Bad intelligent device or component,547,263
+Deutz,Deutz,Deutz,ECM,729,3,Engine - Preheating relay - Voltage above normal or shorted to high source,549,263
+Deutz,Deutz,Deutz,ECM,729,4,Engine - Preheating relay - Voltage below normal or shorted to low source,551,263
+Deutz,Deutz,Deutz,ECM,523895,13,Engine - Injector 1 IMA Code - Out of calibration,559,158
+Deutz,Deutz,Deutz,ECM,523896,13,Engine - Injector 2 IMA Code - Out of calibration,560,158
+Deutz,Deutz,Deutz,ECM,523897,13,Engine - Injector 3 IMA Code - Out of calibration,561,158
+Deutz,Deutz,Deutz,ECM,523898,13,Engine - Injector 4 IMA Code - Out of calibration,562,158
+Deutz,Deutz,Deutz,ECM,523899,13,Engine - Injector 5 IMA Code - Out of calibration,563,158
+Deutz,Deutz,Deutz,ECM,523900,13,Engine - Injector 6 IMA Code - Out of calibration,564,158
+Deutz,Deutz,Deutz,ECM,523350,4,Engine - Injectors bank 1 - Voltage below normal or shorted to low source,565,151
+Deutz,Deutz,Deutz,ECM,523352,4,Engine - Injectors bank 2 - Voltage below normal or shorted to low source,566,152
+Deutz,Deutz,Deutz,ECM,523354,12,Engine - Output power stage Injector - Bad intelligent device or component,567,153
+Deutz,Deutz,Deutz,ECM,651,5,Engine - Injector 1 - Current below normal or open circuit,568,154
+Deutz,Deutz,Deutz,ECM,652,5,Engine - Injector 2 - Current below normal or open circuit,569,155
+Deutz,Deutz,Deutz,ECM,653,5,Engine - Injector 3 - Current below normal or open circuit,570,156
+Deutz,Deutz,Deutz,ECM,654,5,Engine - Injector 4 - Current below normal or open circuit,571,161
+Deutz,Deutz,Deutz,ECM,655,5,Engine - Injector 5 - Current below normal or open circuit,572,162
+Deutz,Deutz,Deutz,ECM,656,5,Engine - Injector 6 - Current below normal or open circuit,573,163
+Deutz,Deutz,Deutz,ECM,651,3,Engine - Injector 1 - Voltage above normal or shorted to high source,580,154
+Deutz,Deutz,Deutz,ECM,652,3,Engine - Injector 2 - Voltage above normal or shorted to high source,581,155
+Deutz,Deutz,Deutz,ECM,653,3,Engine - Injector 3 - Voltage above normal or shorted to high source,582,156
+Deutz,Deutz,Deutz,ECM,654,3,Engine - Injector 4 - Voltage above normal or shorted to high source,583,161
+Deutz,Deutz,Deutz,ECM,655,3,Engine - Injector 5 - Voltage above normal or shorted to high source,584,162
+Deutz,Deutz,Deutz,ECM,656,3,Engine - Injector 6 - Voltage above normal or shorted to high source,585,163
+Deutz,Deutz,Deutz,ECM,523615,5,Engine - Fuel metering unit - Current below normal or open circuit,592,135
+Deutz,Deutz,Deutz,ECM,523615,12,Engine - Fuel metering unit - Bad intelligent device or component,593,135
+Deutz,Deutz,Deutz,ECM,523615,3,Engine - Fuel metering unit - Voltage above normal or shorted to high source,594,135
+Deutz,Deutz,Deutz,ECM,523615,4,Engine - Fuel metering unit - Voltage below normal or shorted to low source,595,135
+Deutz,Deutz,Deutz,ECM,523615,3,Engine - Fuel metering unit - Voltage above normal or shorted to high source,596,135
+Deutz,Deutz,Deutz,ECM,523615,4,Engine - Fuel metering unit - Voltage below normal or shorted to low source,597,135
+Deutz,Deutz,Deutz,ECM,523615,3,Engine - Fuel metering unit - Voltage above normal or shorted to high source,598,135
+Deutz,Deutz,Deutz,ECM,523615,4,Engine - Fuel metering unit - Voltage below normal or shorted to low source,599,135
+Deutz,Deutz,Deutz,ECM,1323,12,Engine - Misfire cylinder 1 - Bad intelligent device or component,604,241
+Deutz,Deutz,Deutz,ECM,1324,12,Engine - Misfire cylinder 2 - Bad intelligent device or component,605,241
+Deutz,Deutz,Deutz,ECM,1325,12,Engine - Misfire cylinder 3 - Bad intelligent device or component,606,241
+Deutz,Deutz,Deutz,ECM,1326,12,Engine - Misfire cylinder 4 - Bad intelligent device or component,607,241
+Deutz,Deutz,Deutz,ECM,1327,12,Engine - Misfire cylinder 5 - Bad intelligent device or component,608,241
+Deutz,Deutz,Deutz,ECM,1328,12,Engine - Misfire cylinder 6 - Bad intelligent device or component,609,241
+Deutz,Deutz,Deutz,ECM,1322,12,Engine - Misfire for multiple cylinders - Bad intelligent device or component,610,241
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,612,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,613,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,614,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,615,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,616,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,617,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,618,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,619,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,620,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,621,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,623,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,624,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,625,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,627,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,628,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,629,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,630,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,631,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,632,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,633,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,634,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,635,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,636,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,637,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,638,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,639,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,640,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,641,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,642,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,643,555
+Deutz,Deutz,Deutz,ECM,523612,3,Engine - ECU - Voltage above normal or shorted to high source,644,555
+Deutz,Deutz,Deutz,ECM,523612,4,Engine - ECU - Voltage below normal or shorted to low source,646,555
+Deutz,Deutz,Deutz,ECM,523008,1,Engine - Manipulation monitoring - Data below normal operational range (Most severe level),648,424
+Deutz,Deutz,Deutz,ECM,523008,2,Engine - Manipulation monitoring - Data erratic intermittent or incorrect,649,424
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,714,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,715,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,716,555
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,717,555
+Deutz,Deutz,Deutz,ECM,100,3,Engine - Oil pressure sensor - Voltage above normal or shorted to high source,732,224
+Deutz,Deutz,Deutz,ECM,100,4,Engine - Oil pressure sensor - Voltage below normal or shorted to low source,733,224
+Deutz,Deutz,Deutz,ECM,100,0,Engine - Oil pressure sensor - Data above normal operational range (Most severe level),734,231
+Deutz,Deutz,Deutz,ECM,100,0,Engine - Oil pressure sensor - Data above normal operational range (Most severe level),735,231
+Deutz,Deutz,Deutz,ECM,100,1,Engine - Oil pressure sensor - Data below normal operational range (Most severe level),736,231
+Deutz,Deutz,Deutz,ECM,100,1,Engine - Oil pressure sensor - Data below normal operational range (Most severe level),737,231
+Deutz,Deutz,Deutz,ECM,175,3,Engine - Oil temperature - Voltage above normal or shorted to high source,743,144
+Deutz,Deutz,Deutz,ECM,175,4,Engine - Oil temperature - Voltage below normal or shorted to low source,744,144
+Deutz,Deutz,Deutz,ECM,175,0,Engine - Oil temperature - Data above normal operational range (Most severe level),745,144
+Deutz,Deutz,Deutz,ECM,175,0,Engine - Oil temperature - Data above normal operational range (Most severe level),746,144
+Deutz,Deutz,Deutz,ECM,1237,2,Engine - Shutdown override switch - Data erratic intermittent or incorrect,747,145
+Deutz,Deutz,Deutz,ECM,107,3,Engine - Air filter differential pressure sensor - Voltage above normal or shorted to high source,750,136
+Deutz,Deutz,Deutz,ECM,107,0,Engine - Air filter differential pressure sensor - Data above normal operational range (Most severe level),751,136
+Deutz,Deutz,Deutz,ECM,107,0,Engine - Air filter differential pressure sensor - Data above normal operational range (Most severe level),752,136
+Deutz,Deutz,Deutz,ECM,523919,2,Exhaust aftertreatment - Burner air pump pressure sensor - Data erratic intermittent or incorrect,753,6-9-4
+Deutz,Deutz,Deutz,ECM,523919,0,Exhaust aftertreatment - Burner air pump pressure sensor - Data above normal operational range (Most severe level),755,6-9-4
+Deutz,Deutz,Deutz,ECM,523919,1,Exhaust aftertreatment - Burner air pump pressure sensor - Data below normal operational range (Most severe level),758,6-9-4
+Deutz,Deutz,Deutz,ECM,523919,3,Exhaust aftertreatment - Burner air pump pressure sensor - Voltage above normal or shorted to high source,761,694
+Deutz,Deutz,Deutz,ECM,523919,4,Exhaust aftertreatment - Burner air pump pressure sensor - Voltage below normal or shorted to low source,762,694
+Deutz,Deutz,Deutz,ECM,523920,2,Exhaust aftertreatment - Burner exhaust back pressure sensor - Data erratic intermittent or incorrect,763,7-1-6
+Deutz,Deutz,Deutz,ECM,523920,0,Exhaust aftertreatment - Burner exhaust back pressure sensor - Data above normal operational range (Most severe level),765,7-1-6
+Deutz,Deutz,Deutz,ECM,523920,3,Exhaust aftertreatment - Burner exhaust back pressure sensor - Voltage above normal or shorted to high source,770,716
+Deutz,Deutz,Deutz,ECM,523920,4,Exhaust aftertreatment - Burner exhaust back pressure sensor - Voltage below normal or shorted to low source,771,716
+Deutz,Deutz,Deutz,ECM,102,2,Engine - Charge air pressure sensor - Data erratic intermittent or incorrect,772,223
+Deutz,Deutz,Deutz,ECM,102,1,Engine - Charge air pressure sensor - Data below normal operational range (Most severe level),774,223
+Deutz,Deutz,Deutz,ECM,102,3,Engine - Charge air pressure sensor - Voltage above normal or shorted to high source,776,223
+Deutz,Deutz,Deutz,ECM,102,4,Engine - Charge air pressure sensor - Voltage below normal or shorted to low source,777,223
+Deutz,Deutz,Deutz,ECM,411,0,Engine - EGR differential pressure - Data above normal operational range (Most severe level),791,693
+Deutz,Deutz,Deutz,ECM,411,11,Engine - EGR differential pressure - Root cause not known,793,693
+Deutz,Deutz,Deutz,ECM,411,3,Engine - EGR differential pressure - Voltage above normal or shorted to high source,795,693
+Deutz,Deutz,Deutz,ECM,411,4,Engine - EGR differential pressure - Voltage below normal or shorted to low source,796,693
+Deutz,Deutz,Deutz,ECM,524025,14,Exhaust aftertreatment - Stand Still - Special instructions,805,8-4-5
+Deutz,Deutz,Deutz,ECM,3253,2,Exhaust aftertreatment - DPF differential pressure - Data erratic intermittent or incorrect,807,692
+Deutz,Deutz,Deutz,ECM,3251,0,Exhaust aftertreatment - DPF differential pressure - Data above normal operational range (Most severe level),809,692
+Deutz,Deutz,Deutz,ECM,3251,0,Exhaust aftertreatment - DPF differential pressure - Data above normal operational range (Most severe level),810,692
+Deutz,Deutz,Deutz,ECM,3251,1,Exhaust aftertreatment - DPF differential pressure - Data below normal operational range (Most severe level),812,692
+Deutz,Deutz,Deutz,ECM,3251,1,Exhaust aftertreatment - DPF differential pressure - Data below normal operational range (Most severe level),813,692
+Deutz,Deutz,Deutz,ECM,3253,3,Exhaust aftertreatment - DPF differential pressure - Voltage above normal or shorted to high source,814,692
+Deutz,Deutz,Deutz,ECM,3253,4,Exhaust aftertreatment - DPF differential pressure - Voltage below normal or shorted to low source,815,692
+Deutz,Deutz,Deutz,ECM,523009,9,Engine - Fuel pressure relief valve - Abnormal update rate timeout,825,253
+Deutz,Deutz,Deutz,ECM,523470,2,Engine - Fuel pressure relief valve - Data erratic intermittent or incorrect,826,146
+Deutz,Deutz,Deutz,ECM,523470,2,Engine - Fuel pressure relief valve - Data erratic intermittent or incorrect,827,146
+Deutz,Deutz,Deutz,ECM,523470,12,Engine - Fuel pressure relief valve - Bad intelligent device or component,828,146
+Deutz,Deutz,Deutz,ECM,523470,12,Engine - Fuel pressure relief valve - Bad intelligent device or component,829,146
+Deutz,Deutz,Deutz,ECM,523470,14,Engine - Fuel pressure relief valve - Special instructions,830,146
+Deutz,Deutz,Deutz,ECM,523470,11,Engine - Fuel pressure relief valve - Root cause not known,831,146
+Deutz,Deutz,Deutz,ECM,523470,11,Engine - Fuel pressure relief valve - Root cause not known,832,146
+Deutz,Deutz,Deutz,ECM,523009,10,Engine - Fuel pressure relief valve - Abnormal rate of change,833,253
+Deutz,Deutz,Deutz,ECM,523906,5,Engine - Fuel pre feed pump - Current below normal or open circuit,834,761
+Deutz,Deutz,Deutz,ECM,523906,12,Engine - Fuel pre feed pump - Bad intelligent device or component,835,761
+Deutz,Deutz,Deutz,ECM,523906,3,Engine - Fuel pre feed pump - Voltage above normal or shorted to high source,836,761
+Deutz,Deutz,Deutz,ECM,523906,4,Engine - Fuel pre feed pump - Voltage below normal or shorted to low source,837,761
+Deutz,Deutz,Deutz,ECM,1176,0,Engine - TC charge pressure - Data above normal operational range (Most severe level),847,139
+Deutz,Deutz,Deutz,ECM,1176,1,Engine - TC charge pressure - Data below normal operational range (Most severe level),848,139
+Deutz,Deutz,Deutz,ECM,1176,3,Engine - TC charge pressure - Voltage above normal or shorted to high source,849,141
+Deutz,Deutz,Deutz,ECM,1176,4,Engine - TC charge pressure - Voltage below normal or shorted to low source,850,141
+Deutz,Deutz,Deutz,ECM,523613,0,Engine - Fuel pressure - Data above normal operational range (Most severe level),856,134
+Deutz,Deutz,Deutz,ECM,523613,0,Engine - Fuel pressure - Data above normal operational range (Most severe level),857,134
+Deutz,Deutz,Deutz,ECM,523613,0,Engine - Fuel pressure - Data above normal operational range (Most severe level),858,134
+Deutz,Deutz,Deutz,ECM,523613,0,Engine - Fuel pressure - Data above normal operational range (Most severe level),859,134
+Deutz,Deutz,Deutz,ECM,523613,1,Engine - Fuel pressure - Data below normal operational range (Most severe level),861,134
+Deutz,Deutz,Deutz,ECM,523613,0,Engine - Fuel pressure - Data above normal operational range (Most severe level),862,134
+Deutz,Deutz,Deutz,ECM,523613,2,Engine - Fuel pressure - Data erratic intermittent or incorrect,864,134
+Deutz,Deutz,Deutz,ECM,523470,7,Engine - Fuel pressure relief valve - Mechanical system not responding or out of adjustment,876,146
+Deutz,Deutz,Deutz,ECM,157,3,Engine - Rail pressure sensor - Voltage above normal or shorted to high source,877,147
+Deutz,Deutz,Deutz,ECM,157,4,Engine - Rail pressure sensor - Voltage below normal or shorted to low source,878,147
+Deutz,Deutz,Deutz,ECM,523633,11,Exhaust aftertreatment - Efficiency SCR system - Root cause not known,881,1-4-9
+Deutz,Deutz,Deutz,ECM,523633,11,Exhaust aftertreatment - Efficiency SCR system - Root cause not known,882,1-4-9
+Deutz,Deutz,Deutz,ECM,523633,11,Exhaust aftertreatment - Efficiency SCR system - Root cause not known,883,1-4-9
+Deutz,Deutz,Deutz,ECM,3234,11,Exhaust aftertreatment - NOx sensor after SCR - Root cause not known,887,1-8-4
+Deutz,Deutz,Deutz,ECM,3224,1,Exhaust aftertreatment - NOx sensor mixing section - Data below normal operational range (Most severe level),889,1-8-5
+Deutz,Deutz,Deutz,ECM,4345,11,Exhaust aftertreatment - Heater DEF return line - Root cause not known,892,2-3-6
+Deutz,Deutz,Deutz,ECM,4343,11,Exhaust aftertreatment - Heater DEF pressure line - Root cause not known,893,8-7-1
+Deutz,Deutz,Deutz,ECM,4374,13,Exhaust aftertreatment - DEF metering valve - Out of calibration,894,8-7-2
+Deutz,Deutz,Deutz,ECM,523632,16,Exhaust aftertreatment - DEF pressure - Data above normal operational range (Moderately severe level),897,8-7-5
+Deutz,Deutz,Deutz,ECM,523632,18,Exhaust aftertreatment - DEF pressure - Data below normal operational range (Moderately severe level),898,8-7-6
+Deutz,Deutz,Deutz,ECM,523632,0,Exhaust aftertreatment - DEF pressure - Data above normal operational range (Most severe level),899,8-7-7
+Deutz,Deutz,Deutz,ECM,523632,1,Exhaust aftertreatment - DEF pressure - Data below normal operational range (Most severe level),900,8-7-8
+Deutz,Deutz,Deutz,ECM,4365,0,Exhaust aftertreatment - DEF tank temperature - Data above normal operational range (Most severe level),903,8-8-1
+Deutz,Deutz,Deutz,ECM,3241,0,Exhaust aftertreatment - Temperature before SCR Cat - Data above normal operational range (Most severe level),905,8-8-3
+Deutz,Deutz,Deutz,ECM,3361,7,Exhaust aftertreatment - DEF metering unit - Mechanical system not responding or out of adjustment,908,8-8-6
+Deutz,Deutz,Deutz,ECM,523720,2,Exhaust aftertreatment - Heater DEF metering unit - Data erratic intermittent or incorrect,914,1-4-8
+Deutz,Deutz,Deutz,ECM,523720,2,Exhaust aftertreatment - Heater DEF metering unit - Data erratic intermittent or incorrect,915,1-4-8
+Deutz,Deutz,Deutz,ECM,523721,2,Exhaust aftertreatment - DEF temperature - Data erratic intermittent or incorrect,916,6-8-9
+Deutz,Deutz,Deutz,ECM,523721,2,Exhaust aftertreatment - DEF temperature - Data erratic intermittent or incorrect,917,6-8-9
+Deutz,Deutz,Deutz,ECM,523981,11,Exhaust aftertreatment - DEF tank heater - Root cause not known,918,2-4-3
+Deutz,Deutz,Deutz,ECM,523330,14,Engine - Immobilizer - Special instructions,919,131
+Deutz,Deutz,Deutz,ECM,523720,8,Exhaust aftertreatment - Heater DEF metering unit - Abnormal frequency or pulse width or period,925,148
+Deutz,Deutz,Deutz,ECM,523720,8,Exhaust aftertreatment - Heater DEF metering unit - Abnormal frequency or pulse width or period,926,148
+Deutz,Deutz,Deutz,ECM,523721,11,Exhaust aftertreatment - DEF temperature - Root cause not known,927,689
+Deutz,Deutz,Deutz,ECM,523722,8,Exhaust aftertreatment - DEF temperature - Abnormal frequency or pulse width or period,928,691
+Deutz,Deutz,Deutz,ECM,523722,8,Exhaust aftertreatment - DEF temperature - Abnormal frequency or pulse width or period,929,691
+Deutz,Deutz,Deutz,ECM,523721,8,Exhaust aftertreatment - DEF temperature - Abnormal frequency or pulse width or period,930,689
+Deutz,Deutz,Deutz,ECM,523721,8,Exhaust aftertreatment - DEF temperature - Abnormal frequency or pulse width or period,931,689
+Deutz,Deutz,Deutz,ECM,29,3,Machine - Position accelerator pedal 2 - Voltage above normal or shorted to high source,932,126
+Deutz,Deutz,Deutz,ECM,91,3,Machine - Position accelerator pedal - Voltage above normal or shorted to high source,935,226
+Deutz,Deutz,Deutz,ECM,29,4,Machine - Position accelerator pedal 2 - Voltage below normal or shorted to low source,937,126
+Deutz,Deutz,Deutz,ECM,91,4,Machine - Position accelerator pedal - Voltage below normal or shorted to low source,940,226
+Deutz,Deutz,Deutz,ECM,523921,3,Exhaust aftertreatment - Burner firing chamber temperature - Voltage above normal or shorted to high source,942,714
+Deutz,Deutz,Deutz,ECM,3532,3,Exhaust aftertreatment - DEF tank level sensor - Voltage above normal or shorted to high source,943,127
+Deutz,Deutz,Deutz,ECM,523921,4,Exhaust aftertreatment - Burner firing chamber temperature - Voltage below normal or shorted to low source,944,714
+Deutz,Deutz,Deutz,ECM,3532,4,Exhaust aftertreatment - DEF tank level sensor - Voltage below normal or shorted to low source,945,127
+Deutz,Deutz,Deutz,ECM,1079,13,Engine - Sensor supply voltage - Out of calibration,946,282
+Deutz,Deutz,Deutz,ECM,1080,13,Engine - Sensor supply voltage 2 - Out of calibration,947,282
+Deutz,Deutz,Deutz,ECM,523601,13,Engine - ECU Sensor supply voltage 3 - Out of calibration,948,282
+Deutz,Deutz,Deutz,ECM,677,3,Engine - Starter relay - Voltage above normal or shorted to high source,956,512
+Deutz,Deutz,Deutz,ECM,677,4,Engine - Starter relay - Voltage below normal or shorted to low source,957,512
+Deutz,Deutz,Deutz,ECM,677,5,Engine - Starter relay - Current below normal or open circuit,958,512
+Deutz,Deutz,Deutz,ECM,677,12,Engine - Starter relay - Bad intelligent device or component,959,512
+Deutz,Deutz,Deutz,ECM,677,3,Engine - Starter relay - Voltage above normal or shorted to high source,960,512
+Deutz,Deutz,Deutz,ECM,677,4,Engine - Starter relay - Voltage below normal or shorted to low source,961,512
+Deutz,Deutz,Deutz,ECM,523922,3,Exhaust aftertreatment - Burner metering unit shut-off valve - Voltage above normal or shorted to high source,965,715
+Deutz,Deutz,Deutz,ECM,624,5,Machine - Amber warning lamp - Current below normal or open circuit,969,513
+Deutz,Deutz,Deutz,ECM,624,12,Machine - Amber warning lamp - Bad intelligent device or component,970,513
+Deutz,Deutz,Deutz,ECM,624,3,Machine - Amber warning lamp - Voltage above normal or shorted to high source,971,513
+Deutz,Deutz,Deutz,ECM,624,4,Machine - Amber warning lamp - Voltage below normal or shorted to low source,972,513
+Deutz,Deutz,Deutz,ECM,523612,14,Engine - ECU - Special instructions,973,555
+Deutz,Deutz,Deutz,ECM,523612,14,Engine - ECU - Special instructions,974,555
+Deutz,Deutz,Deutz,ECM,523612,14,Engine - ECU - Special instructions,975,555
+Deutz,Deutz,Deutz,ECM,91,11,Machine - Position accelerator pedal - Root cause not known,976,226
+Deutz,Deutz,Deutz,ECM,29,2,Machine - Position accelerator pedal 2 - Data erratic intermittent or incorrect,978,126
+Deutz,Deutz,Deutz,ECM,523550,12,Engine - Starter switch to long active - Bad intelligent device or component,980,515
+Deutz,Deutz,Deutz,ECM,172,3,Engine - Ambient air temperature sensor - Voltage above normal or shorted to high source,981,226
+Deutz,Deutz,Deutz,ECM,172,4,Engine - Ambient air temperature sensor - Voltage below normal or shorted to low source,982,226
+Deutz,Deutz,Deutz,ECM,523921,0,Exhaust aftertreatment - Burner firing chamber temperature - Data above normal operational range (Most severe level),986,7-1-4
+Deutz,Deutz,Deutz,ECM,523921,1,Exhaust aftertreatment - Burner firing chamber temperature - Data below normal operational range (Most severe level),989,7-1-4
+Deutz,Deutz,Deutz,ECM,105,1,Engine - Charge air temperature sensor - Data below normal operational range (Most severe level),992,128
+Deutz,Deutz,Deutz,ECM,105,3,Engine - Charge air temperature sensor - Voltage above normal or shorted to high source,994,128
+Deutz,Deutz,Deutz,ECM,105,4,Engine - Charge air temperature sensor - Voltage below normal or shorted to low source,995,128
+Deutz,Deutz,Deutz,ECM,105,0,Engine - Charge air temperature sensor - Data above normal operational range (Most severe level),996,233
+Deutz,Deutz,Deutz,ECM,105,0,Engine - Charge air temperature sensor - Data above normal operational range (Most severe level),997,233
+Deutz,Deutz,Deutz,ECM,105,11,Engine - Charge air temperature sensor - Root cause not known,998,128
+Deutz,Deutz,Deutz,ECM,412,3,Engine - EGR temperature sensor - Voltage above normal or shorted to high source,1007,682
+Deutz,Deutz,Deutz,ECM,412,4,Engine - EGR temperature sensor - Voltage below normal or shorted to low source,1008,682
+Deutz,Deutz,Deutz,ECM,523960,0,Engine - EGR temperature after EGR cooler - Data above normal operational range (Most severe level),1011,771
+Deutz,Deutz,Deutz,ECM,523960,1,Engine - EGR temperature after EGR cooler - Data below normal operational range (Most severe level),1012,771
+Deutz,Deutz,Deutz,ECM,51,6,Engine - Throttle valve position - Current above normal or grounded circuit,1014,594
+Deutz,Deutz,Deutz,ECM,51,5,Engine - Throttle valve position - Current below normal or open circuit,1015,594
+Deutz,Deutz,Deutz,ECM,51,7,Engine - Throttle valve position - Mechanical system not responding or out of adjustment,1016,594
+Deutz,Deutz,Deutz,ECM,51,6,Engine - Throttle valve position - Current above normal or grounded circuit,1022,594
+Deutz,Deutz,Deutz,ECM,51,5,Engine - Throttle valve position - Current below normal or open circuit,1023,594
+Deutz,Deutz,Deutz,ECM,51,3,Engine - Throttle valve position - Voltage above normal or shorted to high source,1024,594
+Deutz,Deutz,Deutz,ECM,51,4,Engine - Throttle valve position - Voltage below normal or shorted to low source,1025,594
+Deutz,Deutz,Deutz,ECM,4769,2,Exhaust aftertreatment - Temperature sensor after DOC - Data erratic intermittent or incorrect,1026,684
+Deutz,Deutz,Deutz,ECM,4766,0,Exhaust aftertreatment - Temperature after DOC - Data above normal operational range (Most severe level),1029,684
+Deutz,Deutz,Deutz,ECM,4766,0,Exhaust aftertreatment - Temperature after DOC - Data above normal operational range (Most severe level),1030,684
+Deutz,Deutz,Deutz,ECM,4769,3,Exhaust aftertreatment - Temperature sensor after DOC - Voltage above normal or shorted to high source,1034,684
+Deutz,Deutz,Deutz,ECM,4769,4,Exhaust aftertreatment - Temperature sensor after DOC - Voltage below normal or shorted to low source,1035,684
+Deutz,Deutz,Deutz,ECM,4768,2,Exhaust aftertreatment - Temperature sensor before DOC - Data erratic intermittent or incorrect,1036,683
+Deutz,Deutz,Deutz,ECM,4765,0,Exhaust aftertreatment - Temperature bevor DOC - Data above normal operational range (Most severe level),1039,683
+Deutz,Deutz,Deutz,ECM,4765,0,Exhaust aftertreatment - Temperature bevor DOC - Data above normal operational range (Most severe level),1040,683
+Deutz,Deutz,Deutz,ECM,4768,3,Exhaust aftertreatment - Temperature sensor before DOC - Voltage above normal or shorted to high source,1044,683
+Deutz,Deutz,Deutz,ECM,4768,4,Exhaust aftertreatment - Temperature sensor before DOC - Voltage below normal or shorted to low source,1045,683
+Deutz,Deutz,Deutz,ECM,3248,4,Exhaust aftertreatment - Temperature after DPF - Voltage below normal or shorted to low source,1047,685
+Deutz,Deutz,Deutz,ECM,1180,3,Engine - TC charge temprature before tubine - Voltage above normal or shorted to high source,1067,556
+Deutz,Deutz,Deutz,ECM,4360,0,Exhaust aftertreatment - Temperature before SCR Cat - Data above normal operational range (Most severe level),1069,668
+Deutz,Deutz,Deutz,ECM,4360,1,Exhaust aftertreatment - Temperature before SCR Cat - Data below normal operational range (Most severe level),1070,668
+Deutz,Deutz,Deutz,ECM,4361,3,Exhaust aftertreatment - Temperature SCR Cat - Voltage above normal or shorted to high source,1072,668
+Deutz,Deutz,Deutz,ECM,4361,4,Exhaust aftertreatment - Temperature SCR Cat - Voltage below normal or shorted to low source,1073,668
+Deutz,Deutz,Deutz,ECM,1761,14,Exhaust aftertreatment - DEF tank level sensor - Special instructions,1074,1-2-7
+Deutz,Deutz,Deutz,ECM,3361,6,Exhaust aftertreatment - DEF metering unit - Current above normal or grounded circuit,1075,677
+Deutz,Deutz,Deutz,ECM,3361,3,Exhaust aftertreatment - DEF metering unit - Voltage above normal or shorted to high source,1077,677
+Deutz,Deutz,Deutz,ECM,3361,3,Exhaust aftertreatment - DEF metering unit - Voltage above normal or shorted to high source,1078,677
+Deutz,Deutz,Deutz,ECM,3361,4,Exhaust aftertreatment - DEF metering unit - Voltage below normal or shorted to low source,1079,677
+Deutz,Deutz,Deutz,ECM,3361,4,Exhaust aftertreatment - DEF metering unit - Voltage below normal or shorted to low source,1080,677
+Deutz,Deutz,Deutz,ECM,4345,5,Exhaust aftertreatment - Heater DEF return line - Current below normal or open circuit,1081,6-7-4
+Deutz,Deutz,Deutz,ECM,4366,5,Exhaust aftertreatment - DEF tank heating valve - Current below normal or open circuit,1082,7-6-2
+Deutz,Deutz,Deutz,ECM,4343,5,Exhaust aftertreatment - Heater DEF pressure line - Current below normal or open circuit,1083,6-7-3
+Deutz,Deutz,Deutz,ECM,4366,5,Exhaust aftertreatment - DEF tank heating valve - Current below normal or open circuit,1084,7-6-2
+Deutz,Deutz,Deutz,ECM,4366,5,Exhaust aftertreatment - DEF tank heating valve - Current below normal or open circuit,1085,7-6-2
+Deutz,Deutz,Deutz,ECM,4341,5,Exhaust aftertreatment - Heater DEF supply line - Current below normal or open circuit,1086,6-7-5
+Deutz,Deutz,Deutz,ECM,523719,5,Exhaust aftertreatment - SCR heater - Current below normal or open circuit,1087,6-7-2
+Deutz,Deutz,Deutz,ECM,4366,5,Exhaust aftertreatment - DEF tank heating valve - Current below normal or open circuit,1088,6-7-1
+Deutz,Deutz,Deutz,ECM,4243,11,Exhaust aftertreatment - SCR heater - Root cause not known,1089,7-8-3
+Deutz,Deutz,Deutz,ECM,4345,5,Exhaust aftertreatment - Heater DEF return line - Current below normal or open circuit,1090,674
+Deutz,Deutz,Deutz,ECM,4345,3,Exhaust aftertreatment - Heater DEF return line - Voltage above normal or shorted to high source,1092,674
+Deutz,Deutz,Deutz,ECM,4345,4,Exhaust aftertreatment - Heater DEF return line - Voltage below normal or shorted to low source,1093,674
+Deutz,Deutz,Deutz,ECM,4343,5,Exhaust aftertreatment - Heater DEF pressure line - Current below normal or open circuit,1094,673
+Deutz,Deutz,Deutz,ECM,4343,3,Exhaust aftertreatment - Heater DEF pressure line - Voltage above normal or shorted to high source,1096,673
+Deutz,Deutz,Deutz,ECM,4343,4,Exhaust aftertreatment - Heater DEF pressure line - Voltage below normal or shorted to low source,1097,673
+Deutz,Deutz,Deutz,ECM,523718,5,Exhaust aftertreatment - SCR system - Current below normal or open circuit,1098,676
+Deutz,Deutz,Deutz,ECM,523718,12,Exhaust aftertreatment - SCR system - Bad intelligent device or component,1099,676
+Deutz,Deutz,Deutz,ECM,523718,3,Exhaust aftertreatment - SCR system - Voltage above normal or shorted to high source,1100,676
+Deutz,Deutz,Deutz,ECM,523718,4,Exhaust aftertreatment - SCR system - Voltage below normal or shorted to low source,1101,676
+Deutz,Deutz,Deutz,ECM,4341,5,Exhaust aftertreatment - Heater DEF supply line - Current below normal or open circuit,1102,675
+Deutz,Deutz,Deutz,ECM,4341,3,Exhaust aftertreatment - Heater DEF supply line - Voltage above normal or shorted to high source,1104,675
+Deutz,Deutz,Deutz,ECM,4341,4,Exhaust aftertreatment - Heater DEF supply line - Voltage below normal or shorted to low source,1105,675
+Deutz,Deutz,Deutz,ECM,523719,5,Exhaust aftertreatment - SCR heater - Current below normal or open circuit,1106,672
+Deutz,Deutz,Deutz,ECM,523719,3,Exhaust aftertreatment - SCR heater - Voltage above normal or shorted to high source,1108,672
+Deutz,Deutz,Deutz,ECM,523719,4,Exhaust aftertreatment - SCR heater - Voltage below normal or shorted to low source,1109,672
+Deutz,Deutz,Deutz,ECM,4366,5,Exhaust aftertreatment - DEF tank heating valve - Current below normal or open circuit,1110,671
+Deutz,Deutz,Deutz,ECM,4366,3,Exhaust aftertreatment - DEF tank heating valve - Voltage above normal or shorted to high source,1112,671
+Deutz,Deutz,Deutz,ECM,4366,4,Exhaust aftertreatment - DEF tank heating valve - Voltage below normal or shorted to low source,1113,671
+Deutz,Deutz,Deutz,ECM,523632,11,Exhaust aftertreatment - DEF pressure - Root cause not known,1117,666
+Deutz,Deutz,Deutz,ECM,4375,5,Exhaust aftertreatment - DEF pump - Current below normal or open circuit,1118,666
+Deutz,Deutz,Deutz,ECM,4375,3,Exhaust aftertreatment - DEF pump - Voltage above normal or shorted to high source,1120,666
+Deutz,Deutz,Deutz,ECM,4375,4,Exhaust aftertreatment - DEF pump - Voltage below normal or shorted to low source,1121,666
+Deutz,Deutz,Deutz,ECM,4334,0,Exhaust aftertreatment - DEF pump pressure - Data above normal operational range (Most severe level),1122,665
+Deutz,Deutz,Deutz,ECM,4334,1,Exhaust aftertreatment - DEF pump pressure - Data below normal operational range (Most severe level),1123,665
+Deutz,Deutz,Deutz,ECM,4334,0,Exhaust aftertreatment - DEF pump pressure - Data above normal operational range (Most severe level),1124,6-6-5
+Deutz,Deutz,Deutz,ECM,4334,1,Exhaust aftertreatment - DEF pump pressure - Data below normal operational range (Most severe level),1125,6-6-5
+Deutz,Deutz,Deutz,ECM,523632,3,Exhaust aftertreatment - DEF pressure - Voltage above normal or shorted to high source,1127,665
+Deutz,Deutz,Deutz,ECM,523632,4,Exhaust aftertreatment - DEF pressure - Voltage below normal or shorted to low source,1128,665
+Deutz,Deutz,Deutz,ECM,4376,5,Exhaust aftertreatment - DEF reverse valve - Current below normal or open circuit,1129,667
+Deutz,Deutz,Deutz,ECM,4376,3,Exhaust aftertreatment - DEF reverse valve - Voltage above normal or shorted to high source,1131,667
+Deutz,Deutz,Deutz,ECM,4376,4,Exhaust aftertreatment - DEF reverse valve - Voltage below normal or shorted to low source,1132,667
+Deutz,Deutz,Deutz,ECM,3031,0,Exhaust aftertreatment - DEF tank temperature - Data above normal operational range (Most severe level),1135,669
+Deutz,Deutz,Deutz,ECM,3031,1,Exhaust aftertreatment - DEF tank temperature - Data below normal operational range (Most severe level),1136,669
+Deutz,Deutz,Deutz,ECM,4365,2,Exhaust aftertreatment - DEF tank temperature - Data erratic intermittent or incorrect,1137,669
+Deutz,Deutz,Deutz,ECM,4365,3,Exhaust aftertreatment - DEF tank temperature - Voltage above normal or shorted to high source,1138,669
+Deutz,Deutz,Deutz,ECM,4365,4,Exhaust aftertreatment - DEF tank temperature - Voltage below normal or shorted to low source,1139,669
+Deutz,Deutz,Deutz,ECM,97,12,Engine - Water in fuel sensor - Bad intelligent device or component,1157,228
+Deutz,Deutz,Deutz,ECM,523946,0,Engine - Injection Zero quantity calibration Injector 1 - Data above normal operational range (Most severe level),1158,772
+Deutz,Deutz,Deutz,ECM,523947,0,Engine - Injection Zero quantity calibration Injector 2 - Data above normal operational range (Most severe level),1159,772
+Deutz,Deutz,Deutz,ECM,523948,0,Engine - Injection Zero quantity calibration Injector 3 - Data above normal operational range (Most severe level),1160,772
+Deutz,Deutz,Deutz,ECM,523951,0,Engine - Injection Zero quantity calibration Injector 6 - Data above normal operational range (Most severe level),1163,772
+Deutz,Deutz,Deutz,ECM,523946,1,Engine - Injection Zero quantity calibration Injector 1 - Data below normal operational range (Most severe level),1164,772
+Deutz,Deutz,Deutz,ECM,523947,1,Engine - Injection Zero quantity calibration Injector 2 - Data below normal operational range (Most severe level),1165,772
+Deutz,Deutz,Deutz,ECM,523948,1,Engine - Injection Zero quantity calibration Injector 3 - Data below normal operational range (Most severe level),1166,772
+Deutz,Deutz,Deutz,ECM,523949,1,Engine - Injection Zero quantity calibration Injector 4 - Data below normal operational range (Most severe level),1167,772
+Deutz,Deutz,Deutz,ECM,523950,1,Engine - Injection Zero quantity calibration Injector 5 - Data below normal operational range (Most severe level),1168,772
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,1170,555
+Deutz,Deutz,Deutz,ECM,168,0,Machine - Battery voltage - Data above normal operational range (Most severe level),1180,318
+Deutz,Deutz,Deutz,ECM,168,1,Machine - Battery voltage - Data below normal operational range (Most severe level),1181,318
+Deutz,Deutz,Deutz,ECM,172,1,Engine - Ambient air temperature sensor - Data below normal operational range (Most severe level),1183,226
+Deutz,Deutz,Deutz,ECM,523980,14,Exhaust aftertreatment - DEF metering quantity - Special instructions,1187,7-8-4
+Deutz,Deutz,Deutz,ECM,1180,0,Engine - TC charge temprature before tubine - Data above normal operational range (Most severe level),1193,5-5-6
+Deutz,Deutz,Deutz,ECM,1180,1,Engine - TC charge temprature before tubine - Data below normal operational range (Most severe level),1194,5-5-6
+Deutz,Deutz,Deutz,ECM,524018,14,Exhaust aftertreatment - DPF regeneration request - Special instructions,1219,7-8-6
+Deutz,Deutz,Deutz,ECM,524022,14,Exhaust aftertreatment - Soot load - Special instructions,1220,7-8-6
+Deutz,Deutz,Deutz,ECM,190,14,Engine - Rotation speed - Special instructions,1222,212
+Deutz,Deutz,Deutz,ECM,51,5,Engine - Throttle valve position - Current below normal or open circuit,1223,594
+Deutz,Deutz,Deutz,ECM,51,6,Engine - Throttle valve position - Current above normal or grounded circuit,1224,594
+Deutz,Deutz,Deutz,ECM,51,3,Engine - Throttle valve position - Voltage above normal or shorted to high source,1226,594
+Deutz,Deutz,Deutz,ECM,51,3,Engine - Throttle valve position - Voltage above normal or shorted to high source,1227,594
+Deutz,Deutz,Deutz,ECM,51,4,Engine - Throttle valve position - Voltage below normal or shorted to low source,1228,594
+Deutz,Deutz,Deutz,ECM,51,4,Engine - Throttle valve position - Voltage below normal or shorted to low source,1229,594
+Deutz,Deutz,Deutz,ECM,51,6,Engine - Throttle valve position - Current above normal or grounded circuit,1230,594
+Deutz,Deutz,Deutz,ECM,51,11,Engine - Throttle valve position - Root cause not known,1231,594
+Deutz,Deutz,Deutz,ECM,51,4,Engine - Throttle valve position - Voltage below normal or shorted to low source,1232,594
+Deutz,Deutz,Deutz,ECM,523984,3,Engine - Actuator relay 7 - Voltage above normal or shorted to high source,1239,788
+Deutz,Deutz,Deutz,ECM,523986,4,Engine - Actuator relay 6 - Voltage below normal or shorted to low source,1241,176
+Deutz,Deutz,Deutz,ECM,523987,4,Engine - Actuator relay 7 - Voltage below normal or shorted to low source,1242,791
+Deutz,Deutz,Deutz,ECM,524019,11,Exhaust aftertreatment - Burner air line blocked - Root cause not known,1247,8-6-2
+Deutz,Deutz,Deutz,ECM,523910,9,Exhaust aftertreatment - Burner air pump - Abnormal update rate timeout,1248,6-9-5
+Deutz,Deutz,Deutz,ECM,523910,7,Exhaust aftertreatment - Burner air pump - Mechanical system not responding or out of adjustment,1249,6-9-5
+Deutz,Deutz,Deutz,ECM,523910,12,Exhaust aftertreatment - Burner air pump - Bad intelligent device or component,1250,6-9-5
+Deutz,Deutz,Deutz,ECM,523910,0,Exhaust aftertreatment - Burner air pump - Data above normal operational range (Most severe level),1252,6-9-5
+Deutz,Deutz,Deutz,ECM,524014,1,Engine - Air pressure glow plug flushing line - Data below normal operational range (Most severe level),1254,8-5-8
+Deutz,Deutz,Deutz,ECM,524013,7,Exhaust aftertreatment - Burner operation - Mechanical system not responding or out of adjustment,1255,8-5-7
+Deutz,Deutz,Deutz,ECM,523915,7,"Exhaust aftertreatment - Burner post injection metering valve
+- Mechanical system not responding or out of adjustment",1257,8-5-3
+Deutz,Deutz,Deutz,ECM,524016,11,Exhaust aftertreatment - Burner air pump - Root cause not known,1258,8-5-9
+Deutz,Deutz,Deutz,ECM,524016,2,Exhaust aftertreatment - Burner air pump - Data erratic intermittent or incorrect,1259,8-5-9
+Deutz,Deutz,Deutz,ECM,523910,6,Exhaust aftertreatment - Burner air pump - Current above normal or grounded circuit,1261,6-9-5
+Deutz,Deutz,Deutz,ECM,523922,7,Exhaust aftertreatment - Burner metering unit shut-off valve - Mechanical system not responding or out of adjustment,1262,8-5-4
+Deutz,Deutz,Deutz,ECM,524021,11,Exhaust aftertreatment - Burner fuel line - Root cause not known,1263,8-6-4
+Deutz,Deutz,Deutz,ECM,523922,7,Exhaust aftertreatment - Burner metering unit shut-off valve - Mechanical system not responding or out of adjustment,1264,8-5-5
+Deutz,Deutz,Deutz,ECM,524038,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1285,8-2-4
+Deutz,Deutz,Deutz,ECM,524039,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1286,8-2-5
+Deutz,Deutz,Deutz,ECM,524040,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1287,8-2-6
+Deutz,Deutz,Deutz,ECM,524041,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1288,8-2-7
+Deutz,Deutz,Deutz,ECM,524042,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1289,8-2-8
+Deutz,Deutz,Deutz,ECM,524043,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1290,8-2-9
+Deutz,Deutz,Deutz,ECM,524045,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1291,8-3-1
+Deutz,Deutz,Deutz,ECM,524046,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1292,8-3-2
+Deutz,Deutz,Deutz,ECM,524047,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1293,8-3-3
+Deutz,Deutz,Deutz,ECM,524048,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1294,8-3-4
+Deutz,Deutz,Deutz,ECM,523788,0,Engine - CAN TC - Data above normal operational range (Most severe level),1299,655
+Deutz,Deutz,Deutz,ECM,523788,0,Engine - CAN TC - Data above normal operational range (Most severe level),1300,655
+Deutz,Deutz,Deutz,ECM,524024,11,Exhaust aftertreatment - DOC temperature difference - Root cause not known,1302,8-6-6
+Deutz,Deutz,Deutz,ECM,523995,13,Engine - Injector 7 IMA Code - Out of calibration,1324,7-9-5
+Deutz,Deutz,Deutz,ECM,523996,13,Engine - Injector 8 IMA Code - Out of calibration,1325,7-9-6
+Deutz,Deutz,Deutz,ECM,523997,4,Engine - Injectors bank 1 Secondary - Voltage below normal or shorted to low source,1326,7-9-7
+Deutz,Deutz,Deutz,ECM,523998,4,Engine - Injectors bank 2 Secondary - Voltage below normal or shorted to low source,1327,7-9-8
+Deutz,Deutz,Deutz,ECM,523999,12,Engine - Injector control Secondary - Bad intelligent device or component,1328,7-9-9
+Deutz,Deutz,Deutz,ECM,524000,5,Engine - Injector 7 - Current below normal or open circuit,1329,1-7-7
+Deutz,Deutz,Deutz,ECM,524001,5,Engine - Injector 8 - Current below normal or open circuit,1330,1-7-8
+Deutz,Deutz,Deutz,ECM,524000,3,Engine - Injector 7 - Voltage above normal or shorted to high source,1333,1-7-7
+Deutz,Deutz,Deutz,ECM,524001,3,Engine - Injector 8 - Voltage above normal or shorted to high source,1334,1-7-8
+Deutz,Deutz,Deutz,ECM,2797,4,Engine - Injector group - Voltage below normal or shorted to low source,1337,565
+Deutz,Deutz,Deutz,ECM,2798,4,Engine - Injector group 2 - Voltage below normal or shorted to low source,1338,566
+Deutz,Deutz,Deutz,ECM,2797,4,Engine - Injector group - Voltage below normal or shorted to low source,1339,565
+Deutz,Deutz,Deutz,ECM,2798,4,Engine - Injector group 2 - Voltage below normal or shorted to low source,1340,566
+Deutz,Deutz,Deutz,ECM,524036,12,Engine - Diagnostic injector Secondary - Bad intelligent device or component,1342,5-5-5
+Deutz,Deutz,Deutz,ECM,524069,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1345,8-9-6
+Deutz,Deutz,Deutz,ECM,524052,11,Exhaust aftertreatment - Power reduction on Main ECU triggered by fault on Secondary - Root cause not known,1357,8-3-6
+Deutz,Deutz,Deutz,ECM,524052,11,Exhaust aftertreatment - Power reduction on Main ECU triggered by fault on Secondary - Root cause not known,1368,8-3-6
+Deutz,Deutz,Deutz,ECM,523919,2,Exhaust aftertreatment - Burner air pump pressure sensor - Data erratic intermittent or incorrect,1378,6-9-4
+Deutz,Deutz,Deutz,ECM,523920,2,Exhaust aftertreatment - Burner exhaust back pressure sensor - Data erratic intermittent or incorrect,1379,7-1-6
+Deutz,Deutz,Deutz,ECM,3253,2,Exhaust aftertreatment - DPF differential pressure - Data erratic intermittent or incorrect,1380,6-9-2
+Deutz,Deutz,Deutz,ECM,164,2,Engine - Rail pressure - Data erratic intermittent or incorrect,1381,839
+Deutz,Deutz,Deutz,ECM,523922,5,Exhaust aftertreatment - Burner metering unit shut-off valve - Current below normal or open circuit,1389,715
+Deutz,Deutz,Deutz,ECM,523922,12,Exhaust aftertreatment - Burner metering unit shut-off valve - Bad intelligent device or component,1390,715
+Deutz,Deutz,Deutz,ECM,523922,4,Exhaust aftertreatment - Burner metering unit shut-off valve - Voltage below normal or shorted to low source,1392,715
+Deutz,Deutz,Deutz,ECM,523921,2,Exhaust aftertreatment - Burner firing chamber temperature - Data erratic intermittent or incorrect,1395,7-1-4
+Deutz,Deutz,Deutz,ECM,1136,0,Engine - ECU temperature - Data above normal operational range (Most severe level),1398,681
+Deutz,Deutz,Deutz,ECM,4769,2,Exhaust aftertreatment - Temperature sensor after DOC - Data erratic intermittent or incorrect,1402,6-8-4
+Deutz,Deutz,Deutz,ECM,4769,2,Exhaust aftertreatment - Temperature sensor after DOC - Data erratic intermittent or incorrect,1403,6-8-4
+Deutz,Deutz,Deutz,ECM,1188,11,Engine - TC wastegate - Root cause not known,1411,814
+Deutz,Deutz,Deutz,ECM,1188,11,Engine - TC wastegate - Root cause not known,1412,814
+Deutz,Deutz,Deutz,ECM,1188,13,Engine - TC wastegate - Out of calibration,1413,814
+Deutz,Deutz,Deutz,ECM,1188,2,Engine - TC wastegate - Data erratic intermittent or incorrect,1414,814
+Deutz,Deutz,Deutz,ECM,1188,7,Engine - TC wastegate - Mechanical system not responding or out of adjustment,1415,814
+Deutz,Deutz,Deutz,ECM,1188,11,Engine - TC wastegate - Root cause not known,1417,814
+Deutz,Deutz,Deutz,ECM,1188,11,Engine - TC wastegate - Root cause not known,1418,814
+Deutz,Deutz,Deutz,ECM,51,0,Engine - Throttle valve position - Data above normal operational range (Most severe level),1423,594
+Deutz,Deutz,Deutz,ECM,51,1,Engine - Throttle valve position - Data below normal operational range (Most severe level),1424,594
+Deutz,Deutz,Deutz,ECM,172,0,Engine - Ambient air temperature sensor - Data above normal operational range (Most severe level),1425,226
+Deutz,Deutz,Deutz,ECM,524029,2,Exhaust aftertreatment - CAN return actuator - Data erratic intermittent or incorrect,1432,815
+Deutz,Deutz,Deutz,ECM,524034,5,Engine - Disc separator - Current below normal or open circuit,1436,816
+Deutz,Deutz,Deutz,ECM,524034,12,Engine - Disc separator - Bad intelligent device or component,1437,816
+Deutz,Deutz,Deutz,ECM,524034,3,Engine - Disc separator - Voltage above normal or shorted to high source,1438,816
+Deutz,Deutz,Deutz,ECM,524034,4,Engine - Disc separator - Voltage below normal or shorted to low source,1439,816
+Deutz,Deutz,Deutz,ECM,524030,7,Engine - EGR actuator - Mechanical system not responding or out of adjustment,1440,815
+Deutz,Deutz,Deutz,ECM,524031,13,Engine - EGR actuator - Out of calibration,1441,815
+Deutz,Deutz,Deutz,ECM,524032,2,Engine - EGR actuator - Data erratic intermittent or incorrect,1442,815
+Deutz,Deutz,Deutz,ECM,524033,7,Engine - EGR actuator - Mechanical system not responding or out of adjustment,1443,815
+Deutz,Deutz,Deutz,ECM,3711,12,Exhaust aftertreatment - Temperature during Stand Still - Bad intelligent device or component,1455,711
+Deutz,Deutz,Deutz,ECM,523960,0,Engine - EGR temperature after EGR cooler - Data above normal operational range (Most severe level),1458,7-7-1
+Deutz,Deutz,Deutz,ECM,523668,11,Exhaust aftertreatment - Hardware failure temperature sensor DEF suction unit - Root cause not known,1464,1136
+Deutz,Deutz,Deutz,ECM,523669,11,Exhaust aftertreatment - Hardware failure quality sensor DEF suction unit - Root cause not known,1466,1137
+Deutz,Deutz,Deutz,ECM,523670,11,Exhaust aftertreatment - Hardware failure level sensor DEF suction unit - Root cause not known,1467,1138
+Deutz,Deutz,Deutz,ECM,524282,11,Exhaust aftertreatment - Hardware failure temperature sensor DEF suction unit - Root cause not known,1468,1139
+Deutz,Deutz,Deutz,ECM,524283,12,Exhaust aftertreatment - Swapped hoses for differential pressure sensor DPF - Bad intelligent device or component,1469,1141
+Deutz,Deutz,Deutz,ECM,524284,12,Exhaust aftertreatment - DOC removed - Bad intelligent device or component,1470,1142
+Deutz,Deutz,Deutz,ECM,524285,2,Machine - GPS status error - Data erratic intermittent or incorrect,1471,1143
+Deutz,Deutz,Deutz,ECM,524286,2,Machine - Telemetry status error - Data erratic intermittent or incorrect,1472,1144
+Deutz,Deutz,Deutz,ECM,524025,5,Exhaust aftertreatment - Stand Still - Current below normal or open circuit,1481,845
+Deutz,Deutz,Deutz,ECM,524044,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1482,1-8-8
+Deutz,Deutz,Deutz,ECM,524068,2,Engine - ECU Main Secondary identical - Data erratic intermittent or incorrect,1484,8-9-5
+Deutz,Deutz,Deutz,ECM,524052,11,Exhaust aftertreatment - Power reduction on Main ECU triggered by fault on Secondary - Root cause not known,1485,8-3-6
+Deutz,Deutz,Deutz,ECM,523718,5,Exhaust aftertreatment - SCR system - Current below normal or open circuit,1486,6-7-6
+Deutz,Deutz,Deutz,ECM,523718,3,Exhaust aftertreatment - SCR system - Voltage above normal or shorted to high source,1488,6-7-6
+Deutz,Deutz,Deutz,ECM,523718,4,Exhaust aftertreatment - SCR system - Voltage below normal or shorted to low source,1489,6-7-6
+Deutz,Deutz,Deutz,ECM,4376,5,Exhaust aftertreatment - DEF reverse valve - Current below normal or open circuit,1490,6-6-7
+Deutz,Deutz,Deutz,ECM,4376,12,Exhaust aftertreatment - DEF reverse valve - Bad intelligent device or component,1491,6-6-7
+Deutz,Deutz,Deutz,ECM,4376,4,Exhaust aftertreatment - DEF reverse valve - Voltage below normal or shorted to low source,1493,6-6-7
+Deutz,Deutz,Deutz,ECM,524057,2,Engine - Fuel low pressure pump - Data erratic intermittent or incorrect,1505,843
+Deutz,Deutz,Deutz,ECM,2659,2,Engine - EGR mass flow - Data erratic intermittent or incorrect,1523,8-2-2
+Deutz,Deutz,Deutz,ECM,2659,0,Engine - EGR mass flow - Data above normal operational range (Most severe level),1524,8-2-2
+Deutz,Deutz,Deutz,ECM,2659,1,Engine - EGR mass flow - Data below normal operational range (Most severe level),1525,8-2-2
+Deutz,Deutz,Deutz,ECM,2659,12,Engine - EGR mass flow - Bad intelligent device or component,1526,8-2-2
+Deutz,Deutz,Deutz,ECM,2659,2,Engine - EGR mass flow - Data erratic intermittent or incorrect,1527,8-2-2
+Deutz,Deutz,Deutz,ECM,524070,2,Exhaust aftertreatment - NOx sensor before SCR Cat - Data erratic intermittent or incorrect,1529,897
+Deutz,Deutz,Deutz,ECM,524071,2,Exhaust aftertreatment - NOx sensor after SCR Cat - Data erratic intermittent or incorrect,1530,898
+Deutz,Deutz,Deutz,ECM,524072,2,Exhaust aftertreatment - NOx sensor before SCR Cat - Data erratic intermittent or incorrect,1531,899
+Deutz,Deutz,Deutz,ECM,524073,2,Exhaust aftertreatment - NOx sensor after SCR Cat - Data erratic intermittent or incorrect,1532,245
+Deutz,Deutz,Deutz,ECM,524074,9,Exhaust aftertreatment - NOx sensor after SCR Cat - Abnormal update rate timeout,1533,246
+Deutz,Deutz,Deutz,ECM,524075,11,Exhaust aftertreatment - NOx sensor after SCR Cat - Root cause not known,1534,247
+Deutz,Deutz,Deutz,ECM,524076,9,Exhaust aftertreatment - NOx sensor before SCR Cat - Abnormal update rate timeout,1535,248
+Deutz,Deutz,Deutz,ECM,524077,11,Exhaust aftertreatment - NOx sensor before SCR Cat - Root cause not known,1536,249
+Deutz,Deutz,Deutz,ECM,524078,9,Exhaust aftertreatment - NOx sensor after SCR Cat lambda - Abnormal update rate timeout,1537,255
+Deutz,Deutz,Deutz,ECM,524079,9,Exhaust aftertreatment - NOx sensor after SCR Cat lambda - Abnormal update rate timeout,1538,256
+Deutz,Deutz,Deutz,ECM,524080,9,"Exhaust aftertreatment - NOx sensor before SCR Cat lambda
+- Abnormal update rate timeout",1539,257
+Deutz,Deutz,Deutz,ECM,524081,9,"Exhaust aftertreatment - NOx sensor before SCR Cat lambda
+- Abnormal update rate timeout",1540,258
+Deutz,Deutz,Deutz,ECM,524082,9,Exhaust aftertreatment - NOx sensor after SCR Cat NOx - Abnormal update rate timeout,1541,259
+Deutz,Deutz,Deutz,ECM,524083,9,Exhaust aftertreatment - NOx sensor after SCR Cat NOx - Abnormal update rate timeout,1542,261
+Deutz,Deutz,Deutz,ECM,524084,9,Exhaust aftertreatment - NOx sensor before SCR Cat NOx - Abnormal update rate timeout,1543,911
+Deutz,Deutz,Deutz,ECM,524085,9,Exhaust aftertreatment - NOx sensor before SCR Cat NOx - Abnormal update rate timeout,1544,912
+Deutz,Deutz,Deutz,ECM,524149,2,Engine - TC pressure after turbine - Data erratic intermittent or incorrect,1545,968
+Deutz,Deutz,Deutz,ECM,1176,2,Engine - TC charge pressure - Data erratic intermittent or incorrect,1549,139
+Deutz,Deutz,Deutz,ECM,524063,5,Exhaust aftertreatment - DEF heater - Current below normal or open circuit,1555,869
+Deutz,Deutz,Deutz,ECM,524063,5,Exhaust aftertreatment - DEF heater - Current below normal or open circuit,1556,869
+Deutz,Deutz,Deutz,ECM,524063,5,Exhaust aftertreatment - DEF heater - Current below normal or open circuit,1557,869
+Deutz,Deutz,Deutz,ECM,524063,3,Exhaust aftertreatment - DEF heater - Voltage above normal or shorted to high source,1558,869
+Deutz,Deutz,Deutz,ECM,524063,4,Exhaust aftertreatment - DEF heater - Voltage below normal or shorted to low source,1559,869
+Deutz,Deutz,Deutz,ECM,524063,5,Exhaust aftertreatment - DEF heater - Current below normal or open circuit,1560,869
+Deutz,Deutz,Deutz,ECM,524063,5,Exhaust aftertreatment - DEF heater - Current below normal or open circuit,1561,869
+Deutz,Deutz,Deutz,ECM,524063,5,Exhaust aftertreatment - DEF heater - Current below normal or open circuit,1562,869
+Deutz,Deutz,Deutz,ECM,524065,0,Exhaust aftertreatment - Pressure sensor before SCR Cat - Data above normal operational range (Most severe level),1565,892
+Deutz,Deutz,Deutz,ECM,524065,1,Exhaust aftertreatment - Pressure sensor before SCR Cat - Data below normal operational range (Most severe level),1566,892
+Deutz,Deutz,Deutz,ECM,524065,3,Exhaust aftertreatment - Pressure sensor before SCR Cat - Voltage above normal or shorted to high source,1569,892
+Deutz,Deutz,Deutz,ECM,524065,4,Exhaust aftertreatment - Pressure sensor before SCR Cat - Voltage below normal or shorted to low source,1570,892
+Deutz,Deutz,Deutz,ECM,524067,0,Exhaust aftertreatment - DEF pump temperature - Data above normal operational range (Most severe level),1581,894
+Deutz,Deutz,Deutz,ECM,524067,1,Exhaust aftertreatment - DEF pump temperature - Data below normal operational range (Most severe level),1582,894
+Deutz,Deutz,Deutz,ECM,524067,0,Exhaust aftertreatment - DEF pump temperature - Data above normal operational range (Most severe level),1585,894
+Deutz,Deutz,Deutz,ECM,524067,1,Exhaust aftertreatment - DEF pump temperature - Data below normal operational range (Most severe level),1586,894
+Deutz,Deutz,Deutz,ECM,1761,0,Exhaust aftertreatment - DEF tank level sensor - Data above normal operational range (Most severe level),1593,129
+Deutz,Deutz,Deutz,ECM,1761,1,Exhaust aftertreatment - DEF tank level sensor - Data below normal operational range (Most severe level),1594,129
+Deutz,Deutz,Deutz,ECM,524149,2,Engine - TC pressure after turbine - Data erratic intermittent or incorrect,1597,968
+Deutz,Deutz,Deutz,ECM,524065,2,Exhaust aftertreatment - Pressure sensor before SCR Cat - Data erratic intermittent or incorrect,1598,892
+Deutz,Deutz,Deutz,ECM,3699,2,Exhaust aftertreatment - Passive regeneration - Data erratic intermittent or incorrect,1617,8-1-8
+Deutz,Deutz,Deutz,ECM,524087,5,Machine - DEF error lamp - Current below normal or open circuit,1619,884
+Deutz,Deutz,Deutz,ECM,524087,12,Machine - DEF error lamp - Bad intelligent device or component,1620,884
+Deutz,Deutz,Deutz,ECM,524087,3,Machine - DEF error lamp - Voltage above normal or shorted to high source,1621,884
+Deutz,Deutz,Deutz,ECM,524087,4,Machine - DEF error lamp - Voltage below normal or shorted to low source,1622,884
+Deutz,Deutz,Deutz,ECM,524132,2,Engine - Fuel low pressure before pump - Data erratic intermittent or incorrect,1630,955
+Deutz,Deutz,Deutz,ECM,524132,0,Engine - Fuel low pressure before pump - Data above normal operational range (Most severe level),1631,9-5-5
+Deutz,Deutz,Deutz,ECM,524132,0,Engine - Fuel low pressure before pump - Data above normal operational range (Most severe level),1632,9-5-5
+Deutz,Deutz,Deutz,ECM,524132,1,Engine - Fuel low pressure before pump - Data below normal operational range (Most severe level),1633,9-5-5
+Deutz,Deutz,Deutz,ECM,524132,1,Engine - Fuel low pressure before pump - Data below normal operational range (Most severe level),1634,9-5-5
+Deutz,Deutz,Deutz,ECM,3699,0,Exhaust aftertreatment - Passive regeneration - Data above normal operational range (Most severe level),1635,8-1-8
+Deutz,Deutz,Deutz,ECM,524147,13,Exhaust aftertreatment - DEF pressure - Out of calibration,1639,966
+Deutz,Deutz,Deutz,ECM,524063,12,Exhaust aftertreatment - DEF heater - Bad intelligent device or component,1646,869
+Deutz,Deutz,Deutz,ECM,524063,12,Exhaust aftertreatment - DEF heater - Bad intelligent device or component,1647,869
+Deutz,Deutz,Deutz,ECM,1761,14,Exhaust aftertreatment - DEF tank level sensor - Special instructions,1654,138
+Deutz,Deutz,Deutz,ECM,1761,14,Exhaust aftertreatment - DEF tank level sensor - Special instructions,1655,138
+Deutz,Deutz,Deutz,ECM,1761,14,Exhaust aftertreatment - DEF tank level sensor - Special instructions,1656,138
+Deutz,Deutz,Deutz,ECM,524096,14,Exhaust aftertreatment - EPA counter - Special instructions,1658,1-9-6
+Deutz,Deutz,Deutz,ECM,524114,9,Exhaust aftertreatment - CAN DOC - Abnormal update rate timeout,1659,9-3-8
+Deutz,Deutz,Deutz,ECM,524115,9,Exhaust aftertreatment - CAN service - Abnormal update rate timeout,1660,939
+Deutz,Deutz,Deutz,ECM,524116,9,Exhaust aftertreatment - CAN DEF tank - Abnormal update rate timeout,1661,1-9-4
+Deutz,Deutz,Deutz,ECM,524117,9,Exhaust aftertreatment - CAN DEF heater - Abnormal update rate timeout,1662,9-4-1
+Deutz,Deutz,Deutz,ECM,524097,9,Exhaust aftertreatment - CAN Burner pump - Abnormal update rate timeout,1663,921
+Deutz,Deutz,Deutz,ECM,524098,9,Exhaust aftertreatment - CAN Burner pump - Abnormal update rate timeout,1664,922
+Deutz,Deutz,Deutz,ECM,524099,9,Exhaust aftertreatment - CAN DPF - Abnormal update rate timeout,1665,923
+Deutz,Deutz,Deutz,ECM,524100,9,Exhaust aftertreatment - CAN DPF - Abnormal update rate timeout,1666,924
+Deutz,Deutz,Deutz,ECM,524101,9,Exhaust aftertreatment - CAN DPF - Abnormal update rate timeout,1667,925
+Deutz,Deutz,Deutz,ECM,524105,9,Engine - CAN EGR actuator - Abnormal update rate timeout,1668,929
+Deutz,Deutz,Deutz,ECM,524108,9,Engine - CAN EGR actuator - Abnormal update rate timeout,1669,932
+Deutz,Deutz,Deutz,ECM,524110,9,Engine - Exhaust brake flap - Abnormal update rate timeout,1670,934
+Deutz,Deutz,Deutz,ECM,524112,9,Engine - CAN throttle valve - Abnormal update rate timeout,1671,936
+Deutz,Deutz,Deutz,ECM,524118,9,Exhaust aftertreatment - CAN DPF regeneration - Abnormal update rate timeout,1672,942
+Deutz,Deutz,Deutz,ECM,524103,9,Exhaust aftertreatment - CAN Burner air pump - Abnormal update rate timeout,1675,927
+Deutz,Deutz,Deutz,ECM,524104,9,Exhaust aftertreatment - CAN DPF - Abnormal update rate timeout,1676,928
+Deutz,Deutz,Deutz,ECM,524106,9,Engine - CAN EGR actuator - Abnormal update rate timeout,1677,195
+Deutz,Deutz,Deutz,ECM,524107,9,Engine - CAN EGR actuator - Abnormal update rate timeout,1678,931
+Deutz,Deutz,Deutz,ECM,524109,9,Engine - CAN EGR actuator - Abnormal update rate timeout,1679,933
+Deutz,Deutz,Deutz,ECM,524111,9,Engine - Exhaust brake flap - Abnormal update rate timeout,1680,935
+Deutz,Deutz,Deutz,ECM,524113,9,Engine - CAN throttle valve - Abnormal update rate timeout,1681,937
+Deutz,Deutz,Deutz,ECM,524120,9,Exhaust aftertreatment - CAN SCR heater diagnostic - Abnormal update rate timeout,1682,9-4-4
+Deutz,Deutz,Deutz,ECM,524121,9,Engine - CAN wastegate actuator - Abnormal update rate timeout,1683,945
+Deutz,Deutz,Deutz,ECM,524122,9,Exhaust aftertreatment - CAN DEF quality - Abnormal update rate timeout,1684,9-4-6
+Deutz,Deutz,Deutz,ECM,524123,9,Exhaust aftertreatment - CAN SCR heater control - Abnormal update rate timeout,1685,9-4-7
+Deutz,Deutz,Deutz,ECM,524124,9,Exhaust aftertreatment - CAN DPF - Abnormal update rate timeout,1686,9-4-8
+Deutz,Deutz,Deutz,ECM,524125,9,Engine - CAN wastegate actuator - Abnormal update rate timeout,1687,949
+Deutz,Deutz,Deutz,ECM,524133,2,Machine - Override switch - Data erratic intermittent or incorrect,1698,956
+Deutz,Deutz,Deutz,ECM,524134,0,Exhaust aftertreatment - DPF ash load - Data above normal operational range (Most severe level),1699,957
+Deutz,Deutz,Deutz,ECM,524134,0,Exhaust aftertreatment - DPF ash load - Data above normal operational range (Most severe level),1700,957
+Deutz,Deutz,Deutz,ECM,524135,0,Exhaust aftertreatment - DPF soot load - Data above normal operational range (Most severe level),1701,958
+Deutz,Deutz,Deutz,ECM,524135,14,Exhaust aftertreatment - DPF soot load - Special instructions,1702,958
+Deutz,Deutz,Deutz,ECM,524135,0,Exhaust aftertreatment - DPF soot load - Data above normal operational range (Most severe level),1703,958
+Deutz,Deutz,Deutz,ECM,524156,9,Machine - CAN wheel speed - Abnormal update rate timeout,1705,972
+Deutz,Deutz,Deutz,ECM,524157,9,Machine - CAN fan control - Abnormal update rate timeout,1706,973
+Deutz,Deutz,Deutz,ECM,524159,0,Engine - Fan - Data above normal operational range (Most severe level),1708,975
+Deutz,Deutz,Deutz,ECM,524159,1,Engine - Fan - Data below normal operational range (Most severe level),1709,975
+Deutz,Deutz,Deutz,ECM,524160,5,Engine - Fan control - Current below normal or open circuit,1710,976
+Deutz,Deutz,Deutz,ECM,524160,3,Engine - Fan control - Voltage above normal or shorted to high source,1712,976
+Deutz,Deutz,Deutz,ECM,524160,4,Engine - Fan control - Voltage below normal or shorted to low source,1713,976
+Deutz,Deutz,Deutz,ECM,524161,5,Engine - Fan control - Current below normal or open circuit,1714,977
+Deutz,Deutz,Deutz,ECM,524161,3,Engine - Fan control - Voltage above normal or shorted to high source,1716,977
+Deutz,Deutz,Deutz,ECM,524161,4,Engine - Fan control - Voltage below normal or shorted to low source,1717,977
+Deutz,Deutz,Deutz,ECM,524162,12,Engine - Fan control angle sensor - Bad intelligent device or component,1718,978
+Deutz,Deutz,Deutz,ECM,524163,12,Engine - Fan control - Bad intelligent device or component,1719,979
+Deutz,Deutz,Deutz,ECM,2791,7,Engine - EGR actuator - Mechanical system not responding or out of adjustment,1752,415
+Deutz,Deutz,Deutz,ECM,2791,2,Engine - EGR actuator - Data erratic intermittent or incorrect,1753,415
+Deutz,Deutz,Deutz,ECM,2791,13,Engine - EGR actuator - Out of calibration,1754,415
+Deutz,Deutz,Deutz,ECM,2791,12,Engine - EGR actuator - Bad intelligent device or component,1755,415
+Deutz,Deutz,Deutz,ECM,2791,13,Engine - EGR actuator - Out of calibration,1756,415
+Deutz,Deutz,Deutz,ECM,2791,6,Engine - EGR actuator - Current above normal or grounded circuit,1757,415
+Deutz,Deutz,Deutz,ECM,2791,3,Engine - EGR actuator - Voltage above normal or shorted to high source,1758,415
+Deutz,Deutz,Deutz,ECM,2791,4,Engine - EGR actuator - Voltage below normal or shorted to low source,1759,415
+Deutz,Deutz,Deutz,ECM,2791,13,Engine - EGR actuator - Out of calibration,1760,415
+Deutz,Deutz,Deutz,ECM,2791,7,Engine - EGR actuator - Mechanical system not responding or out of adjustment,1761,415
+Deutz,Deutz,Deutz,ECM,2791,16,Engine - EGR actuator - Data above normal operational range (Moderately severe level),1762,415
+Deutz,Deutz,Deutz,ECM,2791,0,Engine - EGR actuator - Data above normal operational range (Most severe level),1763,415
+Deutz,Deutz,Deutz,ECM,1188,7,Engine - TC wastegate - Mechanical system not responding or out of adjustment,1788,814
+Deutz,Deutz,Deutz,ECM,1188,2,Engine - TC wastegate - Data erratic intermittent or incorrect,1789,814
+Deutz,Deutz,Deutz,ECM,1188,13,Engine - TC wastegate - Out of calibration,1790,814
+Deutz,Deutz,Deutz,ECM,1188,12,Engine - TC wastegate - Bad intelligent device or component,1791,814
+Deutz,Deutz,Deutz,ECM,1188,13,Engine - TC wastegate - Out of calibration,1792,814
+Deutz,Deutz,Deutz,ECM,1188,6,Engine - TC wastegate - Current above normal or grounded circuit,1793,814
+Deutz,Deutz,Deutz,ECM,1188,3,Engine - TC wastegate - Voltage above normal or shorted to high source,1794,814
+Deutz,Deutz,Deutz,ECM,1188,4,Engine - TC wastegate - Voltage below normal or shorted to low source,1795,814
+Deutz,Deutz,Deutz,ECM,1188,13,Engine - TC wastegate - Out of calibration,1796,814
+Deutz,Deutz,Deutz,ECM,1188,7,Engine - TC wastegate - Mechanical system not responding or out of adjustment,1797,814
+Deutz,Deutz,Deutz,ECM,1188,0,Engine - TC wastegate - Data above normal operational range (Most severe level),1799,814
+Deutz,Deutz,Deutz,ECM,524141,7,Exhaust aftertreatment - DEF metering valve - Mechanical system not responding or out of adjustment,1827,192
+Deutz,Deutz,Deutz,ECM,523612,12,Engine - ECU - Bad intelligent device or component,1857,555
+Deutz,Deutz,Deutz,ECM,524147,7,Exhaust aftertreatment - DEF pressure - Mechanical system not responding or out of adjustment,1858,966
+Deutz,Deutz,Deutz,ECM,524175,0,Exhaust aftertreatment - NOx emissiones after SCR Cat - Data above normal operational range (Most severe level),1859,993
+Deutz,Deutz,Deutz,ECM,524074,2,Exhaust aftertreatment - NOx sensor after SCR Cat - Data erratic intermittent or incorrect,1860,246
+Deutz,Deutz,Deutz,ECM,524076,2,Exhaust aftertreatment - NOx sensor before SCR Cat - Data erratic intermittent or incorrect,1861,248
+Deutz,Deutz,Deutz,ECM,524177,7,Exhaust aftertreatment - DEF pressure suction line - Mechanical system not responding or out of adjustment,1863,995
+Deutz,Deutz,Deutz,ECM,524178,7,Exhaust aftertreatment - DEF pressure - Mechanical system not responding or out of adjustment,1864,996
+Deutz,Deutz,Deutz,ECM,4360,2,Exhaust aftertreatment - Temperature before SCR Cat - Data erratic intermittent or incorrect,1865,668
+Deutz,Deutz,Deutz,ECM,4334,2,Exhaust aftertreatment - DEF pump pressure - Data erratic intermittent or incorrect,1866,665
+Deutz,Deutz,Deutz,ECM,524067,2,Exhaust aftertreatment - DEF pump temperature - Data erratic intermittent or incorrect,1867,894
+Deutz,Deutz,Deutz,ECM,524067,2,Exhaust aftertreatment - DEF pump temperature - Data erratic intermittent or incorrect,1868,894
+Deutz,Deutz,Deutz,ECM,1761,2,Exhaust aftertreatment - DEF tank level sensor - Data erratic intermittent or incorrect,1869,129
+Deutz,Deutz,Deutz,ECM,524152,2,Exhaust aftertreatment - CAN DEF quality sensor - Data erratic intermittent or incorrect,1874,971
+Deutz,Deutz,Deutz,ECM,524153,2,Exhaust aftertreatment - DEF tank level and temperature - Data erratic intermittent or incorrect,1875,997
+Deutz,Deutz,Deutz,ECM,1761,14,Exhaust aftertreatment - DEF tank level sensor - Special instructions,1880,138
+Deutz,Deutz,Deutz,ECM,4768,2,Exhaust aftertreatment - Temperature sensor before DOC - Data erratic intermittent or incorrect,1881,683
+Deutz,Deutz,Deutz,ECM,524025,14,Exhaust aftertreatment - Stand Still - Special instructions,1882,8-4-5
+Deutz,Deutz,Deutz,ECM,524025,14,Exhaust aftertreatment - Stand Still - Special instructions,1883,8-4-5
+Deutz,Deutz,Deutz,ECM,524184,9,Exhaust aftertreatment - CAN SCR - Abnormal update rate timeout,1884,2-6-7
+Deutz,Deutz,Deutz,ECM,524189,9,Engine - CAN Main Secondary - Abnormal update rate timeout,1889,2-6-9
+Deutz,Deutz,Deutz,ECM,524192,12,Engine - Fan control - Bad intelligent device or component,1890,274
+Deutz,Deutz,Deutz,ECM,524190,14,Engine - Power reduction step 1 - Special instructions,1891,272
+Deutz,Deutz,Deutz,ECM,524191,14,Engine - Power reduction step 2 - Special instructions,1892,273
+Deutz,Deutz,Deutz,ECM,524193,8,Exhaust aftertreatment - Time Stand Still - Abnormal frequency or pulse width or period,1893,275
+Deutz,Deutz,Deutz,ECM,524194,8,Exhaust aftertreatment - Time Stand Still - Abnormal frequency or pulse width or period,1894,276
+Deutz,Deutz,Deutz,ECM,3519,12,Exhaust aftertreatment - DEF tank temperature - Bad intelligent device or component,1895,277
+Deutz,Deutz,Deutz,ECM,3520,3,Exhaust aftertreatment - DEF quality sensor - Voltage above normal or shorted to high source,1896,278
+Deutz,Deutz,Deutz,ECM,3520,4,Exhaust aftertreatment - DEF quality sensor - Voltage below normal or shorted to low source,1897,278
+Deutz,Deutz,Deutz,ECM,3519,3,Exhaust aftertreatment - DEF tank temperature - Voltage above normal or shorted to high source,1898,277
+Deutz,Deutz,Deutz,ECM,3519,4,Exhaust aftertreatment - DEF tank temperature - Voltage below normal or shorted to low source,1899,277
+Deutz,Deutz,Deutz,ECM,524195,14,Exhaust aftertreatment - Stand Still request - Special instructions,1900,279
+Deutz,Deutz,Deutz,ECM,524196,13,Engine - Fan - Out of calibration,1901,283
+Deutz,Deutz,Deutz,ECM,524196,2,Engine - Fan - Data erratic intermittent or incorrect,1902,283
+Deutz,Deutz,Deutz,ECM,3520,2,Exhaust aftertreatment - DEF quality sensor - Data erratic intermittent or incorrect,1904,278
+Deutz,Deutz,Deutz,ECM,3520,8,Exhaust aftertreatment - DEF quality sensor - Abnormal frequency or pulse width or period,1905,278
+Deutz,Deutz,Deutz,ECM,3520,13,Exhaust aftertreatment - DEF quality sensor - Out of calibration,1907,278
+Deutz,Deutz,Deutz,ECM,3519,13,Exhaust aftertreatment - DEF tank temperature - Out of calibration,1908,277
+Deutz,Deutz,Deutz,ECM,4365,12,Exhaust aftertreatment - DEF tank temperature - Bad intelligent device or component,1909,669
+Deutz,Deutz,Deutz,ECM,3532,13,Exhaust aftertreatment - DEF tank level sensor - Out of calibration,1910,129
+Deutz,Deutz,Deutz,ECM,3532,3,Exhaust aftertreatment - DEF tank level sensor - Voltage above normal or shorted to high source,1911,127
+Deutz,Deutz,Deutz,ECM,3532,4,Exhaust aftertreatment - DEF tank level sensor - Voltage below normal or shorted to low source,1912,127
+Deutz,Deutz,Deutz,ECM,4365,13,Exhaust aftertreatment - DEF tank temperature - Out of calibration,1913,669
+Deutz,Deutz,Deutz,ECM,4365,3,Exhaust aftertreatment - DEF tank temperature - Voltage above normal or shorted to high source,1914,669
+Deutz,Deutz,Deutz,ECM,4365,4,Exhaust aftertreatment - DEF tank temperature - Voltage below normal or shorted to low source,1915,669
+Deutz,Deutz,Deutz,ECM,3936,14,Exhaust aftertreatment - Time Stand Still - Special instructions,1917,286
+Deutz,Deutz,Deutz,ECM,3936,14,Exhaust aftertreatment - Time Stand Still - Special instructions,1918,286
+Deutz,Deutz,Deutz,ECM,51,3,Engine - Throttle valve position - Voltage above normal or shorted to high source,1924,5-9-4
+Deutz,Deutz,Deutz,ECM,51,3,Engine - Throttle valve position - Voltage above normal or shorted to high source,1925,5-9-4
+Deutz,Deutz,Deutz,ECM,51,4,Engine - Throttle valve position - Voltage below normal or shorted to low source,1926,5-9-4
+Deutz,Deutz,Deutz,ECM,51,7,Engine - Throttle valve position - Mechanical system not responding or out of adjustment,1931,5-9-4
+Deutz,Deutz,Deutz,ECM,51,12,Engine - Throttle valve position - Bad intelligent device or component,1932,5-9-4
+Deutz,Deutz,Deutz,ECM,51,3,Engine - Throttle valve position - Voltage above normal or shorted to high source,1935,5-9-4
+Deutz,Deutz,Deutz,ECM,524201,11,Exhaust aftertreatment - SCR effectiveness monitoring Secondary ECU triggered by ambient temperature sensor Main - Root cause not known,1942,3-1-3
+Deutz,Deutz,Deutz,ECM,524202,11,Exhaust aftertreatment - Collective fault on Secondary ECU triggered by SCR failure Main - Root cause not known,1943,3-1-3
+Deutz,Deutz,Deutz,ECM,524203,11,Exhaust aftertreatment - Collective fault on Secondary ECU triggered DEF tank failure Main - Root cause not known,1944,3-1-3
+Deutz,Deutz,Deutz,ECM,524204,11,Exhaust aftertreatment - Collective fault on Secondary ECU triggered by SCR failure Main - Root cause not known,1945,3-1-3
+Deutz,Deutz,Deutz,ECM,524205,11,Exhaust aftertreatment - Collective fault on Secondary ECU triggered by SCR failure Main - Root cause not known,1946,3-1-3
+Deutz,Deutz,Deutz,ECM,524206,11,Exhaust aftertreatment - Collective fault on Secondary ECU triggered by DEF dosing failure Main - Root cause not known,1947,3-1-3
+Deutz,Deutz,Deutz,ECM,524230,11,Exhaust aftertreatment - Hardware failure on Secondary ECU activates power reduction - Root cause not known,1971,3-1-5
+Deutz,Deutz,Deutz,ECM,524231,11,Exhaust aftertreatment - SCR failure on Secondary ECU activates power reduction - Root cause not known,1972,3-1-5
+Deutz,Deutz,Deutz,ECM,524232,11,Exhaust aftertreatment - SCR failure on Secondary ECU activates power reduction - Root cause not known,1973,3-1-5
+Deutz,Deutz,Deutz,ECM,524233,11,Engine - ECU EEPROM error Secondary - Root cause not known,1974,3-1-5
+Deutz,Deutz,Deutz,ECM,524234,11,Engine - Battery voltage failure on Secondary ECU triggers collective fault Main - Root cause not known,1975,3-1-5
+Deutz,Deutz,Deutz,ECM,524235,11,Engine - CAN failure on Secondary ECU triggers collective fault Main - Root cause not known,1976,3-1-5
+Deutz,Deutz,Deutz,ECM,524236,11,Engine - ECU monitoring failure on Secondary ECU triggers collective fault Main - Root cause not known,1977,3-1-5
+Deutz,Deutz,Deutz,ECM,524237,11,Engine - ECU failure on Secondary ECU triggers collective fault Main - Root cause not known,1978,3-1-5
+Deutz,Deutz,Deutz,ECM,524238,11,Engine - ECU failure on Secondary ECU triggers collective fault Main - Root cause not known,1979,3-1-5
+Deutz,Deutz,Deutz,ECM,524239,11,Exhaust aftertreatment - Collective fault on Secondary ECU triggered by SCR failure Main - Root cause not known,1980,3-1-5
+Deutz,Deutz,Deutz,ECM,524242,11,Engine - Software reset failure on Secondary ECU triggers collective fault Main - Root cause not known,1983,3-1-5
+Deutz,Deutz,Deutz,ECM,524243,11,Engine - Engine speed signal failure on Secondary ECU triggers collective fault Main - Root cause not known,1984,3-1-5
+Deutz,Deutz,Deutz,ECM,524248,11,Exhaust aftertreatment - Collective fault on Secondary ECU triggered by SCR failure Main - Root cause not known,1989,3-1-5
+Deutz,Deutz,Deutz,ECM,524249,11,Exhaust aftertreatment - Collective fault on Main ECU triggered by SCR failure Secondary - Root cause not known,1990,3-1-5
+Deutz,Deutz,Deutz,ECM,524251,11,Exhaust aftertreatment - Collective fault on Main ECU triggered by SCR failure Secondary - Root cause not known,1992,3-1-5
+Deutz,Deutz,Deutz,ECM,524252,11,Exhaust aftertreatment - Reverting valve failure on Secondary ECU triggered by collective fault Main - Root cause not known,1993,3-1-5
+Deutz,Deutz,Deutz,ECM,524253,11,Exhaust aftertreatment - Collective fault on Main ECU triggered by DEF failure Secondary - Root cause not known,1994,3-1-5
+Deutz,Deutz,Deutz,ECM,524254,11,Exhaust aftertreatment - Collective fault on Main ECU triggered by SCR failure Secondary - Root cause not known,1995,3-1-5
+Deutz,Deutz,Deutz,ECM,524255,11,Exhaust aftertreatment - Collective fault on Main ECU triggered by DEF failure Secondary - Root cause not known,1996,3-1-5
+Deutz,Deutz,Deutz,ECM,524256,11,Exhaust aftertreatment - Collective fault on Main ECU triggered by DEF failure Secondary - Root cause not known,1997,3-1-5
+Deutz,Deutz,Deutz,ECM,524257,11,Exhaust aftertreatment - Collective fault on Main ECU triggered by SCR failure Secondary - Root cause not known,1998,3-1-5
+Deutz,Deutz,Deutz,ECM,524258,11,Exhaust aftertreatment - Collective fault on Main ECU triggered by SCR failure Secondary - Root cause not known,1999,3-1-5
+Deutz,Deutz,Deutz,ECM,524259,11,Exhaust aftertreatment - Collective fault on Main ECU triggered by DEF failure Secondary - Root cause not known,2000,3-1-5
+Deutz,Deutz,Deutz,ECM,524260,11,Exhaust aftertreatment - Collective fault on Main ECU triggered by DEF failure Secondary - Root cause not known,2001,3-1-5
+Deutz,Deutz,Deutz,ECM,524261,11,Exhaust aftertreatment - Collective fault on Main ECU triggered by DEF failure Secondary - Root cause not known,2002,3-1-5
+Deutz,Deutz,Deutz,ECM,524262,8,Exhaust aftertreatment - CAN SCR - Abnormal frequency or pulse width or period,2003,3-1-6
+Deutz,Deutz,Deutz,ECM,524267,14,Exhaust aftertreatment - Announcement trigger power reduction step 2 - Special instructions,2007,273
+Deutz,Deutz,Deutz,ECM,524025,8,Exhaust aftertreatment - Stand Still - Abnormal frequency or pulse width or period,2008,845
+Deutz,Deutz,Deutz,ECM,4361,2,Exhaust aftertreatment - Dynamic temperature check before SCR - Data erratic intermittent or incorrect,2011,668
+Deutz,Deutz,Deutz,ECM,524147,13,Exhaust aftertreatment - DEF pressure - Out of calibration,2013,966
+Deutz,Deutz,Deutz,ECM,3520,1,Exhaust aftertreatment - DEF quality sensor - Data below normal operational range (Most severe level),2014,278
+Deutz,Deutz,Deutz,ECM,524268,9,Manufacturer Assignable SPN - Abnormal update rate timeout,2015,1117
+Deutz,Deutz,Deutz,ECM,524269,9,Engine - CAN Hydraulic Start Stop - Abnormal update rate timeout,2016,1118
+Deutz,Deutz,Deutz,ECM,524272,14,Manufacturer Assignable SPN - Special instructions,2025,1119
+Deutz,Deutz,Deutz,ECM,523470,13,Engine - Fuel pressure relief valve - Out of calibration,2026,146
+Deutz,Deutz,Deutz,ECM,411,2,Engine - EGR differential pressure - Data erratic intermittent or incorrect,2032,693
+Deutz,Deutz,Deutz,ECM,1176,2,Engine - TC charge pressure - Data erratic intermittent or incorrect,2033,139
+Deutz,Deutz,Deutz,ECM,524277,11,Engine - ECU afterun too often not waited - Root cause not known,2034,555
+Deutz,Deutz,Deutz,ECM,524278,11,Engine - ECU afterun too often consecutive not waited - Root cause not known,2035,555
+Deutz,Deutz,Deutz,ECM,51,12,Engine - Throttle valve position - Bad intelligent device or component,2036,594
+Deutz,Deutz,Deutz,ECM,524281,6,Engine - Throttle valve dynamic current limitation - Current above normal or grounded circuit,2038,1124
+Deutz,Deutz,Deutz,ECM,524280,8,Engine - CAN oil level sensor - Abnormal frequency or pulse width or period,2044,-
+Deutz,Deutz,Deutz,ECM,5763,6,Engine - EGR valve - Current above normal or grounded circuit,2049,1146
+Deutz,Deutz,Deutz,ECM,5763,5,Engine - EGR valve - Current below normal or open circuit,2050,1146
+Deutz,Deutz,Deutz,ECM,5763,5,Engine - EGR valve - Current below normal or open circuit,2051,1146
+Deutz,Deutz,Deutz,ECM,5763,6,Engine - EGR valve - Current above normal or grounded circuit,2052,1146
+Deutz,Deutz,Deutz,ECM,5763,3,Engine - EGR valve - Voltage above normal or shorted to high source,2054,1146
+Deutz,Deutz,Deutz,ECM,5763,3,Engine - EGR valve - Voltage above normal or shorted to high source,2055,1146
+Deutz,Deutz,Deutz,ECM,5763,4,Engine - EGR valve - Voltage below normal or shorted to low source,2056,1146
+Deutz,Deutz,Deutz,ECM,5763,4,Engine - EGR valve - Voltage below normal or shorted to low source,2057,1146
+Deutz,Deutz,Deutz,ECM,5763,6,Engine - EGR valve - Current above normal or grounded circuit,2058,1146
+Deutz,Deutz,Deutz,ECM,5763,11,Engine - EGR valve - Root cause not known,2059,1146
+Deutz,Deutz,Deutz,ECM,5763,4,Engine - EGR valve - Voltage below normal or shorted to low source,2060,1146
+Deutz,Deutz,Deutz,ECM,5763,7,Engine - EGR valve - Mechanical system not responding or out of adjustment,2061,1146
+Deutz,Deutz,Deutz,ECM,5763,6,Engine - EGR valve - Current above normal or grounded circuit,2063,1146
+Deutz,Deutz,Deutz,ECM,5763,5,Engine - EGR valve - Current below normal or open circuit,2064,1146
+Deutz,Deutz,Deutz,ECM,5763,3,Engine - EGR valve - Voltage above normal or shorted to high source,2065,1146
+Deutz,Deutz,Deutz,ECM,5763,4,Engine - EGR valve - Voltage below normal or shorted to low source,2066,1146
+Deutz,Deutz,Deutz,ECM,5763,0,Engine - EGR valve - Data above normal operational range (Most severe level),2067,1146
+Deutz,Deutz,Deutz,ECM,5763,1,Engine - EGR valve - Data below normal operational range (Most severe level),2068,1146
+Deutz,Deutz,Deutz,ECM,5763,6,Engine - EGR valve - Current above normal or grounded circuit,2069,1147

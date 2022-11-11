@@ -35,6 +35,8 @@ namespace Fault_Code_Search
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.engineBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -194,16 +196,36 @@ namespace Fault_Code_Search
             this.SearchResults.AllowUserToAddRows = false;
             this.SearchResults.AllowUserToDeleteRows = false;
             this.SearchResults.AllowUserToResizeColumns = false;
-            this.SearchResults.AllowUserToResizeRows = false;
             this.SearchResults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.SearchResults.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.SearchResults.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            this.SearchResults.Location = new System.Drawing.Point(3, 402);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SearchResults.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.SearchResults.ColumnHeadersHeight = 35;
+            this.SearchResults.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SearchResults.DefaultCellStyle = dataGridViewCellStyle2;
+            this.SearchResults.Location = new System.Drawing.Point(10, 409);
+            this.SearchResults.Margin = new System.Windows.Forms.Padding(10);
             this.SearchResults.Name = "SearchResults";
             this.SearchResults.ReadOnly = true;
-            this.SearchResults.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.SearchResults.RowTemplate.Height = 42;
+            this.SearchResults.RowTemplate.ReadOnly = true;
+            this.SearchResults.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.SearchResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SearchResults.Size = new System.Drawing.Size(1396, 398);
+            this.SearchResults.Size = new System.Drawing.Size(1382, 384);
             this.SearchResults.TabIndex = 19;
             // 
             // SearchControlBox
@@ -229,10 +251,11 @@ namespace Fault_Code_Search
             this.SearchControlBox.Size = new System.Drawing.Size(519, 89);
             this.SearchControlBox.TabIndex = 16;
             this.SearchControlBox.TabStop = false;
+            this.SearchControlBox.Enter += new System.EventHandler(this.SearchControlBox_Enter);
             // 
             // Clear
             // 
-            this.Clear.Location = new System.Drawing.Point(380, 11);
+            this.Clear.Location = new System.Drawing.Point(395, 11);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(75, 23);
             this.Clear.TabIndex = 13;
@@ -242,7 +265,7 @@ namespace Fault_Code_Search
             // 
             // Searcbutton
             // 
-            this.Searcbutton.Location = new System.Drawing.Point(299, 11);
+            this.Searcbutton.Location = new System.Drawing.Point(312, 11);
             this.Searcbutton.Name = "Searcbutton";
             this.Searcbutton.Size = new System.Drawing.Size(75, 23);
             this.Searcbutton.TabIndex = 12;
@@ -252,7 +275,7 @@ namespace Fault_Code_Search
             // 
             // FMItextBox
             // 
-            this.FMItextBox.Location = new System.Drawing.Point(218, 12);
+            this.FMItextBox.Location = new System.Drawing.Point(229, 12);
             this.FMItextBox.Name = "FMItextBox";
             this.FMItextBox.Size = new System.Drawing.Size(75, 20);
             this.FMItextBox.TabIndex = 11;
@@ -260,7 +283,7 @@ namespace Fault_Code_Search
             // 
             // SPNtextBox
             // 
-            this.SPNtextBox.Location = new System.Drawing.Point(106, 12);
+            this.SPNtextBox.Location = new System.Drawing.Point(113, 12);
             this.SPNtextBox.Name = "SPNtextBox";
             this.SPNtextBox.Size = new System.Drawing.Size(75, 20);
             this.SPNtextBox.TabIndex = 10;
@@ -269,7 +292,7 @@ namespace Fault_Code_Search
             // FMIText
             // 
             this.FMIText.AutoSize = true;
-            this.FMIText.Location = new System.Drawing.Point(187, 16);
+            this.FMIText.Location = new System.Drawing.Point(196, 16);
             this.FMIText.Name = "FMIText";
             this.FMIText.Size = new System.Drawing.Size(25, 13);
             this.FMIText.TabIndex = 9;
@@ -278,11 +301,11 @@ namespace Fault_Code_Search
             // SPNText
             // 
             this.SPNText.AutoSize = true;
-            this.SPNText.Location = new System.Drawing.Point(71, 16);
+            this.SPNText.Location = new System.Drawing.Point(48, 16);
             this.SPNText.Name = "SPNText";
-            this.SPNText.Size = new System.Drawing.Size(29, 13);
+            this.SPNText.Size = new System.Drawing.Size(57, 13);
             this.SPNText.TabIndex = 8;
-            this.SPNText.Text = "SPN";
+            this.SPNText.Text = "Fault/SPN";
             // 
             // EngineText
             // 
@@ -300,11 +323,15 @@ namespace Fault_Code_Search
             this.EngineBox.FormattingEnabled = true;
             this.EngineBox.Items.AddRange(new object[] {
             "ALL",
+            "CAT",
             "Cummins",
+            "Cummins/Mercedes",
+            "Deutz",
+            "Kubota",
+            "Mitsubishi",
             "Perkins",
-            "Yanmar",
             "Scania",
-            "Mitsubishi"});
+            "Yanmar"});
             this.EngineBox.Location = new System.Drawing.Point(266, 52);
             this.EngineBox.Name = "EngineBox";
             this.EngineBox.Size = new System.Drawing.Size(121, 21);
@@ -344,11 +371,12 @@ namespace Fault_Code_Search
             this.Type.FormattingEnabled = true;
             this.Type.Items.AddRange(new object[] {
             "ALL",
-            "Loader",
-            "Roller",
+            "Deutz",
+            "Dump/Track Truck",
             "Excavator",
             "Forklift",
-            "Lamtrac"});
+            "Loader",
+            "Trench Roller"});
             this.Type.Location = new System.Drawing.Point(139, 52);
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(121, 21);
@@ -361,12 +389,17 @@ namespace Fault_Code_Search
             this.Manufacture.FormattingEnabled = true;
             this.Manufacture.Items.AddRange(new object[] {
             "ALL",
-            "Hyundai",
-            "Bell"});
+            "Bell",
+            "Bomag",
+            "CAT",
+            "Cummins",
+            "Deutz",
+            "Hyundai"});
             this.Manufacture.Location = new System.Drawing.Point(14, 52);
             this.Manufacture.Name = "Manufacture";
             this.Manufacture.Size = new System.Drawing.Size(121, 21);
             this.Manufacture.TabIndex = 1;
+            this.Manufacture.SelectedIndexChanged += new System.EventHandler(this.Manufacture_SelectedIndexChanged);
             // 
             // Controllers
             // 
@@ -375,15 +408,16 @@ namespace Fault_Code_Search
             this.Controllers.FormattingEnabled = true;
             this.Controllers.Items.AddRange(new object[] {
             "ALL",
+            "BLM",
+            "CCU/OEU",
             "ECM",
+            "ECU",
             "EHCU",
             "MCU",
-            "TCU",
-            "CCU/OEU",
             "MDU",
             "MMU",
             "SSM",
-            "ECU"});
+            "TCU"});
             this.Controllers.Location = new System.Drawing.Point(392, 52);
             this.Controllers.Name = "Controllers";
             this.Controllers.Size = new System.Drawing.Size(121, 21);
